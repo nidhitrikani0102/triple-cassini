@@ -126,6 +126,17 @@ const EventPage = () => {
         }
     };
 
+    // Handle resending invitation
+    const handleResendInvitation = async (guestId) => {
+        try {
+            await axios.post(`http://localhost:5000/api/guests/resend/${guestId}`, {}, config);
+            setMessage({ type: 'success', text: 'Invitation resent successfully' });
+        } catch (err) {
+            console.error(err);
+            setMessage({ type: 'danger', text: 'Error resending invitation' });
+        }
+    };
+
     // Handle saving the invitation design
     const handleSaveInvitation = async (invitationConfig) => {
         try {
@@ -269,15 +280,33 @@ const EventPage = () => {
                                     <ListGroup.Item key={index} className="d-flex justify-content-between align-items-center">
                                         <div>
                                             <strong>{guest.name}</strong> ({guest.email})
+                                            <div className="mt-1">
+                                                {guest.status === 'Accepted' && <span className="badge bg-success me-2">Accepted</span>}
+                                                {guest.status === 'Declined' && <span className="badge bg-danger me-2">Declined</span>}
+                                                {guest.status === 'Pending' && <span className="badge bg-warning text-dark me-2">Pending</span>}
+                                                {!guest.isInvited && <span className="badge bg-secondary">Not Invited</span>}
+                                            </div>
                                         </div>
-                                        <span className={`badge bg-${guest.isInvited ? 'success' : 'secondary'}`}>
-                                            {guest.isInvited ? 'Invited' : 'Not Invited'}
-                                        </span>
+                                        <div>
+                                            {/* Show Resend button only if status is Pending or Declined */}
+                                            {(guest.status === 'Pending' || guest.status === 'Declined') && (
+                                                <Button
+                                                    variant="outline-secondary"
+                                                    size="sm"
+                                                    className="me-2"
+                                                    onClick={() => handleResendInvitation(guest._id)}
+                                                    title="Resend Invitation"
+                                                >
+                                                    <i className="bi bi-arrow-repeat"></i> Resend Invitation
+                                                </Button>
+                                            )}
+                                        </div>
                                     </ListGroup.Item>
                                 ))
                             )}
                         </ListGroup>
                     </Tab.Pane>
+
 
                     <Tab.Pane eventKey="budget">
                         <div className="d-flex justify-content-between align-items-center mb-3">
@@ -530,7 +559,7 @@ const EventPage = () => {
                     </Form>
                 </Modal.Body>
             </Modal>
-        </Container>
+        </Container >
     );
 };
 

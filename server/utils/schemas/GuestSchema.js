@@ -30,6 +30,12 @@ const guestSchema = new mongoose.Schema({
         type: Boolean,
         default: false,
     },
+    // RSVP Status
+    status: {
+        type: String,
+        enum: ['Pending', 'Accepted', 'Declined'],
+        default: 'Pending',
+    },
     // Timestamp when the invitation was sent
     invitedAt: {
         type: Date,

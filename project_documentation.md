@@ -108,6 +108,15 @@ graph LR
 5.  **Frontend** sends `POST /api/vendors/portfolio` with the URL.
 6.  **Backend** updates `VendorProfile` adding the URL to the portfolio array.
 
+### 3.4 RSVP Flow
+1.  **Host** sends invitation from `EventPage`.
+2.  **Backend** generates a unique link (`/rsvp/:guestId`) and emails it to the guest.
+3.  **Guest** clicks the link and lands on the public `RSVPPage`.
+4.  **Guest** clicks "Accept" or "Decline".
+5.  **Frontend** sends `POST /api/guests/rsvp/:guestId`.
+6.  **Backend** updates the guest's status in the database.
+7.  **Host** sees the updated status (Accepted/Declined) on their dashboard.
+
 ---
 
 ## 4. API Reference
@@ -206,6 +215,7 @@ erDiagram
         string event FK
         string name
         string email
+        string status
         boolean isInvited
     }
 
@@ -320,6 +330,7 @@ classDiagram
         +String event (FK -> Event)
         +String name
         +String email
+        +String status (Enum: 'Pending', 'Accepted', 'Declined')
         +Boolean isInvited
         +Date invitedAt
         +Date createdAt
@@ -330,6 +341,7 @@ classDiagram
 | :--- | :--- | :--- |
 | `_id` | String | Custom unique identifier (e.g., `G001`). Primary Key. |
 | `event` | String | Reference to the `Event` the guest is invited to. |
+| `status` | String | RSVP status ('Pending', 'Accepted', 'Declined'). |
 | `isInvited` | Boolean | Tracks if the invitation email has been sent. |
 
 #### 6.2.5 Budget Schema

@@ -9,7 +9,22 @@ const authMiddleware = require('../middleware/authMiddleware');
  * Base URL: /api/guests
  */
 
-// Protect all routes
+/**
+ * @route   POST /api/guests/rsvp/:guestId
+ * @desc    Update guest RSVP status (Public)
+ * @access  Public
+ */
+router.post('/rsvp/:guestId', async (req, res, next) => {
+    try {
+        const { status } = req.body;
+        const guest = await guestService.updateGuestStatus(req.params.guestId, status);
+        res.json(guest);
+    } catch (error) {
+        next(error);
+    }
+});
+
+// Protect all routes below this line
 router.use(authMiddleware.protect);
 
 /**
@@ -51,6 +66,20 @@ router.get('/:eventId', async (req, res, next) => {
 router.post('/invite/:guestId', async (req, res, next) => {
     try {
         const result = await guestService.sendInvitation(req.params.guestId, req.user._id);
+        res.json(result);
+    } catch (error) {
+        next(error);
+    }
+});
+
+/**
+ * @route   POST /api/guests/resend/:guestId
+ * @desc    Resend invitation email (Host only)
+ * @access  Private
+ */
+router.post('/resend/:guestId', async (req, res, next) => {
+    try {
+        const result = await guestService.resendInvitation(req.params.guestId, req.user._id);
         res.json(result);
     } catch (error) {
         next(error);

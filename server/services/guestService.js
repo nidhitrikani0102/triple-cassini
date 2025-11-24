@@ -126,6 +126,9 @@ const sendInvitation = async (guestId, userId) => {
         const config = event.invitationConfig || { theme: 'classic', showMap: true, customMessage: '' };
         const theme = themeColors[config.theme] || themeColors.classic;
 
+        // Generate RSVP Link
+        const rsvpLink = `http://localhost:3000/rsvp/${guest._id}`;
+
         const htmlTemplate = `
             <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; background-color: ${theme.bg}; color: ${theme.text};">
                 <div style="background-color: ${theme.header}; padding: 20px; text-align: center; color: #ffffff;">
@@ -143,9 +146,14 @@ const sendInvitation = async (guestId, userId) => {
                         <p style="margin: 5px 0;">📍 <strong>Location:</strong> ${event.location}</p>
                     </div>
 
+                    <div style="text-align: center; margin: 30px 0;">
+                        <p style="margin-bottom: 15px; font-weight: bold;">Please let us know if you can make it:</p>
+                        <a href="${rsvpLink}" style="background-color: ${theme.button}; color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block;">RSVP Now</a>
+                    </div>
+
                     ${config.showMap && event.mapLink ? `
-                        <div style="text-align: center; margin-top: 30px;">
-                            <a href="${event.mapLink}" style="background-color: #e91e63; color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block;">View Location on Map</a>
+                        <div style="text-align: center; margin-top: 20px;">
+                            <a href="${event.mapLink}" style="color: #e91e63; text-decoration: none; font-size: 14px;">View Location on Map</a>
                         </div>
                     ` : ''}
                 </div>
@@ -176,4 +184,43 @@ const sendInvitation = async (guestId, userId) => {
     }
 };
 
-module.exports = { addGuest, getGuests, sendInvitation };
+/**
+ * Updates the RSVP status of a guest.
+ * @param {string} guestId - ID of the guest
+ * @param {string} status - New status ('Accepted', 'Declined')
+ * @returns {Promise<Object>} Updated guest
+ */
+const updateGuestStatus = async (guestId, status) => {
+    try {
+        const guest = await Guest.findById(guestId);
+        if (!guest) {
+            const err = new Error('Guest not found');
+            err.status = 404;
+            throw err;
+        }
+
+        if (!['Accepted', 'Declined'].includes(status)) {
+            const err = new Error('Invalid status');
+            err.status = 400;
+            throw err;
+        }
+
+        guest.status = status;
+        await guest.save();
+        return guest;
+    } catch (error) {
+        throw error;
+    }
+};
+
+/**
+ * Resends an invitation to a guest.
+ * @param {string} guestId - ID of the guest
+ * @param {string} userId - ID of the requesting user (Host)
+ * @returns {Promise<Object>} Success message
+ */
+const resendInvitation = async (guestId, userId) => {
+    return await sendInvitation(guestId, userId);
+};
+
+module.exports = { addGuest, getGuests, sendInvitation, updateGuestStatus, resendInvitation };

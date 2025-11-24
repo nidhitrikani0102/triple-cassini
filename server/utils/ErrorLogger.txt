@@ -1259,3 +1259,36 @@
     at Object.verifyLoginOtp (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:167:25)
     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
     at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:48:24
+[2025-11-24T05:17:43.281Z] TypeError: User.findById(...).select is not a function
+    at Object.getUserById (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:244:50)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:92:40
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:421:3)
+[2025-11-24T05:17:43.292Z] TypeError: User.findById(...).select is not a function
+    at Object.getUserById (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:244:50)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:92:40
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:421:3)
+[2025-11-24T05:18:04.674Z] TypeError: User.findById(...).select is not a function
+    at Object.getUserById (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:244:50)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:92:40
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:421:3)
