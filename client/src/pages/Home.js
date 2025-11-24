@@ -10,9 +10,11 @@ import people4 from '../assets/Images/people4.jpg';
 const Home = () => {
     const [stats, setStats] = useState({ users: 0, vendors: 0, events: 0 });
 
+    // Fetch public statistics when the component mounts
     useEffect(() => {
         const fetchStats = async () => {
             try {
+                // Get the count of users, events, and vendors from the public API
                 const res = await axios.get('http://localhost:5000/api/stats/public');
                 setStats(res.data);
             } catch (err) {

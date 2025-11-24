@@ -20,20 +20,26 @@ const Login = () => {
         setError('');
     };
 
+    // Handle form submission
     const handleSubmit = async (e) => {
         e.preventDefault();
         setError('');
         setSuccess('');
         try {
             if (step === 1) {
+                // Step 1: Send email and password to login endpoint
                 const res = await axios.post('http://localhost:5000/api/auth/login', formData);
+
+                // Check if the server requires OTP verification (e.g., for vendors/admins)
                 if (res.data.requiresOtp) {
-                    setUserId(res.data.userId);
-                    setStep(2);
+                    setUserId(res.data.userId); // Store user ID for the next step
+                    setStep(2); // Move to OTP entry step
                     setSuccess('OTP sent to your email. Please check your inbox.');
                 } else {
-                    login(res.data.token, res.data);
-                    // Redirect based on role
+                    // Standard login (no OTP required)
+                    login(res.data.token, res.data); // Save token and user data to context
+
+                    // Redirect the user based on their role
                     if (res.data.role === 'admin') {
                         navigate('/admin-dashboard');
                     } else if (res.data.role === 'vendor') {
@@ -43,11 +49,15 @@ const Login = () => {
                     }
                 }
             } else {
+                // Step 2: Verify OTP
                 const res = await axios.post('http://localhost:5000/api/auth/verify-otp', {
                     userId,
                     otp
                 });
+
+                // If OTP is valid, complete the login
                 login(res.data.token, res.data);
+
                 // Redirect based on role
                 if (res.data.role === 'admin') {
                     navigate('/admin-dashboard');

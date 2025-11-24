@@ -31,12 +31,14 @@ const VendorDashboard = () => {
         }
     }, [message]);
 
+    // Function to fetch the vendor's profile from the backend
     const fetchProfile = async () => {
         try {
             const res = await axios.get('http://localhost:5000/api/vendors/profile', {
                 headers: { Authorization: `Bearer ${token}` }
             });
             setProfile(res.data);
+            // Pre-fill the form with existing data if available
             if (res.data) {
                 setFormData({
                     serviceType: res.data.serviceType || '',
@@ -46,17 +48,19 @@ const VendorDashboard = () => {
                 });
             }
         } catch (err) {
-            console.log('No profile found');
+            console.log('No profile found'); // It's okay if no profile exists yet
         }
     };
 
+    // Function to save or update the profile
     const handleSave = async () => {
         try {
+            // We send the form data to the backend to create or update the profile
             const res = await axios.post('http://localhost:5000/api/vendors/profile', formData, {
                 headers: { Authorization: `Bearer ${token}` }
             });
             setProfile(res.data);
-            setIsEditing(false);
+            setIsEditing(false); // Exit edit mode
             setMessage({ type: 'success', text: 'Profile saved successfully' });
         } catch (err) {
             console.error(err);
@@ -66,25 +70,29 @@ const VendorDashboard = () => {
 
     const [selectedFile, setSelectedFile] = useState(null);
 
+    // Handle file selection from the input
     const handleFileChange = (e) => {
         setSelectedFile(e.target.files[0]);
     };
 
+    // Function to handle image upload (Portfolio)
     const handleAddImage = async () => {
         try {
-            let imageUrl = newImage;
+            let imageUrl = newImage; // Start with the URL entered in the text box (if any)
 
+            // If a file was selected, upload it first
             if (selectedFile) {
                 const formData = new FormData();
                 formData.append('image', selectedFile);
 
+                // Send the file to the upload endpoint
                 const uploadRes = await axios.post('http://localhost:5000/api/vendors/upload', formData, {
                     headers: {
                         Authorization: `Bearer ${token}`,
-                        'Content-Type': 'multipart/form-data'
+                        'Content-Type': 'multipart/form-data' // Required for file uploads
                     }
                 });
-                imageUrl = uploadRes.data.imageUrl;
+                imageUrl = uploadRes.data.imageUrl; // Get the returned URL of the uploaded image
             }
 
             if (!imageUrl) {
@@ -92,13 +100,14 @@ const VendorDashboard = () => {
                 return;
             }
 
+            // Save the image URL to the vendor's portfolio
             const res = await axios.post('http://localhost:5000/api/vendors/portfolio', { imageUrl }, {
                 headers: { Authorization: `Bearer ${token}` }
             });
-            setProfile(res.data);
-            setNewImage('');
-            setSelectedFile(null);
-            setShowImageModal(false);
+            setProfile(res.data); // Update local profile state
+            setNewImage(''); // Clear input
+            setSelectedFile(null); // Clear file selection
+            setShowImageModal(false); // Close modal
             setMessage({ type: 'success', text: 'Image added to portfolio' });
         } catch (err) {
             console.error(err);

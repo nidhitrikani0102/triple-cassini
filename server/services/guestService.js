@@ -11,14 +11,16 @@ const { validateGuest } = require('../validators/guestValidator');
 
 /**
  * Adds a guest to an event.
+ * This function handles validation, creation, and sending an automatic invitation email.
+ * 
  * @param {string} eventId - ID of the event
  * @param {Object} guestData - Guest details (name, email)
  * @param {string} userId - ID of the requesting user
- * @returns {Promise<Object>} Created guest
+ * @returns {Promise<Object>} Created guest document
  */
 const addGuest = async (eventId, guestData, userId) => {
     try {
-        // Validate guest data
+        // Step 1: Validate the guest data (e.g., check if email is valid)
         const errors = validateGuest(guestData);
         if (errors.length > 0) {
             const err = new Error(errors.join(', '));
@@ -26,7 +28,7 @@ const addGuest = async (eventId, guestData, userId) => {
             throw err;
         }
 
-        // Verify event ownership
+        // Step 2: Verify that the event exists
         const event = await Event.findById(eventId);
         if (!event) {
             const err = new Error('Event not found');
@@ -34,27 +36,27 @@ const addGuest = async (eventId, guestData, userId) => {
             throw err;
         }
 
+        // Step 3: Ensure the user owns the event
         if (event.user.toString() !== userId) {
             const err = new Error('Not authorized');
             err.status = 401;
             throw err;
         }
 
-        // Create guest via DAL
+        // Step 4: Create the guest record in the database
         const guest = await Guest.createOne({
             ...guestData,
             event: eventId,
         });
 
-        // Automatically send invitation
+        // Step 5: Automatically send an email invitation
+        // We wrap this in a try-catch so that if the email fails, the guest is still created
         try {
             await sendInvitation(guest._id, userId);
-            guest.isInvited = true; // Update local object to reflect change
+            guest.isInvited = true; // Update the local object to reflect that the email was sent
         } catch (emailError) {
             console.error('Failed to send auto-invitation:', emailError);
-            // We don't throw here to avoid rolling back the guest creation, 
-            // but we could if strict atomicity is required. 
-            // For now, let's just log it.
+            // We log the error but don't stop the process
         }
 
         return guest;

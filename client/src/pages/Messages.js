@@ -50,6 +50,7 @@ const Messages = () => {
         }
     };
 
+    // Function to fetch the list of conversations (users you've talked to)
     const fetchConversations = async () => {
         try {
             const res = await axios.get('http://localhost:5000/api/messages/conversations', config);
@@ -59,6 +60,7 @@ const Messages = () => {
         }
     };
 
+    // Function to fetch messages for a specific conversation
     const fetchMessages = async (userId) => {
         try {
             const res = await axios.get(`http://localhost:5000/api/messages/${userId}`, config);
@@ -68,6 +70,7 @@ const Messages = () => {
         }
     };
 
+    // Function to delete a conversation
     const handleDeleteConversation = async () => {
         if (window.confirm('Are you sure you want to delete this conversation? This action cannot be undone.')) {
             try {
@@ -77,32 +80,28 @@ const Messages = () => {
                 setMessages([]);
             } catch (err) {
                 console.error(err);
-                if (err.response) {
-                    // Server responded with a status code outside 2xx
-                    const errorMsg = err.response.data?.error || err.response.data?.message || 'Failed to delete conversation';
-                    alert(`Server Error: ${errorMsg}`);
-                } else if (err.request) {
-                    // Request was made but no response received
-                    alert('Network Error: No response from server. Please check your connection.');
-                } else {
-                    // Something happened in setting up the request
-                    alert(`Error: ${err.message}`);
-                }
+                alert(err.response?.data?.message || 'Failed to delete conversation');
             }
         }
     };
 
+    // Function to handle sending a new message
     const handleSendMessage = async (e) => {
         e.preventDefault();
         if (!newMessage.trim() || !currentChat) return;
 
         try {
+            // Send the message to the backend
             const res = await axios.post('http://localhost:5000/api/messages/send', {
-                receiverId: currentChat._id, // Changed from recipientId to receiverId to match backend
-                content: newMessage
+                receiverId: currentChat._id, // The ID of the user receiving the message
+                content: newMessage // The text content
             }, config);
+
+            // Add the new message to the local state immediately for better UX
             setMessages([...messages, res.data]);
-            setNewMessage('');
+            setNewMessage(''); // Clear the input field
+
+            // If this is a new conversation, refresh the conversation list
             if (!conversations.find(c => c._id === currentChat._id)) {
                 fetchConversations();
             }

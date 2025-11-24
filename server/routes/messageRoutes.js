@@ -17,10 +17,21 @@ router.use(authMiddleware.protect);
  * @desc    Send a message to another user
  * @access  Private
  */
+/**
+ * @route   POST /api/messages/send
+ * @desc    Send a message to another user
+ * @access  Private
+ */
 router.post('/send', async (req, res, next) => {
     try {
+        // Extract receiver ID and content from the request body
         const { receiverId, content } = req.body;
+
+        // Use the service to create and save the message
+        // req.user._id is the sender (from the logged-in user's token)
         const message = await messageService.sendMessage(req.user._id, receiverId, content);
+
+        // Return 201 (Created)
         res.status(201).json(message);
     } catch (error) {
         next(error);

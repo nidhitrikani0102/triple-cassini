@@ -19,7 +19,10 @@ router.use(authMiddleware.protect);
  */
 router.post('/:eventId', async (req, res, next) => {
     try {
+        // We pass the event ID from the URL, the guest data from the body, and the user ID from the token
         const guest = await guestService.addGuest(req.params.eventId, req.body, req.user._id);
+
+        // Return 201 (Created) and the new guest data
         res.status(201).json(guest);
     } catch (error) {
         next(error);

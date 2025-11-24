@@ -10,6 +10,8 @@ const authMiddleware = require('../middleware/authMiddleware');
  */
 
 // Middleware: Protect all routes (Login required) and restrict to 'admin' role
+// 1. authMiddleware.protect: Checks for a valid JWT token (user is logged in)
+// 2. authMiddleware.admin: Checks if the user's role is 'admin' (user has permission)
 router.use(authMiddleware.protect);
 router.use(authMiddleware.admin);
 

@@ -54,13 +54,15 @@ const EventPage = () => {
         }
     }, [message]);
 
+    // Fetch event details from the backend
     const fetchEventDetails = async () => {
         try {
             const res = await axios.get(`http://localhost:5000/api/events/${id}`, config);
             setEvent(res.data);
+            // Pre-fill the edit form with the fetched data
             setEditEventData({
                 name: res.data.name,
-                date: res.data.date.split('T')[0], // Format for date input
+                date: res.data.date.split('T')[0], // Format date for HTML input (YYYY-MM-DD)
                 time: res.data.time,
                 location: res.data.location,
                 mapLink: res.data.mapLink || '',
@@ -75,6 +77,7 @@ const EventPage = () => {
         }
     };
 
+    // Fetch the list of guests for this event
     const fetchGuests = async () => {
         try {
             const res = await axios.get(`http://localhost:5000/api/guests/${id}`, config);
@@ -84,6 +87,7 @@ const EventPage = () => {
         }
     };
 
+    // Fetch budget details for this event
     const fetchBudgetDetails = async () => {
         try {
             const res = await axios.get(`http://localhost:5000/api/budget/${id}`, config);
@@ -96,6 +100,7 @@ const EventPage = () => {
         }
     };
 
+    // Handle updating event details
     const handleUpdateEvent = async () => {
         try {
             const res = await axios.put(`http://localhost:5000/api/events/${id}`, editEventData, config);
@@ -108,10 +113,11 @@ const EventPage = () => {
         }
     };
 
+    // Handle adding a new guest
     const handleAddGuest = async () => {
         try {
             await axios.post(`http://localhost:5000/api/guests/${id}`, newGuest, config);
-            fetchGuests(); // Refresh guests list
+            fetchGuests(); // Refresh guests list to show the new guest
             setShowGuestModal(false);
             setNewGuest({ name: '', email: '' });
             setMessage({ type: 'success', text: 'Guest invited successfully' });
@@ -120,12 +126,10 @@ const EventPage = () => {
         }
     };
 
+    // Handle saving the invitation design
     const handleSaveInvitation = async (invitationConfig) => {
         try {
-            // We update the event with the new invitation config
-            const updatedEventData = { ...editEventData, invitationConfig };
-            // Note: We need to make sure the backend accepts invitationConfig in the PUT body.
-            // Assuming the backend updates whatever fields are sent.
+            // Update the event with the new invitation configuration
             const res = await axios.put(`http://localhost:5000/api/events/${id}`, { invitationConfig }, config);
             setEvent(res.data);
             setShowInvitationModal(false);
@@ -136,6 +140,7 @@ const EventPage = () => {
         }
     };
 
+    // Handle updating the total budget amount
     const handleUpdateBudget = async () => {
         try {
             const res = await axios.put(`http://localhost:5000/api/budget/${id}`, { totalBudget: Number(totalBudget) }, config);
@@ -147,6 +152,7 @@ const EventPage = () => {
         }
     };
 
+    // Handle adding a new expense
     const handleAddExpense = async (e) => {
         e.preventDefault();
         try {
@@ -156,7 +162,7 @@ const EventPage = () => {
                 category: newExpense.category
             }, config);
 
-            // Backend returns { budget, alert, remaining }
+            // The backend returns the updated budget and an alert flag if over budget
             setBudget(res.data.budget);
             setNewExpense({ title: '', amount: '', category: '' });
             setShowBudgetModal(false);

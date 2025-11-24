@@ -9,28 +9,44 @@ const bcrypt = require('bcryptjs');
 
 /**
  * Retrieves all regular users.
+ * This is used by the Admin Dashboard to show a list of all registered users.
+ * 
  * @returns {Promise<Array>} List of users with role 'user'
  */
 const getAllUsers = async () => {
     try {
+        // Find all documents in the User collection where role is 'user'
+        // We exclude the 'password' field for security reasons ('-password')
         return await User.findWithSelect({ role: 'user' }, '-password');
     } catch (error) {
-        throw error;
+        throw error; // Pass any errors to the controller
     }
 };
 
 /**
  * Retrieves all vendors with their profile details.
- * @returns {Promise<Array>} List of vendors
+ * This is slightly more complex because vendor data is split across two collections:
+ * 1. User collection (basic info like name, email)
+ * 2. VendorProfile collection (business details like service type, bio)
+ * 
+ * @returns {Promise<Array>} List of vendors with their full profiles
  */
 const getAllVendors = async () => {
     try {
+        // Step 1: Get all users who have the 'vendor' role
         const vendors = await User.findWithSelect({ role: 'vendor' }, '-password');
-        // Manually populate vendor profiles since they are in a separate collection
+
+        // Step 2: For each vendor, fetch their detailed profile from the VendorProfile collection
+        // We use Promise.all to run these queries in parallel for better performance
         const vendorsWithProfiles = await Promise.all(vendors.map(async (vendor) => {
+            // Find the profile that belongs to this specific user (linked by user ID)
             const profile = await VendorProfile.findOne({ user: vendor._id });
+
+            // Combine the user data and profile data into a single object
+            // vendor.toObject() converts the Mongoose document to a plain JavaScript object
             return { ...vendor.toObject(), profile };
         }));
+
         return vendorsWithProfiles;
     } catch (error) {
         throw error;

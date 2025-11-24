@@ -16,8 +16,15 @@ const VendorProfile = require('../utils/schemas/VendorProfileSchema');
  * @desc    Get public statistics for landing page
  * @access  Public
  */
+/**
+ * @route   GET /api/stats/public
+ * @desc    Get public statistics for landing page
+ * @access  Public (No login required)
+ */
 router.get('/public', async (req, res, next) => {
     try {
+        // Count total number of documents in each collection
+        // This is used to show "X Users, Y Events" on the home page
         const users = await User.countDocuments();
         const events = await Event.countDocuments();
         const vendors = await VendorProfile.countDocuments();

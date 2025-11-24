@@ -9,13 +9,15 @@ const { validateBudgetUpdate, validateExpense } = require('../validators/budgetV
 
 /**
  * Retrieves the budget for a specific event.
+ * Ensures that only the event owner can view the budget.
+ * 
  * @param {string} eventId - ID of the event
  * @param {string} userId - ID of the requesting user (for authorization)
  * @returns {Promise<Object>} The budget document
  */
 const getBudget = async (eventId, userId) => {
     try {
-        // Verify event ownership
+        // Step 1: Verify that the event exists
         const event = await Event.findById(eventId);
         if (!event) {
             const err = new Error('Event not found');
@@ -23,13 +25,15 @@ const getBudget = async (eventId, userId) => {
             throw err;
         }
 
+        // Step 2: Check if the requesting user is the owner of the event
+        // We convert the ObjectId to a string for comparison
         if (event.user.toString() !== userId) {
             const err = new Error('Not authorized');
-            err.status = 401;
+            err.status = 401; // Unauthorized
             throw err;
         }
 
-        // Find budget for the event
+        // Step 3: Find the budget associated with this event
         const budget = await Budget.findOne({ event: eventId });
         if (!budget) {
             const err = new Error('Budget not found');

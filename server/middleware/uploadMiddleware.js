@@ -8,24 +8,28 @@ if (!fs.existsSync(uploadDir)) {
     fs.mkdirSync(uploadDir, { recursive: true });
 }
 
-// Configure storage
+// Configure storage settings for Multer
 const storage = multer.diskStorage({
+    // Destination: Where to save the uploaded files
     destination: function (req, file, cb) {
-        cb(null, uploadDir);
+        cb(null, uploadDir); // Save to 'uploads' directory
     },
+    // Filename: How to name the saved files
     filename: function (req, file, cb) {
-        // Create unique filename: fieldname-timestamp.ext
+        // Create a unique filename to prevent overwriting
+        // Format: fieldname-timestamp-random.ext
         const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
         cb(null, file.fieldname + '-' + uniqueSuffix + path.extname(file.originalname));
     }
 });
 
-// File filter
+// File filter: Restrict uploads to specific file types
 const fileFilter = (req, file, cb) => {
-    // Accept images only
+    // Accept images only (jpg, jpeg, png, gif)
     if (!file.originalname.match(/\.(jpg|jpeg|png|gif)$/)) {
         return cb(new Error('Only image files are allowed!'), false);
     }
+    // Accept the file
     cb(null, true);
 };
 

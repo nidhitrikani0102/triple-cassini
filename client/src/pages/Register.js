@@ -10,12 +10,18 @@ const Register = () => {
     const { register } = useContext(AuthContext);
     const navigate = useNavigate();
 
+    // Handle form submission
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
+            // Call the register function from AuthContext
+            // This sends the data to the backend API
             await register(formData);
-            navigate('/login'); // Redirect to login after register
+
+            // If successful, redirect the user to the login page
+            navigate('/login');
         } catch (err) {
+            // If there's an error (e.g., email already exists), display it
             setError(err.response?.data?.message || 'Registration failed');
         }
     };

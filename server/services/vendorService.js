@@ -9,13 +9,15 @@ const { validateVendorProfile } = require('../validators/vendorValidator');
 
 /**
  * Creates or updates a vendor profile.
- * @param {string} userId - ID of the user
- * @param {Object} profileData - Profile details
- * @returns {Promise<Object>} Updated profile
+ * This function handles the "Upsert" logic: if a profile exists, update it; otherwise, create a new one.
+ * 
+ * @param {string} userId - ID of the user (who must have the 'vendor' role)
+ * @param {Object} profileData - Profile details (business name, service type, etc.)
+ * @returns {Promise<Object>} The updated or created profile document
  */
 const createOrUpdateProfile = async (userId, profileData) => {
     try {
-        // Validate profile data
+        // Step 1: Validate the profile data
         const errors = validateVendorProfile(profileData);
         if (errors.length > 0) {
             const err = new Error(errors.join(', '));
@@ -23,10 +25,13 @@ const createOrUpdateProfile = async (userId, profileData) => {
             throw err;
         }
 
+        // Step 2: Check if a profile already exists for this user
         let profile = await VendorProfile.findOne({ user: userId });
 
         if (profile) {
             // Update existing profile
+            // $set: profileData updates only the fields provided in profileData
+            // new: true returns the modified document rather than the original
             profile = await VendorProfile.findOneAndUpdate(
                 { user: userId },
                 { $set: profileData },
@@ -34,6 +39,7 @@ const createOrUpdateProfile = async (userId, profileData) => {
             );
         } else {
             // Create new vendor profile
+            // We spread ...profileData and add the userId to link it
             profile = await VendorProfile.createOne({
                 ...profileData,
                 user: userId,
