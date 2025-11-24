@@ -1,0 +1,1261 @@
+[2025-11-23T15:39:03.074Z] Error: Not authorized, no token
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:47:21)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+[2025-11-23T15:39:03.077Z] Error: Not authorized, no token
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:47:21)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+[2025-11-23T15:40:07.299Z] Error: Not authorized, no token
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:47:21)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+[2025-11-23T15:40:07.303Z] Error: Not authorized, no token
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:47:21)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+[2025-11-23T15:40:25.109Z] DocumentNotFoundError: No document found for query "{ _id: '6922e374e03bac5156211eba' }" on model "User"
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\model.js:545:17
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\model.js:450:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-23T15:47:53.967Z] DocumentNotFoundError: No document found for query "{ _id: '6922e374e03bac5156211eba' }" on model "User"
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\model.js:545:17
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\model.js:450:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-23T15:47:55.601Z] DocumentNotFoundError: No document found for query "{ _id: '6922e374e03bac5156211eba' }" on model "User"
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\model.js:545:17
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\model.js:450:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-23T15:48:05.405Z] DocumentNotFoundError: No document found for query "{ _id: '6922e374e03bac5156211eba' }" on model "User"
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\model.js:545:17
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\model.js:450:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-23T15:48:06.655Z] DocumentNotFoundError: No document found for query "{ _id: '6922e374e03bac5156211eba' }" on model "User"
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\model.js:545:17
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\model.js:450:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-23T15:48:08.110Z] DocumentNotFoundError: No document found for query "{ _id: '6922e374e03bac5156211eba' }" on model "User"
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\model.js:545:17
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\model.js:450:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-23T15:48:13.235Z] DocumentNotFoundError: No document found for query "{ _id: '6922e374e03bac5156211eba' }" on model "User"
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\model.js:545:17
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\model.js:450:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-23T15:53:45.425Z] DocumentNotFoundError: No document found for query "{ _id: '6922e374e03bac5156211eba' }" on model "User"
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\model.js:545:17
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\model.js:450:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-23T15:53:46.590Z] DocumentNotFoundError: No document found for query "{ _id: '6922e374e03bac5156211eba' }" on model "User"
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\model.js:545:17
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\model.js:450:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-23T15:53:47.758Z] DocumentNotFoundError: No document found for query "{ _id: '6922e374e03bac5156211eba' }" on model "User"
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\model.js:545:17
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\model.js:450:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-23T15:54:29.362Z] DocumentNotFoundError: No document found for query "{ _id: '6922e374e03bac5156211eba' }" on model "User"
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\model.js:545:17
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\model.js:450:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-23T15:54:30.554Z] DocumentNotFoundError: No document found for query "{ _id: '6922e374e03bac5156211eba' }" on model "User"
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\model.js:545:17
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\model.js:450:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-23T15:54:32.163Z] DocumentNotFoundError: No document found for query "{ _id: '6922e374e03bac5156211eba' }" on model "User"
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\model.js:545:17
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\model.js:450:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-23T15:54:33.343Z] DocumentNotFoundError: No document found for query "{ _id: '6922e374e03bac5156211eba' }" on model "User"
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\model.js:545:17
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\model.js:450:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-23T15:54:34.582Z] DocumentNotFoundError: No document found for query "{ _id: '6922e374e03bac5156211eba' }" on model "User"
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\model.js:545:17
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\model.js:450:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-23T15:54:43.454Z] DocumentNotFoundError: No document found for query "{ _id: '6922e374e03bac5156211eba' }" on model "User"
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\model.js:545:17
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\model.js:450:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-23T15:54:44.452Z] DocumentNotFoundError: No document found for query "{ _id: '6922e374e03bac5156211eba' }" on model "User"
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\model.js:545:17
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\model.js:450:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-23T16:01:00.729Z] DocumentNotFoundError: No document found for query "{ _id: '6922e374e03bac5156211eba' }" on model "User"
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\model.js:545:17
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\model.js:450:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-23T16:01:02.482Z] DocumentNotFoundError: No document found for query "{ _id: '6922e374e03bac5156211eba' }" on model "User"
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\model.js:545:17
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\model.js:450:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-23T16:03:27.596Z] DocumentNotFoundError: No document found for query "{ _id: '6922e374e03bac5156211eba' }" on model "User"
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\model.js:545:17
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\model.js:450:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-23T16:08:20.578Z] DocumentNotFoundError: No document found for query "{ _id: '6922e374e03bac5156211eba' }" on model "User"
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\model.js:545:17
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\model.js:450:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-23T16:08:53.036Z] Error: Invalid credentials
+    at Object.loginUser (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:129:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:33:24
+[2025-11-23T16:10:49.180Z] DocumentNotFoundError: No document found for query "{ _id: '6922e374e03bac5156211eba' }" on model "User"
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\model.js:545:17
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\model.js:450:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-23T16:11:06.912Z] DocumentNotFoundError: No document found for query "{ _id: '6922e374e03bac5156211eba' }" on model "User"
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\model.js:545:17
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\model.js:450:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-23T16:11:26.072Z] Error: User already exists
+    at Object.registerUser (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:43:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:19:22
+[2025-11-23T16:11:33.883Z] Error: User already exists
+    at Object.registerUser (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:43:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:19:22
+[2025-11-23T16:11:36.001Z] Error: User already exists
+    at Object.registerUser (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:43:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:19:22
+[2025-11-23T16:11:44.646Z] DocumentNotFoundError: No document found for query "{ _id: '6922e374e03bac5156211eba' }" on model "User"
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\model.js:545:17
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\model.js:450:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-23T16:17:47.400Z] Error: Not authorized, no token
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:52:21)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+[2025-11-23T16:17:47.402Z] Error: Not authorized, no token
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:52:21)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+[2025-11-23T16:18:49.260Z] Error: Not authorized, no token
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:52:21)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+[2025-11-23T16:18:49.264Z] Error: Not authorized, no token
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:52:21)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+[2025-11-23T16:24:56.598Z] Error: Not authorized, no token
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:52:21)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:47:12)
+[2025-11-23T16:27:13.602Z] TypeError: Cannot read properties of undefined (reading '_id')
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:48:66
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:47:12)
+[2025-11-23T16:27:17.296Z] Error: Not authorized, no token
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:52:21)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+[2025-11-23T16:27:17.303Z] Error: Not authorized, no token
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:52:21)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+[2025-11-23T16:27:47.975Z] TypeError: Cannot read properties of undefined (reading '_id')
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:48:66
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:47:12)
+[2025-11-23T16:29:35.776Z] TypeError: Cannot read properties of undefined (reading '_id')
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:48:66
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:47:12)
+[2025-11-23T16:29:36.723Z] TypeError: Cannot read properties of undefined (reading '_id')
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:48:66
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:47:12)
+[2025-11-23T16:29:37.359Z] TypeError: Cannot read properties of undefined (reading '_id')
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:48:66
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:47:12)
+[2025-11-23T16:30:11.162Z] Error: Invalid or expired OTP
+    at Object.verifyLoginOtp (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:167:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:48:24
+[2025-11-23T16:30:12.492Z] Error: Invalid or expired OTP
+    at Object.verifyLoginOtp (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:167:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:48:24
+[2025-11-23T16:30:14.965Z] Error: Not authorized, no token
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:52:21)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+[2025-11-23T16:30:14.974Z] Error: Not authorized, no token
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:52:21)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+[2025-11-23T16:30:50.410Z] Error: Not authorized, no token
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:52:21)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+[2025-11-23T16:30:50.415Z] Error: Not authorized, no token
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:52:21)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+[2025-11-23T16:39:59.161Z] Error: Not authorized, user not found
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:32:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-23T16:39:59.163Z] Error: Not authorized, user not found
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:32:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-23T16:43:23.498Z] Error: Not authorized, user not found
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:32:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-23T16:43:23.506Z] Error: Not authorized, user not found
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:32:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-23T16:43:23.518Z] Error: Not authorized, user not found
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:32:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-23T16:43:23.523Z] Error: Not authorized, user not found
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:32:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-23T16:43:30.972Z] Error: Not authorized, no token
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:52:21)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+[2025-11-23T16:43:30.977Z] Error: Not authorized, no token
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:52:21)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+[2025-11-23T16:45:03.752Z] Error: Invalid credentials
+    at Object.loginUser (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:129:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:33:24
+[2025-11-23T16:46:29.599Z] Error: Invalid or expired OTP
+    at Object.verifyLoginOtp (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:167:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:48:24
+[2025-11-23T16:59:23.228Z] Error: Not authorized, no token
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:52:21)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+[2025-11-23T16:59:23.230Z] Error: Not authorized, no token
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:52:21)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+[2025-11-23T17:00:09.612Z] TypeError: VendorProfile.findOne(...).populate is not a function
+    at Object.getProfile (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:55:71)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:33:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:37:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-23T17:00:09.620Z] TypeError: VendorProfile.findOne(...).populate is not a function
+    at Object.getProfile (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:55:71)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:33:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:37:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-23T17:00:25.708Z] Error: Business name is required, Description is required
+    at Object.createOrUpdateProfile (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:21:25)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:47:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:37:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-23T17:00:28.064Z] Error: Business name is required, Description is required
+    at Object.createOrUpdateProfile (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:21:25)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:47:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:37:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-23T17:00:32.174Z] Error: Business name is required, Description is required
+    at Object.createOrUpdateProfile (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:21:25)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:47:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:37:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-23T17:00:37.835Z] Error: Business name is required, Description is required
+    at Object.createOrUpdateProfile (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:21:25)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:47:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:37:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-23T17:01:27.342Z] Error: Business name is required
+    at Object.createOrUpdateProfile (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:21:25)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:47:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:37:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-23T17:01:29.911Z] Error: Business name is required
+    at Object.createOrUpdateProfile (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:21:25)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:47:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:37:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-23T17:05:08.112Z] Error: Business name is required
+    at Object.createOrUpdateProfile (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:21:25)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:47:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:37:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-23T17:05:26.319Z] Error: Business name is required
+    at Object.createOrUpdateProfile (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:21:25)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:47:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:37:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-23T17:05:57.904Z] Error: Business name is required
+    at Object.createOrUpdateProfile (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:21:25)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:47:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:37:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-23T17:10:12.644Z] Error: Business name is required
+    at Object.createOrUpdateProfile (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:21:25)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:47:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:37:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-23T23:09:43.947Z] Error: Not authorized, no token
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:52:21)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+[2025-11-23T23:09:43.950Z] Error: Not authorized, no token
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:52:21)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+[2025-11-23T23:21:37.565Z] TypeError: VendorProfile.find(...).populate is not a function
+    at Object.searchVendors (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:123:49)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:19:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+[2025-11-23T23:21:37.575Z] TypeError: VendorProfile.find(...).populate is not a function
+    at Object.searchVendors (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:123:49)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:19:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+[2025-11-23T23:21:39.569Z] TypeError: VendorProfile.find(...).populate is not a function
+    at Object.searchVendors (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:123:49)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:19:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+[2025-11-23T23:21:40.394Z] TypeError: VendorProfile.find(...).populate is not a function
+    at Object.searchVendors (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:123:49)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:19:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+[2025-11-23T23:21:40.574Z] TypeError: VendorProfile.find(...).populate is not a function
+    at Object.searchVendors (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:123:49)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:19:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+[2025-11-23T23:21:40.765Z] TypeError: VendorProfile.find(...).populate is not a function
+    at Object.searchVendors (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:123:49)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:19:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+[2025-11-23T23:21:40.932Z] TypeError: VendorProfile.find(...).populate is not a function
+    at Object.searchVendors (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:123:49)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:19:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+[2025-11-23T23:21:41.109Z] TypeError: VendorProfile.find(...).populate is not a function
+    at Object.searchVendors (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:123:49)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:19:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+[2025-11-23T23:21:41.286Z] TypeError: VendorProfile.find(...).populate is not a function
+    at Object.searchVendors (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:123:49)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:19:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+[2025-11-23T23:21:41.511Z] TypeError: VendorProfile.find(...).populate is not a function
+    at Object.searchVendors (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:123:49)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:19:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+[2025-11-23T23:21:48.071Z] TypeError: VendorProfile.find(...).populate is not a function
+    at Object.searchVendors (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:123:49)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:19:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+[2025-11-23T23:21:49.275Z] TypeError: VendorProfile.find(...).populate is not a function
+    at Object.searchVendors (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:123:49)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:19:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+[2025-11-23T23:21:50.534Z] TypeError: VendorProfile.find(...).populate is not a function
+    at Object.searchVendors (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:123:49)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:19:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+[2025-11-23T23:21:50.546Z] TypeError: VendorProfile.find(...).populate is not a function
+    at Object.searchVendors (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:123:49)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:19:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+[2025-11-23T23:28:29.805Z] TypeError: VendorProfile.find(...).populate is not a function
+    at Object.searchVendors (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:123:49)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:19:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+[2025-11-23T23:28:29.812Z] TypeError: VendorProfile.find(...).populate is not a function
+    at Object.searchVendors (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:123:49)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:19:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+[2025-11-23T23:28:33.164Z] TypeError: VendorProfile.find(...).populate is not a function
+    at Object.searchVendors (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:123:49)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:19:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+[2025-11-23T23:28:33.166Z] TypeError: VendorProfile.find(...).populate is not a function
+    at Object.searchVendors (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:123:49)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:19:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+[2025-11-23T23:28:36.824Z] TypeError: VendorProfile.find(...).populate is not a function
+    at Object.searchVendors (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:123:49)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:19:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+[2025-11-23T23:28:36.838Z] TypeError: VendorProfile.find(...).populate is not a function
+    at Object.searchVendors (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:123:49)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:19:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+[2025-11-23T23:36:14.528Z] TypeError: VendorProfile.find(...).populate is not a function
+    at Object.searchVendors (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:123:58)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:19:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+[2025-11-23T23:36:14.547Z] TypeError: VendorProfile.find(...).populate is not a function
+    at Object.searchVendors (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:123:58)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:19:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+[2025-11-23T23:36:16.240Z] TypeError: VendorProfile.find(...).populate is not a function
+    at Object.searchVendors (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:123:58)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:19:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+[2025-11-23T23:36:20.056Z] TypeError: VendorProfile.find(...).populate is not a function
+    at Object.searchVendors (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:123:58)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:19:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+[2025-11-23T23:36:20.080Z] TypeError: VendorProfile.find(...).populate is not a function
+    at Object.searchVendors (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:123:58)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:19:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+[2025-11-23T23:42:15.489Z] TypeError: VendorProfile.find(...).populate is not a function
+    at Object.searchVendors (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:123:58)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:19:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+[2025-11-23T23:42:15.494Z] TypeError: VendorProfile.find(...).populate is not a function
+    at Object.searchVendors (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:123:58)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:19:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+[2025-11-23T23:42:19.115Z] TypeError: VendorProfile.find(...).populate is not a function
+    at Object.searchVendors (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:123:58)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:19:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+[2025-11-23T23:42:20.206Z] TypeError: VendorProfile.find(...).populate is not a function
+    at Object.searchVendors (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:123:58)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:19:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+[2025-11-23T23:42:20.874Z] TypeError: VendorProfile.find(...).populate is not a function
+    at Object.searchVendors (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:123:58)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:19:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+[2025-11-23T23:42:31.907Z] TypeError: VendorProfile.find(...).populate is not a function
+    at Object.searchVendors (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:123:58)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:19:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+[2025-11-23T23:42:32.702Z] TypeError: VendorProfile.find(...).populate is not a function
+    at Object.searchVendors (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:123:58)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:19:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+[2025-11-23T23:42:41.308Z] TypeError: VendorProfile.find(...).populate is not a function
+    at Object.searchVendors (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:123:58)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:19:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+[2025-11-23T23:43:10.169Z] TypeError: VendorProfile.find(...).populate is not a function
+    at Object.searchVendors (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:123:58)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:19:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+[2025-11-23T23:43:10.176Z] TypeError: VendorProfile.find(...).populate is not a function
+    at Object.searchVendors (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:123:58)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:19:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+[2025-11-23T23:45:15.521Z] TypeError: VendorProfile.find(...).populate is not a function
+    at Object.searchVendors (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:123:58)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:19:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+[2025-11-23T23:45:15.529Z] TypeError: VendorProfile.find(...).populate is not a function
+    at Object.searchVendors (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:123:58)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:19:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+[2025-11-24T01:15:49.103Z] Error: Not authorized, no token
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:52:21)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+[2025-11-24T01:15:49.114Z] Error: Not authorized, no token
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:52:21)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+[2025-11-24T01:15:53.039Z] Error: Not authorized, no token
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:52:21)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+[2025-11-24T01:15:53.041Z] Error: Not authorized, no token
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:52:21)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+[2025-11-24T01:16:46.682Z] TypeError: User.findById(...).select is not a function
+    at Object.getUserById (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:244:50)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:92:40
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:421:3)
+[2025-11-24T01:16:46.696Z] TypeError: User.findById(...).select is not a function
+    at Object.getUserById (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:244:50)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:92:40
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:421:3)
+[2025-11-24T01:16:46.722Z] TypeError: User.findById(...).select is not a function
+    at Object.getUserById (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:244:50)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:92:40
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:421:3)
+[2025-11-24T01:16:46.741Z] TypeError: User.findById(...).select is not a function
+    at Object.getUserById (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:244:50)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:92:40
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:421:3)
+[2025-11-24T01:19:31.364Z] Error: Not authorized, no token
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:52:21)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+[2025-11-24T01:19:31.372Z] Error: Not authorized, no token
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:52:21)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+[2025-11-24T01:21:19.837Z] Error: Not authorized, no token
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:52:21)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+[2025-11-24T01:21:19.842Z] Error: Not authorized, no token
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:52:21)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+[2025-11-24T01:21:55.509Z] TypeError: User.findById(...).select is not a function
+    at Object.getUserById (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:244:50)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:92:40
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:421:3)
+[2025-11-24T01:21:55.521Z] TypeError: User.findById(...).select is not a function
+    at Object.getUserById (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:244:50)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:92:40
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:421:3)
+[2025-11-24T01:25:41.944Z] Error: Not authorized, no token
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:52:21)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+[2025-11-24T01:25:41.951Z] Error: Not authorized, no token
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:52:21)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+[2025-11-24T01:25:44.724Z] Error: Not authorized, no token
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:52:21)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+[2025-11-24T01:25:44.726Z] Error: Not authorized, no token
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:52:21)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+[2025-11-24T01:26:06.825Z] Error: Not authorized, no token
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:52:21)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+[2025-11-24T01:26:06.830Z] Error: Not authorized, no token
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:52:21)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:328:13)
+[2025-11-24T01:26:35.326Z] TypeError: User.countDocuments is not a function
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\statsRoutes.js:21:34
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:47:12)
+[2025-11-24T01:26:35.341Z] TypeError: User.countDocuments is not a function
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\statsRoutes.js:21:34
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:47:12)
+[2025-11-24T01:26:38.196Z] TypeError: User.countDocuments is not a function
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\statsRoutes.js:21:34
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:47:12)
+[2025-11-24T01:26:38.198Z] TypeError: User.countDocuments is not a function
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\statsRoutes.js:21:34
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:47:12)
+[2025-11-24T01:27:01.964Z] TypeError: User.countDocuments is not a function
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\statsRoutes.js:21:34
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:47:12)
+[2025-11-24T01:27:01.966Z] TypeError: User.countDocuments is not a function
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\statsRoutes.js:21:34
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:47:12)
+[2025-11-24T01:28:30.925Z] TypeError: User.countDocuments is not a function
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\statsRoutes.js:21:34
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:47:12)
+[2025-11-24T01:28:30.927Z] TypeError: User.countDocuments is not a function
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\statsRoutes.js:21:34
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:47:12)
+[2025-11-24T01:33:25.100Z] Error: Invalid or expired OTP
+    at Object.verifyLoginOtp (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:167:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:48:24
+[2025-11-24T01:35:50.707Z] TypeError: User.findById(...).select is not a function
+    at Object.getUserById (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:244:50)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:92:40
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:421:3)
+[2025-11-24T01:35:50.722Z] TypeError: User.findById(...).select is not a function
+    at Object.getUserById (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:244:50)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:92:40
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:421:3)
+[2025-11-24T01:56:50.908Z] Error: Invalid or expired OTP
+    at Object.verifyLoginOtp (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:167:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:48:24

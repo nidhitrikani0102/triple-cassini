@@ -1,0 +1,177 @@
+const Guest = require('../models/Guest');
+const Event = require('../models/Event');
+const nodemailer = require('nodemailer');
+const sendEmail = require('../utils/sendEmail');
+const { validateGuest } = require('../validators/guestValidator');
+
+/**
+ * Guest Service
+ * Handles guest management and invitations.
+ */
+
+/**
+ * Adds a guest to an event.
+ * @param {string} eventId - ID of the event
+ * @param {Object} guestData - Guest details (name, email)
+ * @param {string} userId - ID of the requesting user
+ * @returns {Promise<Object>} Created guest
+ */
+const addGuest = async (eventId, guestData, userId) => {
+    try {
+        // Validate guest data
+        const errors = validateGuest(guestData);
+        if (errors.length > 0) {
+            const err = new Error(errors.join(', '));
+            err.status = 400;
+            throw err;
+        }
+
+        // Verify event ownership
+        const event = await Event.findById(eventId);
+        if (!event) {
+            const err = new Error('Event not found');
+            err.status = 404;
+            throw err;
+        }
+
+        if (event.user.toString() !== userId) {
+            const err = new Error('Not authorized');
+            err.status = 401;
+            throw err;
+        }
+
+        // Create guest via DAL
+        const guest = await Guest.createOne({
+            ...guestData,
+            event: eventId,
+        });
+
+        // Automatically send invitation
+        try {
+            await sendInvitation(guest._id, userId);
+            guest.isInvited = true; // Update local object to reflect change
+        } catch (emailError) {
+            console.error('Failed to send auto-invitation:', emailError);
+            // We don't throw here to avoid rolling back the guest creation, 
+            // but we could if strict atomicity is required. 
+            // For now, let's just log it.
+        }
+
+        return guest;
+    } catch (error) {
+        throw error;
+    }
+};
+
+/**
+ * Retrieves all guests for an event.
+ * @param {string} eventId - ID of the event
+ * @param {string} userId - ID of the requesting user
+ * @returns {Promise<Array>} List of guests
+ */
+const getGuests = async (eventId, userId) => {
+    try {
+        // Verify event ownership
+        const event = await Event.findById(eventId);
+        if (!event) {
+            const err = new Error('Event not found');
+            err.status = 404;
+            throw err;
+        }
+
+        if (event.user.toString() !== userId) {
+            const err = new Error('Not authorized');
+            err.status = 401;
+            throw err;
+        }
+
+        return await Guest.find({ event: eventId });
+    } catch (error) {
+        throw error;
+    }
+};
+
+/**
+ * Sends an email invitation to a guest.
+ * @param {string} guestId - ID of the guest
+ * @param {string} userId - ID of the requesting user
+ * @returns {Promise<Object>} Success message
+ */
+const sendInvitation = async (guestId, userId) => {
+    try {
+        const guest = await Guest.findById(guestId);
+        if (!guest) {
+            const err = new Error('Guest not found');
+            err.status = 404;
+            throw err;
+        }
+
+        const event = await Event.findById(guest.event);
+        if (event.user.toString() !== userId) {
+            const err = new Error('Not authorized');
+            err.status = 401;
+            throw err;
+        }
+
+        // Generate HTML Template based on config
+        const themeColors = {
+            classic: { header: '#343a40', bg: '#f8f9fa', text: '#212529', button: '#343a40' },
+            floral: { header: '#d63384', bg: '#fff0f5', text: '#4a4a4a', button: '#d63384' },
+            modern: { header: '#0d6efd', bg: '#ffffff', text: '#212529', button: '#0d6efd' },
+            party: { header: '#ffc107', bg: '#212529', text: '#ffffff', button: '#ffc107' }
+        };
+
+        const config = event.invitationConfig || { theme: 'classic', showMap: true, customMessage: '' };
+        const theme = themeColors[config.theme] || themeColors.classic;
+
+        const htmlTemplate = `
+            <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; background-color: ${theme.bg}; color: ${theme.text};">
+                <div style="background-color: ${theme.header}; padding: 20px; text-align: center; color: #ffffff;">
+                    <h1 style="margin: 0;">You're Invited!</h1>
+                </div>
+                <div style="padding: 30px;">
+                    <p style="font-size: 18px;">Dear <strong>${guest.name}</strong>,</p>
+                    <p style="font-size: 16px;">You are cordially invited to attend <strong>${event.name}</strong>.</p>
+                    
+                    ${config.customMessage ? `<p style="font-style: italic; margin: 20px 0; padding: 15px; background-color: rgba(0,0,0,0.05); border-radius: 5px;">"${config.customMessage}"</p>` : ''}
+
+                    <div style="background-color: rgba(255,255,255,0.7); padding: 20px; border-radius: 8px; margin: 20px 0; border: 1px solid #eee;">
+                        <p style="margin: 5px 0;">📅 <strong>Date:</strong> ${new Date(event.date).toLocaleDateString()}</p>
+                        <p style="margin: 5px 0;">⏰ <strong>Time:</strong> ${event.time}</p>
+                        <p style="margin: 5px 0;">📍 <strong>Location:</strong> ${event.location}</p>
+                    </div>
+
+                    ${config.showMap && event.mapLink ? `
+                        <div style="text-align: center; margin-top: 30px;">
+                            <a href="${event.mapLink}" style="background-color: #e91e63; color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block;">View Location on Map</a>
+                        </div>
+                    ` : ''}
+                </div>
+                <div style="text-align: center; padding: 20px; font-size: 12px; color: #888; border-top: 1px solid #eee;">
+                    Sent via EventEmpire
+                </div>
+            </div>
+        `;
+
+        // Send email invitation
+        await sendEmail({
+            email: guest.email,
+            subject: `Invitation to ${event.name}`,
+            message: `You have been invited to ${event.name}. Please check your email for details.`,
+            html: htmlTemplate
+        });
+
+        console.log(`Invitation sent to ${guest.email}`);
+
+        // Update guest status
+        guest.isInvited = true;
+        guest.invitedAt = Date.now();
+        await guest.save();
+
+        return { message: 'Invitation sent' };
+    } catch (error) {
+        throw error;
+    }
+};
+
+module.exports = { addGuest, getGuests, sendInvitation };
