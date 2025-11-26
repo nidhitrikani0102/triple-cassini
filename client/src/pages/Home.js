@@ -1,14 +1,26 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { Container, Row, Col, Button, Card, Carousel } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { AuthContext } from '../context/AuthContext';
 import people1 from '../assets/Images/people1.jpg';
 import people2 from '../assets/Images/people2.jpg';
 import people3 from '../assets/Images/people3.jpg';
 import people4 from '../assets/Images/people4.jpg';
 
 const Home = () => {
+    const { user } = useContext(AuthContext);
+    const navigate = useNavigate();
     const [stats, setStats] = useState({ users: 0, vendors: 0, events: 0 });
+
+    // Redirect logged-in users to their dashboard
+    useEffect(() => {
+        if (user) {
+            if (user.role === 'vendor') navigate('/vendor-dashboard');
+            else if (user.role === 'admin') navigate('/admin-dashboard');
+            else navigate('/dashboard');
+        }
+    }, [user, navigate]);
 
     // Fetch public statistics when the component mounts
     useEffect(() => {

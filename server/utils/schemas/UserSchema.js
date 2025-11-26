@@ -35,6 +35,16 @@ const userSchema = new mongoose.Schema({
         type: Boolean,
         default: false,
     },
+    // Soft Delete status: deleted users remain in DB but are inactive
+    isDeleted: {
+        type: Boolean,
+        default: false,
+    },
+    // Extended Profile Fields
+    phone: { type: String },
+    bio: { type: String },
+    location: { type: String },
+    avatar: { type: String },
     // One-Time Password for 2FA or password reset
     otp: String,
     // Expiration time for the OTP

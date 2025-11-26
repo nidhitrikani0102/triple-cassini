@@ -141,4 +141,14 @@ const findOneWithSelect = async (query, select) => {
     }
 };
 
-module.exports = { createOne, findOne, findById, find, findByIdAndDelete, findWithSelect, findOneWithSelect };
+const countDocuments = async (query) => {
+    try {
+        return await User.countDocuments(query);
+    } catch (error) {
+        const err = new Error(`Database Error: ${error.message}`);
+        err.status = 500;
+        throw err;
+    }
+};
+
+module.exports = { createOne, findOne, findById, find, findByIdAndDelete, findWithSelect, findOneWithSelect, countDocuments };

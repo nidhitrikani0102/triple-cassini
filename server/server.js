@@ -39,6 +39,8 @@ app.use('/api/budget', require('./routes/budgetRoutes')); // Budget tracking
 app.use('/api/admin', require('./routes/adminRoutes')); // Admin features
 app.use('/api/messages', require('./routes/messageRoutes')); // Messaging system
 app.use('/api/stats', require('./routes/statsRoutes')); // Statistics for landing page
+app.use('/api/users', require('./routes/userRoutes')); // User search and management
+app.use('/api/assignments', require('./routes/vendorAssignmentRoutes')); // Vendor assignments
 
 // Error Logger: Middleware to log errors and send standardized error responses
 app.use(require('./utils/errorLogger'));

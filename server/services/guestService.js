@@ -14,7 +14,7 @@ const { validateGuest } = require('../validators/guestValidator');
  * This function handles validation, creation, and sending an automatic invitation email.
  * 
  * @param {string} eventId - ID of the event
- * @param {Object} guestData - Guest details (name, email)
+ * @param {Object} guestData - Guest details (name, email, userId, invitationType)
  * @param {string} userId - ID of the requesting user
  * @returns {Promise<Object>} Created guest document
  */
@@ -44,22 +44,62 @@ const addGuest = async (eventId, guestData, userId) => {
         }
 
         // Step 4: Create the guest record in the database
+        const { name, email, userId: guestUserId, invitationType } = guestData;
+
         const guest = await Guest.createOne({
-            ...guestData,
             event: eventId,
+            name,
+            email,
+            userId: guestUserId,
+            invitationType,
+            status: 'Pending',
+            isInvited: true, // We assume we send it immediately
+            invitedAt: Date.now(),
         });
 
-        // Step 5: Automatically send an email invitation
-        // We wrap this in a try-catch so that if the email fails, the guest is still created
-        try {
-            await sendInvitation(guest._id, userId);
-            guest.isInvited = true; // Update the local object to reflect that the email was sent
-        } catch (emailError) {
-            console.error('Failed to send auto-invitation:', emailError);
-            // We log the error but don't stop the process
+        // Step 5: Send Invitation based on Type
+        if (invitationType === 'Email') {
+            // We wrap this in a try-catch so that if the email fails, the guest is still created
+            try {
+                await sendInvitation(guest._id, userId);
+            } catch (emailError) {
+                console.error('Failed to send auto-invitation:', emailError);
+                // We log the error but don't stop the process
+            }
+        } else {
+            // In-App: No email needed, just saved to DB.
+            console.log(`In-App Invitation created for User ${guestUserId}`);
         }
 
         return guest;
+    } catch (error) {
+        throw error;
+    }
+};
+
+/**
+ * Adds multiple guests to an event.
+ * @param {string} eventId - ID of the event
+ * @param {Array} guestsData - Array of guest details
+ * @param {string} userId - ID of the requesting user
+ * @returns {Promise<Array>} List of created guests
+ */
+const addGuestsBulk = async (eventId, guestsData, userId) => {
+    try {
+        const results = [];
+        // We process them sequentially to ensure proper validation and error handling for each
+        // In a production environment with huge lists, we might want to optimize this or use Promise.all
+        for (const guestData of guestsData) {
+            try {
+                const guest = await addGuest(eventId, guestData, userId);
+                results.push(guest);
+            } catch (error) {
+                console.error(`Failed to add guest ${guestData.email}:`, error.message);
+                // We continue adding other guests even if one fails
+                // Optionally, we could return a list of errors
+            }
+        }
+        return results;
     } catch (error) {
         throw error;
     }
@@ -88,6 +128,26 @@ const getGuests = async (eventId, userId) => {
         }
 
         return await Guest.find({ event: eventId });
+    } catch (error) {
+        throw error;
+    }
+};
+
+/**
+ * Retrieves all invitations for a specific user.
+ * @param {string} userId - ID of the user
+ * @returns {Promise<Array>} List of invitations (guest records)
+ */
+const getMyInvitations = async (userId) => {
+    try {
+        // Find guests where userId matches and populate event details
+        // We use the DAL method findWithPopulate
+        // Added mapLink and invitationConfig to populate fields
+        const invitations = await Guest.findWithPopulate({ userId }, 'event', 'name date time location mapLink invitationConfig');
+
+        // Sort manually since DAL doesn't support sort chaining yet, or we can just accept default sort
+        // For now, let's just return them. If sorting is needed, we should add it to DAL or sort in memory.
+        return invitations.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
     } catch (error) {
         throw error;
     }
@@ -220,7 +280,13 @@ const updateGuestStatus = async (guestId, status) => {
  * @returns {Promise<Object>} Success message
  */
 const resendInvitation = async (guestId, userId) => {
+    // Reset status to Pending so the user can RSVP again
+    const guest = await Guest.findById(guestId);
+    if (guest) {
+        guest.status = 'Pending';
+        await guest.save();
+    }
     return await sendInvitation(guestId, userId);
 };
 
-module.exports = { addGuest, getGuests, sendInvitation, updateGuestStatus, resendInvitation };
+module.exports = { addGuest, addGuestsBulk, getGuests, sendInvitation, updateGuestStatus, resendInvitation, getMyInvitations };

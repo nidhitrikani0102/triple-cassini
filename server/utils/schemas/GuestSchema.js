@@ -36,6 +36,16 @@ const guestSchema = new mongoose.Schema({
         enum: ['Pending', 'Accepted', 'Declined'],
         default: 'Pending',
     },
+    userId: {
+        type: String,
+        ref: 'User',
+        default: null
+    },
+    invitationType: {
+        type: String,
+        enum: ['Email', 'InApp'],
+        default: 'Email'
+    },
     // Timestamp when the invitation was sent
     invitedAt: {
         type: Date,

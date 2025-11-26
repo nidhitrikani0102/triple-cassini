@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useContext } from 'react';
-import { Container, Form, Button, Card, Row, Col, Alert, Tab, Nav, Image, Modal } from 'react-bootstrap';
+import { Container, Form, Button, Card, Row, Col, Alert, Tab, Nav, Image, Modal, Badge } from 'react-bootstrap';
 import axios from 'axios';
 import { AuthContext } from '../context/AuthContext';
-import Messages from './Messages'; // Reusing Messages component
+
 
 const VendorDashboard = () => {
     const [profile, setProfile] = useState(null);
@@ -16,11 +16,20 @@ const VendorDashboard = () => {
     const [message, setMessage] = useState(null);
     const [newImage, setNewImage] = useState('');
     const [showImageModal, setShowImageModal] = useState(false);
+
+    // Job Requests State
+    const [jobs, setJobs] = useState([]);
+    const [filteredJobs, setFilteredJobs] = useState([]);
+    const [searchTerm, setSearchTerm] = useState('');
+    const [filterStatus, setFilterStatus] = useState('All');
+
     const { user } = useContext(AuthContext);
     const token = localStorage.getItem('token');
 
     useEffect(() => {
         fetchProfile();
+        fetchJobs();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
@@ -30,6 +39,26 @@ const VendorDashboard = () => {
             return () => clearTimeout(timer);
         }
     }, [message]);
+
+    // Filter jobs based on search and status
+    useEffect(() => {
+        let result = jobs;
+
+        if (filterStatus !== 'All') {
+            result = result.filter(job => job.status === filterStatus);
+        }
+
+        if (searchTerm) {
+            const lowerTerm = searchTerm.toLowerCase();
+            result = result.filter(job =>
+                job.event.name.toLowerCase().includes(lowerTerm) ||
+                job.event.location.toLowerCase().includes(lowerTerm) ||
+                job.amount.toString().includes(lowerTerm)
+            );
+        }
+
+        setFilteredJobs(result);
+    }, [jobs, searchTerm, filterStatus]);
 
     // Function to fetch the vendor's profile from the backend
     const fetchProfile = async () => {
@@ -52,8 +81,40 @@ const VendorDashboard = () => {
         }
     };
 
+    // Fetch vendor jobs
+    const fetchJobs = async () => {
+        try {
+            const res = await axios.get('http://localhost:5000/api/assignments/vendor/my-jobs', {
+                headers: { Authorization: `Bearer ${token}` }
+            });
+            setJobs(res.data);
+        } catch (err) {
+            console.error("Error fetching jobs:", err);
+        }
+    };
+
+    // Handle job status update
+    const handleUpdateStatus = async (jobId, status) => {
+        try {
+            await axios.put(`http://localhost:5000/api/assignments/${jobId}/status`, { status }, {
+                headers: { Authorization: `Bearer ${token}` }
+            });
+            fetchJobs();
+            setMessage({ type: 'success', text: `Job marked as ${status}` });
+        } catch (err) {
+            console.error(err);
+            setMessage({ type: 'danger', text: 'Error updating status' });
+        }
+    };
+
     // Function to save or update the profile
     const handleSave = async () => {
+        // Client-side validation
+        if (!formData.serviceType || !formData.location || !formData.description || !formData.pricing) {
+            setMessage({ type: 'danger', text: 'Please fill in all mandatory fields: Service Type, Location, Pricing, and Description.' });
+            return;
+        }
+
         try {
             // We send the form data to the backend to create or update the profile
             const res = await axios.post('http://localhost:5000/api/vendors/profile', formData, {
@@ -64,7 +125,8 @@ const VendorDashboard = () => {
             setMessage({ type: 'success', text: 'Profile saved successfully' });
         } catch (err) {
             console.error(err);
-            setMessage({ type: 'danger', text: 'Error saving profile' });
+            const errorMsg = err.response?.data?.message || err.message || 'Error saving profile';
+            setMessage({ type: 'danger', text: errorMsg });
         }
     };
 
@@ -129,8 +191,9 @@ const VendorDashboard = () => {
                     <Nav.Item>
                         <Nav.Link eventKey="profile">Profile</Nav.Link>
                     </Nav.Item>
+
                     <Nav.Item>
-                        <Nav.Link eventKey="inquiries">Inquiries</Nav.Link>
+                        <Nav.Link eventKey="jobs">Job Requests</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
                         <Nav.Link eventKey="portfolio">Portfolio</Nav.Link>
@@ -215,8 +278,101 @@ const VendorDashboard = () => {
                         </Row>
                     </Tab.Pane>
 
-                    <Tab.Pane eventKey="inquiries">
-                        <Messages />
+
+
+                    <Tab.Pane eventKey="jobs">
+                        <div className="d-flex justify-content-between align-items-center mb-4">
+                            <h3 className="fw-bold gradient-text" style={{ background: 'linear-gradient(45deg, #2193b0, #6dd5ed)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+                                Job Board
+                            </h3>
+                            <div className="d-flex gap-2">
+                                <Form.Control
+                                    type="text"
+                                    placeholder="Search jobs..."
+                                    value={searchTerm}
+                                    onChange={(e) => setSearchTerm(e.target.value)}
+                                    style={{ maxWidth: '250px', borderRadius: '20px' }}
+                                />
+                                <Form.Select
+                                    value={filterStatus}
+                                    onChange={(e) => setFilterStatus(e.target.value)}
+                                    style={{ maxWidth: '150px', borderRadius: '20px' }}
+                                >
+                                    <option value="All">All Status</option>
+                                    <option value="Pending">Pending</option>
+                                    <option value="In Progress">In Progress</option>
+                                    <option value="Completed">Completed</option>
+                                    <option value="Paid">Paid</option>
+                                </Form.Select>
+                            </div>
+                        </div>
+
+                        <Row xs={1} md={2} lg={3} className="g-4">
+                            {filteredJobs.length === 0 ? (
+                                <Col xs={12}>
+                                    <div className="text-center py-5 text-muted">
+                                        <i className="bi bi-inbox fs-1 mb-3 d-block"></i>
+                                        <p>No jobs found matching your criteria.</p>
+                                    </div>
+                                </Col>
+                            ) : (
+                                filteredJobs.map(job => (
+                                    <Col key={job._id}>
+                                        <Card className="h-100 border-0 shadow-sm transform-hover" style={{ borderRadius: '15px', overflow: 'hidden' }}>
+                                            <div className={`p-3 text-white d-flex justify-content-between align-items-center`}
+                                                style={{
+                                                    background: job.status === 'Pending' ? 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)' :
+                                                        job.status === 'In Progress' ? 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)' :
+                                                            job.status === 'Completed' ? 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)' :
+                                                                'linear-gradient(135deg, #fa709a 0%, #fee140 100%)' // Paid
+                                                }}>
+                                                <div className="fw-bold"><i className="bi bi-calendar-event me-2"></i>{new Date(job.event.date).toLocaleDateString()}</div>
+                                                <Badge bg="white" text="dark" pill className="px-3">{job.status}</Badge>
+                                            </div>
+                                            <Card.Body>
+                                                <Card.Title className="fw-bold mb-1">{job.event.name}</Card.Title>
+                                                <Card.Text className="text-muted small mb-3">
+                                                    <i className="bi bi-geo-alt me-1"></i> {job.event.location}
+                                                </Card.Text>
+
+                                                <div className="d-flex justify-content-between align-items-center mb-3 p-2 bg-light rounded">
+                                                    <span className="text-muted small">Agreed Amount</span>
+                                                    <span className="fw-bold text-success">₹{job.amount.toLocaleString()}</span>
+                                                </div>
+
+                                                <div className="d-grid gap-2">
+                                                    {job.status === 'Pending' && (
+                                                        <>
+                                                            <Button variant="outline-success" className="rounded-pill" onClick={() => handleUpdateStatus(job._id, 'In Progress')}>
+                                                                <i className="bi bi-check-lg me-2"></i> Accept Job
+                                                            </Button>
+                                                            <Button variant="outline-danger" className="rounded-pill">
+                                                                <i className="bi bi-x-lg me-2"></i> Decline
+                                                            </Button>
+                                                        </>
+                                                    )}
+                                                    {job.status === 'In Progress' && (
+                                                        <Button variant="primary" className="rounded-pill" onClick={() => handleUpdateStatus(job._id, 'Completed')}>
+                                                            <i className="bi bi-check-circle me-2"></i> Mark Completed
+                                                        </Button>
+                                                    )}
+                                                    {job.status === 'Completed' && (
+                                                        <Button variant="secondary" disabled className="rounded-pill opacity-75">
+                                                            <i className="bi bi-clock me-2"></i> Waiting for Payment
+                                                        </Button>
+                                                    )}
+                                                    {job.status === 'Paid' && (
+                                                        <Button variant="success" disabled className="rounded-pill opacity-75">
+                                                            <i className="bi bi-cash-stack me-2"></i> Payment Received
+                                                        </Button>
+                                                    )}
+                                                </div>
+                                            </Card.Body>
+                                        </Card>
+                                    </Col>
+                                ))
+                            )}
+                        </Row>
                     </Tab.Pane>
 
                     <Tab.Pane eventKey="portfolio">

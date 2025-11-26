@@ -15,17 +15,14 @@ const NavigationBar = () => {
     if (!user) return null;
 
     // Define menu items based on the user's role
-    // This allows us to show different navigation links to different types of users
     const menuItems = user.role === 'vendor' ? [
-        // Vendors see their dashboard and messages
         { label: 'Dashboard', path: '/vendor-dashboard' },
         { label: 'Messages', path: '/messages' },
     ] : user.role === 'admin' ? [
         // Admin has no nav links in the header, only the logout button
-        // Their dashboard is their main view
     ] : [
-        // Regular users see their dashboard, vendor search, and messages
         { label: 'Dashboard', path: '/dashboard' },
+        { label: 'Invitations', path: '/invitations' },
         { label: 'Find Vendors', path: '/find-vendors' },
         { label: 'Messages', path: '/messages' },
     ];

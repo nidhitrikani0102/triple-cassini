@@ -1,4 +1,4 @@
-const VendorProfile = require('../utils/schemas/VendorProfileSchema');
+const VendorProfile = require('../models/VendorProfile');
 const User = require('../models/User'); // Ensure User model is registered
 const { validateVendorProfile } = require('../validators/vendorValidator');
 
@@ -58,7 +58,7 @@ const createOrUpdateProfile = async (userId, profileData) => {
  */
 const getProfile = async (userId) => {
     try {
-        const profile = await VendorProfile.findOne({ user: userId }).populate('user', 'name email');
+        const profile = await VendorProfile.findOneWithPopulate({ user: userId }, 'user', 'name email');
         if (!profile) {
             const err = new Error('Vendor profile not found');
             err.status = 404;
@@ -76,7 +76,7 @@ const getProfile = async (userId) => {
  */
 const getAllVendors = async () => {
     try {
-        return await VendorProfile.find().populate('user', 'name email');
+        return await VendorProfile.findWithPopulate({}, 'user', 'name email');
     } catch (error) {
         throw error;
     }
@@ -113,20 +113,26 @@ const addPortfolioImage = async (userId, imageUrl) => {
 const searchVendors = async (query) => {
     try {
         const filter = {};
+
+        // Handle generic search query (from frontend "Search by business name...")
+        if (query.query) {
+            const regex = { $regex: query.query, $options: 'i' };
+            filter.$or = [
+                { businessName: regex },
+                { serviceType: regex },
+                { location: regex }
+            ];
+        }
+
+        // Handle specific filters if provided (e.g. from Find Vendors page)
         if (query.location) {
             filter.location = { $regex: query.location, $options: 'i' };
         }
         if (query.serviceType) {
             filter.serviceType = { $regex: query.serviceType, $options: 'i' };
         }
-        if (query.name) {
-            // Search by user name requires a more complex lookup or aggregation
-            // For simplicity, we'll search vendor profile fields first.
-            // To search by user name, we'd need to find users first, then find their profiles.
-            // Let's stick to profile fields for now or implement a basic join.
-        }
 
-        const vendors = await VendorProfile.find(filter).populate('user', 'name email');
+        const vendors = await VendorProfile.findWithPopulate(filter, 'user', 'name email');
         console.log(`Search vendors found: ${vendors.length}`);
         return vendors;
     } catch (error) {

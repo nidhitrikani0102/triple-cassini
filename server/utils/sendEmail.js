@@ -49,13 +49,17 @@ const sendEmail = async (options) => {
         await transporter.sendMail(mailOptions);
         console.log(`Email sent to ${options.email}`);
     } catch (error) {
-        console.error('Error sending email:', error.message);
-        // Fallback to logging so the flow doesn't break for the user
-        console.log('==================================================');
-        console.log('EMAIL FAILED (Logged instead)');
-        console.log(`To: ${options.email}`);
-        console.log(`Subject: ${options.subject}`);
-        console.log('==================================================');
+        // ROBUST ERROR HANDLING:
+        // If email fails (network, auth, etc.), we catch it and LOG it.
+        // We do NOT throw the error, so the application flow continues.
+        console.error('==================================================');
+        console.error('EMAIL FAILED (Network/Auth Error)');
+        console.error(`Error: ${error.message}`);
+        console.error('FALLBACK LOGGING (Mock Mode Activated)');
+        console.error(`To: ${options.email}`);
+        console.error(`Subject: ${options.subject}`);
+        console.error(`Message: ${options.message}`);
+        console.error('==================================================');
     }
 };
 

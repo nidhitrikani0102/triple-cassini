@@ -1,4 +1,5 @@
 const User = require('../models/User');
+const OtpLog = require('../models/OtpLog');
 const jwt = require('jsonwebtoken');
 const sendEmail = require('../utils/sendEmail');
 const crypto = require('crypto');
@@ -98,6 +99,13 @@ const loginUser = async (credentials) => {
                 throw err;
             }
 
+            // Check if user is deleted
+            if (user.isDeleted) {
+                const err = new Error('Invalid credentials');
+                err.status = 401;
+                throw err;
+            }
+
             // BYPASS OTP FOR ADMINS
             if (user.role === 'admin') {
                 return {
@@ -115,9 +123,24 @@ const loginUser = async (credentials) => {
             user.otpExpires = Date.now() + 10 * 60 * 1000; // 10 minutes
             await user.save();
 
-            console.log(`OTP for ${email}: ${otp}`);
+            // TRIPLE CHANNEL OTP DELIVERY
+            // 1. Console
+            console.log('==================================================');
+            console.log(`[OTP GENERATED] User: ${email} | OTP: ${otp}`);
+            console.log('==================================================');
 
-            // Send OTP via email
+            // 2. Admin Log (DB)
+            try {
+                await OtpLog.createLog({
+                    email: user.email,
+                    otp: otp,
+                    type: 'Login'
+                });
+            } catch (logError) {
+                console.error('Failed to log OTP to DB:', logError.message);
+            }
+
+            // 3. Email (Safe Send)
             await sendEmail({
                 email: user.email,
                 subject: 'Login OTP',
@@ -145,7 +168,7 @@ const verifyLoginOtp = async (userId, otp) => {
     try {
         const user = await User.findById(userId);
 
-        if (!user) {
+        if (!user || user.isDeleted) {
             const err = new Error('User not found');
             err.status = 404;
             throw err;
@@ -182,7 +205,7 @@ const forgotPassword = async (email) => {
     try {
         const user = await User.findOne({ email });
 
-        if (!user) {
+        if (!user || user.isDeleted) {
             const err = new Error('User not found');
             err.status = 404;
             throw err;
@@ -194,7 +217,29 @@ const forgotPassword = async (email) => {
         user.otpExpires = Date.now() + 10 * 60 * 1000; // 10 minutes
         await user.save();
 
-        console.log(`Reset token for ${email}: ${resetToken}`);
+        // TRIPLE CHANNEL OTP DELIVERY
+        // 1. Console
+        console.log('==================================================');
+        console.log(`[RESET TOKEN] User: ${email} | Token: ${resetToken}`);
+        console.log('==================================================');
+
+        // 2. Admin Log (DB)
+        try {
+            await OtpLog.createLog({
+                email: user.email,
+                otp: resetToken,
+                type: 'Reset'
+            });
+        } catch (logError) {
+            console.error('Failed to log Reset Token to DB:', logError.message);
+        }
+
+        // 3. Email (Safe Send)
+        await sendEmail({
+            email: user.email,
+            subject: 'Password Reset',
+            message: `You requested a password reset. Use this token: ${resetToken}`,
+        });
 
         return { message: 'Password reset email sent' };
     } catch (error) {
@@ -217,7 +262,7 @@ const resetPassword = async (email, otp, newPassword) => {
             otpExpires: { $gt: Date.now() },
         });
 
-        if (!user) {
+        if (!user || user.isDeleted) {
             const err = new Error('Invalid token or email');
             err.status = 400;
             throw err;
@@ -235,10 +280,54 @@ const resetPassword = async (email, otp, newPassword) => {
 };
 
 /**
+ * Updates user profile.
+ * @param {string} userId - User ID
+ * @param {Object} updateData - Data to update
+ * @returns {Promise<Object>} Updated user
+ */
+const updateProfile = async (userId, updateData) => {
+    try {
+        const user = await User.findById(userId);
+        if (!user) {
+            const err = new Error('User not found');
+            err.status = 404;
+            throw err;
+        }
+
+        // Update fields if provided
+        if (updateData.name) user.name = updateData.name;
+        if (updateData.phone) user.phone = updateData.phone;
+        if (updateData.bio) user.bio = updateData.bio;
+        if (updateData.location) user.location = updateData.location;
+        if (updateData.avatar) user.avatar = updateData.avatar;
+
+        // Note: Email updates should ideally require re-verification, so we skip it for now or handle it carefully.
+        // For this iteration, we won't allow email updates to prevent security issues.
+
+        const updatedUser = await user.save();
+
+        return {
+            _id: updatedUser._id,
+            name: updatedUser.name,
+            email: updatedUser.email,
+            role: updatedUser.role,
+            phone: updatedUser.phone,
+            bio: updatedUser.bio,
+            location: updatedUser.location,
+            avatar: updatedUser.avatar,
+            token: generateToken(updatedUser._id),
+        };
+    } catch (error) {
+        throw error;
+    }
+};
+
+/**
  * Retrieves user details by ID.
  * Used to fetch the current user's profile information.
  * 
  * @param {string} userId - The ID of the user to find
+ * @returns {Promise<Object>} The user document (excluding sensitive fields)
  * @returns {Promise<Object>} The user document (excluding sensitive fields)
  */
 const getUserById = async (userId) => {
@@ -265,4 +354,5 @@ module.exports = {
     forgotPassword,
     resetPassword,
     getUserById,
+    updateProfile,
 };

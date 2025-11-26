@@ -2,6 +2,7 @@ const express = require('express'); // Import Express framework
 const router = express.Router(); // Create a new Router object to handle routes
 const authService = require('../services/authService'); // Import the service that contains the business logic
 const authMiddleware = require('../middleware/authMiddleware'); // Import middleware for security
+const upload = require('../middleware/uploadMiddleware'); // Import upload middleware
 
 /**
  * Auth Routes
@@ -91,6 +92,20 @@ router.post('/reset-password', async (req, res, next) => {
 });
 
 /**
+ * @route   PUT /api/auth/profile
+ * @desc    Update user profile
+ * @access  Private
+ */
+router.put('/profile', authMiddleware.protect, async (req, res, next) => {
+    try {
+        const updatedUser = await authService.updateProfile(req.user._id, req.body);
+        res.json(updatedUser);
+    } catch (error) {
+        next(error);
+    }
+});
+
+/**
  * @route   GET /api/auth/:id
  * @desc    Get user details by ID
  * @access  Public
@@ -101,6 +116,23 @@ router.get('/:id', async (req, res, next) => {
         res.json(user);
     } catch (error) {
         next(error);
+    }
+});
+
+/**
+ * @route   POST /api/auth/upload
+ * @desc    Upload a profile picture
+ * @access  Private
+ */
+router.post('/upload', authMiddleware.protect, upload.single('image'), (req, res) => {
+    try {
+        if (!req.file) {
+            return res.status(400).json({ message: 'No file uploaded' });
+        }
+        const imageUrl = `${req.protocol}://${req.get('host')}/uploads/${req.file.filename}`;
+        res.json({ imageUrl });
+    } catch (error) {
+        res.status(500).json({ message: 'Server Error' });
     }
 });
 

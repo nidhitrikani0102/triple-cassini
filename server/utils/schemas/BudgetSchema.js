@@ -31,7 +31,7 @@ const budgetSchema = new mongoose.Schema({
             // Category of the expense
             category: {
                 type: String,
-                enum: ['Venue', 'Catering', 'Decoration', 'Entertainment', 'Other'],
+                enum: ['Venue', 'Catering', 'Decoration', 'Entertainment', 'Photography', 'Videography', 'Music', 'Florist', 'Bakery', 'Transport', 'Attire', 'Makeup', 'Planning', 'Other'],
                 required: true
             },
         }

@@ -1292,3 +1292,700 @@
     at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:365:14)
     at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:376:14)
     at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:421:3)
+[2025-11-25T07:45:24.831Z] TypeError: Cannot read properties of undefined (reading '_id')
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\guestRoutes.js:35:82
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+[2025-11-25T07:45:24.841Z] TypeError: Cannot read properties of undefined (reading '_id')
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\guestRoutes.js:35:82
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+[2025-11-25T07:46:15.174Z] TypeError: Cannot read properties of undefined (reading '_id')
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\guestRoutes.js:35:82
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+[2025-11-25T07:46:15.176Z] TypeError: Cannot read properties of undefined (reading '_id')
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\guestRoutes.js:35:82
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+[2025-11-25T07:58:54.584Z] TypeError: Cannot read properties of undefined (reading '_id')
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\guestRoutes.js:35:82
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+[2025-11-25T07:58:54.585Z] TypeError: Cannot read properties of undefined (reading '_id')
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\guestRoutes.js:35:82
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+[2025-11-25T07:58:55.617Z] TypeError: Cannot read properties of undefined (reading '_id')
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\guestRoutes.js:35:82
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+[2025-11-25T07:58:55.621Z] TypeError: Cannot read properties of undefined (reading '_id')
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\guestRoutes.js:35:82
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+[2025-11-25T07:58:56.705Z] TypeError: Cannot read properties of undefined (reading '_id')
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\guestRoutes.js:35:82
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+[2025-11-25T07:58:56.709Z] TypeError: Cannot read properties of undefined (reading '_id')
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\guestRoutes.js:35:82
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+[2025-11-25T07:59:18.566Z] TypeError: Cannot read properties of undefined (reading '_id')
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\guestRoutes.js:35:82
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+[2025-11-25T07:59:18.574Z] TypeError: Cannot read properties of undefined (reading '_id')
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\guestRoutes.js:35:82
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+[2025-11-25T08:05:45.645Z] TypeError: Cannot read properties of undefined (reading '_id')
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\guestRoutes.js:33:90
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+[2025-11-25T08:05:57.552Z] TypeError: Cannot read properties of undefined (reading '_id')
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\guestRoutes.js:33:90
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+[2025-11-25T08:06:10.804Z] Error: Invalid ID format
+    at handleDbError (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\models\Guest.js:22:21)
+    at Object.findWithPopulate (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\models\Guest.js:98:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async Object.getMyInvitations (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\guestService.js:117:29)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\guestRoutes.js:18:29
+[2025-11-25T08:06:10.817Z] Error: Invalid ID format
+    at handleDbError (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\models\Guest.js:22:21)
+    at Object.findWithPopulate (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\models\Guest.js:98:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async Object.getMyInvitations (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\guestService.js:117:29)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\guestRoutes.js:18:29
+[2025-11-25T08:07:32.414Z] Error: Invalid ID format
+    at handleDbError (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\models\Guest.js:22:21)
+    at Object.findWithPopulate (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\models\Guest.js:98:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async Object.getMyInvitations (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\guestService.js:117:29)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\guestRoutes.js:18:29
+[2025-11-25T08:07:32.420Z] Error: Invalid ID format
+    at handleDbError (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\models\Guest.js:22:21)
+    at Object.findWithPopulate (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\models\Guest.js:98:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async Object.getMyInvitations (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\guestService.js:117:29)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\guestRoutes.js:18:29
+[2025-11-25T08:09:33.308Z] TypeError: Cannot read properties of undefined (reading '_id')
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\guestRoutes.js:49:82
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+[2025-11-25T08:09:33.318Z] TypeError: Cannot read properties of undefined (reading '_id')
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\guestRoutes.js:49:82
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+[2025-11-25T08:09:47.990Z] TypeError: Cannot read properties of undefined (reading '_id')
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\guestRoutes.js:33:90
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+[2025-11-25T08:09:55.841Z] TypeError: Cannot read properties of undefined (reading '_id')
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\guestRoutes.js:33:90
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+[2025-11-25T08:10:08.177Z] TypeError: Cannot read properties of undefined (reading '_id')
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\guestRoutes.js:33:90
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+[2025-11-25T08:10:13.642Z] TypeError: Cannot read properties of undefined (reading '_id')
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\guestRoutes.js:33:90
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+[2025-11-25T08:13:16.044Z] Error: Invalid credentials
+    at Object.loginUser (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:145:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:39:24
+[2025-11-25T08:13:24.970Z] Error: Invalid credentials
+    at Object.loginUser (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:145:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:39:24
+[2025-11-25T09:35:18.361Z] TypeError: User.findById(...).select is not a function
+    at Object.getUserById (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:286:50)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:100:40
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:421:3)
+[2025-11-25T09:35:18.365Z] TypeError: User.findById(...).select is not a function
+    at Object.getUserById (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:286:50)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:100:40
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:421:3)
+[2025-11-25T09:35:18.387Z] TypeError: User.findById(...).select is not a function
+    at Object.getUserById (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:286:50)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:100:40
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:421:3)
+[2025-11-25T09:35:18.403Z] TypeError: User.findById(...).select is not a function
+    at Object.getUserById (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:286:50)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:100:40
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:421:3)
+[2025-11-25T11:46:36.468Z] Error: Guest name is required, Valid guest email is required
+    at Object.addGuest (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\guestService.js:26:25)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\guestRoutes.js:33:42
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:49:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-25T11:46:41.361Z] Error: Guest name is required, Valid guest email is required
+    at Object.addGuest (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\guestService.js:26:25)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\guestRoutes.js:33:42
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:49:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-25T11:47:03.999Z] Error: Guest name is required, Valid guest email is required
+    at Object.addGuest (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\guestService.js:26:25)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\guestRoutes.js:33:42
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:49:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-25T12:50:12.044Z] TypeError: User.findById(...).select is not a function
+    at Object.getUserById (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:286:50)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:100:40
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:421:3)
+[2025-11-25T12:50:12.061Z] TypeError: User.findById(...).select is not a function
+    at Object.getUserById (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:286:50)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:100:40
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:421:3)
+[2025-11-25T12:53:27.748Z] Error: Database Error: VendorAssignment validation failed: _id: Cast to ObjectId failed for value "VA001" (type string) at path "_id" because of "BSONError"
+    at Object.createOne (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\models\VendorAssignment.js:48:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async Object.createAssignment (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorAssignmentService.js:30:28)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorAssignmentRoutes.js:18:28
+[2025-11-25T12:53:35.562Z] Error: Database Error: VendorAssignment validation failed: _id: Cast to ObjectId failed for value "VA001" (type string) at path "_id" because of "BSONError"
+    at Object.createOne (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\models\VendorAssignment.js:48:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async Object.createAssignment (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorAssignmentService.js:30:28)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorAssignmentRoutes.js:18:28
+[2025-11-25T12:53:42.299Z] Error: Database Error: VendorAssignment validation failed: _id: Cast to ObjectId failed for value "VA001" (type string) at path "_id" because of "BSONError"
+    at Object.createOne (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\models\VendorAssignment.js:48:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async Object.createAssignment (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorAssignmentService.js:30:28)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorAssignmentRoutes.js:18:28
+[2025-11-25T12:54:07.771Z] Error: Database Error: VendorAssignment validation failed: _id: Cast to ObjectId failed for value "VA001" (type string) at path "_id" because of "BSONError"
+    at Object.createOne (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\models\VendorAssignment.js:48:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async Object.createAssignment (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorAssignmentService.js:30:28)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorAssignmentRoutes.js:18:28
+[2025-11-25T13:03:28.009Z] ValidationError: Budget validation failed: expenses.0.category: `Photography` is not a valid enum value for path `category`.
+    at Document.invalidate (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\document.js:3362:32)
+    at Subdocument.invalidate (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\types\subdocument.js:257:12)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\document.js:3123:17
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\schemaType.js:1446:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:84:11)
+[2025-11-25T13:03:30.182Z] ValidationError: Budget validation failed: expenses.0.category: `Photography` is not a valid enum value for path `category`.
+    at Document.invalidate (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\document.js:3362:32)
+    at Subdocument.invalidate (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\types\subdocument.js:257:12)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\document.js:3123:17
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\schemaType.js:1446:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:84:11)
+[2025-11-25T13:03:42.053Z] ValidationError: Budget validation failed: expenses.0.category: `Photography` is not a valid enum value for path `category`.
+    at Document.invalidate (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\document.js:3362:32)
+    at Subdocument.invalidate (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\types\subdocument.js:257:12)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\document.js:3123:17
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\schemaType.js:1446:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:84:11)
+[2025-11-25T13:04:11.949Z] ValidationError: Budget validation failed: expenses.0.category: `Photography` is not a valid enum value for path `category`.
+    at Document.invalidate (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\document.js:3362:32)
+    at Subdocument.invalidate (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\types\subdocument.js:257:12)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\document.js:3123:17
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\mongoose\lib\schemaType.js:1446:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:84:11)
+[2025-11-25T17:31:19.030Z] Error: Not authorized, user not found
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:43:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-25T17:31:19.043Z] Error: Not authorized, user not found
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:43:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-25T17:31:20.857Z] Error: Not authorized, user not found
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:43:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-25T17:31:20.861Z] Error: Not authorized, user not found
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:43:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-25T17:31:23.672Z] Error: Not authorized, user not found
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:43:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-25T17:31:23.679Z] Error: Not authorized, user not found
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:43:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-25T17:31:25.955Z] Error: Not authorized, user not found
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:43:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-25T17:31:25.965Z] Error: Not authorized, user not found
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:43:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-25T17:31:44.486Z] TypeError: VendorProfile.findOneAndDelete is not a function
+    at Object.deleteUser (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\adminService.js:103:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\adminRoutes.js:76:24
+[2025-11-25T17:31:55.313Z] Error: User not found
+    at Object.deleteUser (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\adminService.js:96:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\adminRoutes.js:76:24
+[2025-11-25T17:38:48.149Z] Error: Invalid credentials
+    at Object.loginUser (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:145:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:40:24
+[2025-11-25T17:41:34.299Z] Error: Invalid credentials
+    at Object.loginUser (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:145:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:40:24
+[2025-11-25T18:36:24.637Z] Error: Not authorized, user not found
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:57:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-25T18:36:24.642Z] Error: Not authorized, user not found
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:57:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-25T18:36:24.649Z] Error: Not authorized, user not found
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:57:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-25T18:36:24.668Z] Error: Not authorized, user not found
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:57:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-25T18:36:24.672Z] Error: Not authorized, user not found
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:57:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-25T18:36:24.679Z] Error: Not authorized, user not found
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:57:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-25T18:53:22.335Z] undefined
+[2025-11-25T18:53:22.336Z] Error: Vendor profile not found
+    at Object.getProfile (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:63:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:48:25
+[2025-11-25T18:53:22.354Z] undefined
+[2025-11-25T18:53:22.358Z] Error: Vendor profile not found
+    at Object.getProfile (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:63:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:48:25
+[2025-11-25T18:54:12.081Z] Error: Description is required
+    at Object.createOrUpdateProfile (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:23:25)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:62:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:63:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-25T18:54:16.919Z] Error: Description is required
+    at Object.createOrUpdateProfile (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:23:25)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:62:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:63:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-25T18:54:24.644Z] Error: Description is required
+    at Object.createOrUpdateProfile (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:23:25)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:62:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:63:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-25T18:56:12.023Z] Error: Description is required
+    at Object.createOrUpdateProfile (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:23:25)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:62:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:63:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-25T18:56:19.222Z] Error: Description is required
+    at Object.createOrUpdateProfile (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:23:25)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:62:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:63:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-25T18:56:36.171Z] TypeError: VendorProfile.createOne is not a function
+    at Object.createOrUpdateProfile (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:43:43)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:62:25
+[2025-11-25T19:00:58.146Z] Error: Vendor profile not found
+    at Object.getProfile (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:63:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:48:25
+[2025-11-25T19:00:58.146Z] undefined
+[2025-11-25T19:04:40.300Z] TypeError: VendorProfile.findOne(...).populate is not a function
+    at Object.getProfile (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:61:71)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:48:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:63:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-25T19:04:40.328Z] TypeError: VendorProfile.findOne(...).populate is not a function
+    at Object.getProfile (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:61:71)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:48:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:63:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-25T19:05:57.392Z] TypeError: VendorProfile.find(...).populate is not a function
+    at Object.searchVendors (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:135:58)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:20:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+[2025-11-25T19:05:57.401Z] TypeError: VendorProfile.find(...).populate is not a function
+    at Object.searchVendors (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:135:58)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:20:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+[2025-11-25T19:06:01.603Z] TypeError: VendorProfile.find(...).populate is not a function
+    at Object.searchVendors (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:135:58)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:20:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+[2025-11-25T19:06:01.606Z] TypeError: VendorProfile.find(...).populate is not a function
+    at Object.searchVendors (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:135:58)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:20:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+[2025-11-25T19:06:02.486Z] TypeError: VendorProfile.find(...).populate is not a function
+    at Object.searchVendors (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:135:58)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:20:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+[2025-11-25T19:06:02.496Z] TypeError: VendorProfile.find(...).populate is not a function
+    at Object.searchVendors (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:135:58)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:20:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+[2025-11-25T19:06:16.182Z] TypeError: VendorProfile.find(...).populate is not a function
+    at Object.searchVendors (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:135:58)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:20:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+[2025-11-25T19:06:16.184Z] TypeError: VendorProfile.find(...).populate is not a function
+    at Object.searchVendors (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:135:58)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:20:45
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:175:3)
+[2025-11-25T19:12:30.507Z] TypeError: User.findById(...).select is not a function
+    at Object.getUserById (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:337:50)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:115:40
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:421:3)
+[2025-11-25T19:12:30.521Z] TypeError: User.findById(...).select is not a function
+    at Object.getUserById (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:337:50)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:115:40
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:421:3)
+[2025-11-25T19:12:30.565Z] TypeError: User.findById(...).select is not a function
+    at Object.getUserById (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:337:50)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:115:40
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:421:3)
+[2025-11-25T19:12:30.591Z] TypeError: User.findById(...).select is not a function
+    at Object.getUserById (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:337:50)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:115:40
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:421:3)
+[2025-11-25T19:13:24.440Z] TypeError: User.findById(...).select is not a function
+    at Object.getUserById (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:337:50)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:115:40
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:421:3)
+[2025-11-25T19:13:24.453Z] TypeError: User.findById(...).select is not a function
+    at Object.getUserById (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:337:50)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:115:40
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:421:3)
+[2025-11-25T19:13:51.095Z] TypeError: User.findById(...).select is not a function
+    at Object.getUserById (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:337:50)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:115:40
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:421:3)
+[2025-11-25T19:13:51.099Z] TypeError: User.findById(...).select is not a function
+    at Object.getUserById (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:337:50)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:115:40
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:421:3)
+[2025-11-25T19:30:44.196Z] Error: Not authorized, user not found
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:57:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-25T19:30:44.193Z] Error: Not authorized, user not found
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:57:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-25T19:30:44.206Z] Error: Not authorized, user not found
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:57:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-25T19:30:44.208Z] Error: Not authorized, user not found
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:57:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)

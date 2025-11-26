@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const authMiddleware = require('../middleware/authMiddleware');
-const User = require('../utils/schemas/UserSchema');
-const Event = require('../utils/schemas/EventSchema');
-const VendorProfile = require('../utils/schemas/VendorProfileSchema');
+const User = require('../models/User');
+const Event = require('../models/Event');
+const VendorProfile = require('../models/VendorProfile');
 
 /**
  * Stats Routes
@@ -14,20 +14,15 @@ const VendorProfile = require('../utils/schemas/VendorProfileSchema');
 /**
  * @route   GET /api/stats/public
  * @desc    Get public statistics for landing page
- * @access  Public
- */
-/**
- * @route   GET /api/stats/public
- * @desc    Get public statistics for landing page
  * @access  Public (No login required)
  */
 router.get('/public', async (req, res, next) => {
     try {
         // Count total number of documents in each collection
-        // This is used to show "X Users, Y Events" on the home page
-        const users = await User.countDocuments();
+        // We exclude deleted users from the count
+        const users = await User.countDocuments({ role: 'user', isDeleted: { $ne: true } });
         const events = await Event.countDocuments();
-        const vendors = await VendorProfile.countDocuments();
+        const vendors = await User.countDocuments({ role: 'vendor', isDeleted: { $ne: true } });
 
         res.json({
             users,

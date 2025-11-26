@@ -1,25 +1,15 @@
 const express = require('express');
 const router = express.Router();
-const adminService = require('../services/adminService');
 const authMiddleware = require('../middleware/authMiddleware');
+const adminService = require('../services/adminService');
+const OtpLog = require('../models/OtpLog');
 
-/**
- * Admin Routes
- * Handles administrative actions.
- * Base URL: /api/admin
- */
-
-// Middleware: Protect all routes (Login required) and restrict to 'admin' role
-// 1. authMiddleware.protect: Checks for a valid JWT token (user is logged in)
+// Apply admin protection to all routes
+// 1. authMiddleware.protect: Checks if the user is logged in (valid token)
 // 2. authMiddleware.admin: Checks if the user's role is 'admin' (user has permission)
 router.use(authMiddleware.protect);
 router.use(authMiddleware.admin);
 
-/**
- * @route   GET /api/admin/users
- * @desc    Get all users (Admin only)
- * @access  Private/Admin
- */
 /**
  * @route   GET /api/admin/users
  * @desc    Get all users (Admin only)
@@ -43,6 +33,20 @@ router.get('/vendors', async (req, res, next) => {
     try {
         const vendors = await adminService.getAllVendors();
         res.json(vendors);
+    } catch (error) {
+        next(error);
+    }
+});
+
+/**
+ * @route   GET /api/admin/otps
+ * @desc    Get latest OTP logs (Admin only)
+ * @access  Private/Admin
+ */
+router.get('/otps', async (req, res, next) => {
+    try {
+        const logs = await OtpLog.findLatest();
+        res.json(logs);
     } catch (error) {
         next(error);
     }

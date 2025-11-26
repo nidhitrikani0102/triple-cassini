@@ -15,9 +15,9 @@ const bcrypt = require('bcryptjs');
  */
 const getAllUsers = async () => {
     try {
-        // Find all documents in the User collection where role is 'user'
+        // Find all documents in the User collection where role is 'user' and isDeleted is not true
         // We exclude the 'password' field for security reasons ('-password')
-        return await User.findWithSelect({ role: 'user' }, '-password');
+        return await User.findWithSelect({ role: 'user', isDeleted: { $ne: true } }, '-password');
     } catch (error) {
         throw error; // Pass any errors to the controller
     }
@@ -33,8 +33,8 @@ const getAllUsers = async () => {
  */
 const getAllVendors = async () => {
     try {
-        // Step 1: Get all users who have the 'vendor' role
-        const vendors = await User.findWithSelect({ role: 'vendor' }, '-password');
+        // Step 1: Get all users who have the 'vendor' role and are not deleted
+        const vendors = await User.findWithSelect({ role: 'vendor', isDeleted: { $ne: true } }, '-password');
 
         // Step 2: For each vendor, fetch their detailed profile from the VendorProfile collection
         // We use Promise.all to run these queries in parallel for better performance
@@ -91,19 +91,38 @@ const updateUser = async (userId, updateData) => {
  */
 const deleteUser = async (userId) => {
     try {
-        const user = await User.findByIdAndDelete(userId);
+        // Soft delete: Update isDeleted to true instead of removing the document
+        const user = await User.findById(userId);
         if (!user) {
             const err = new Error('User not found');
             err.status = 404;
             throw err;
         }
 
-        // If user was a vendor, delete their profile too
+        // Anonymize User Data to allow re-registration with the same email
+        // and to protect user privacy while keeping the ID for sequence integrity.
+        user.email = `deleted_${Date.now()}_${user.email}`; // Free up the original email
+        if (user.phone) {
+            user.phone = `deleted_${Date.now()}_${user.phone}`; // Free up phone if unique
+        }
+        // user.name = 'Deleted User'; // Keep original name as per user request
+        user.password = 'deleted'; // Invalidate password
+        user.bio = undefined;
+        user.location = undefined;
+        user.avatar = undefined;
+        user.otp = undefined;
+        user.otpExpires = undefined;
+        user.isDeleted = true;
+
+        await user.save();
+
+        // If user was a vendor, we should delete the profile to remove business details
         if (user.role === 'vendor') {
+            console.log(`Deleting vendor profile for user: ${userId}`);
             await VendorProfile.findOneAndDelete({ user: userId });
         }
 
-        return { message: 'User deleted successfully' };
+        return { message: 'User deleted successfully (Anonymized)' };
     } catch (error) {
         throw error;
     }

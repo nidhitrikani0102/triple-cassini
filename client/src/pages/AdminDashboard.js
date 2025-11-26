@@ -6,6 +6,7 @@ import { AuthContext } from '../context/AuthContext';
 const AdminDashboard = () => {
     const [users, setUsers] = useState([]);
     const [vendors, setVendors] = useState([]);
+    const [otpLogs, setOtpLogs] = useState([]);
     const [loading, setLoading] = useState(true);
     const [message, setMessage] = useState(null);
     const { logout } = useContext(AuthContext);
@@ -32,12 +33,14 @@ const AdminDashboard = () => {
 
     const fetchData = async () => {
         try {
-            const [usersRes, vendorsRes] = await Promise.all([
+            const [usersRes, vendorsRes, otpRes] = await Promise.all([
                 axios.get('http://localhost:5000/api/admin/users', config),
-                axios.get('http://localhost:5000/api/admin/vendors', config)
+                axios.get('http://localhost:5000/api/admin/vendors', config),
+                axios.get('http://localhost:5000/api/admin/otps', config)
             ]);
             setUsers(usersRes.data);
             setVendors(vendorsRes.data);
+            setOtpLogs(otpRes.data);
             setLoading(false);
         } catch (err) {
             console.error(err);
@@ -141,6 +144,34 @@ const AdminDashboard = () => {
         </Table>
     );
 
+    const OtpLogTable = ({ data }) => (
+        <Table striped bordered hover responsive className="mt-3">
+            <thead className="bg-light">
+                <tr>
+                    <th>Time</th>
+                    <th>Email</th>
+                    <th>Type</th>
+                    <th>OTP/Token</th>
+                </tr>
+            </thead>
+            <tbody>
+                {data.map((log) => (
+                    <tr key={log._id}>
+                        <td><small>{new Date(log.createdAt).toLocaleString()}</small></td>
+                        <td>{log.email}</td>
+                        <td>
+                            <Badge bg={log.type === 'Login' ? 'info' : 'warning'}>
+                                {log.type}
+                            </Badge>
+                        </td>
+                        <td className="font-monospace">{log.otp}</td>
+                    </tr>
+                ))}
+                {data.length === 0 && <tr><td colSpan="4" className="text-center">No logs found</td></tr>}
+            </tbody>
+        </Table>
+    );
+
     return (
         <Container className="mt-4">
             <div className="d-flex justify-content-between align-items-center mb-4">
@@ -159,6 +190,9 @@ const AdminDashboard = () => {
                             <Nav.Item>
                                 <Nav.Link eventKey="vendors">Vendors ({vendors.length})</Nav.Link>
                             </Nav.Item>
+                            <Nav.Item>
+                                <Nav.Link eventKey="otps">OTP Logs</Nav.Link>
+                            </Nav.Item>
                         </Nav>
                         <Tab.Content>
                             <Tab.Pane eventKey="users">
@@ -166,6 +200,9 @@ const AdminDashboard = () => {
                             </Tab.Pane>
                             <Tab.Pane eventKey="vendors">
                                 <UserTable data={vendors} />
+                            </Tab.Pane>
+                            <Tab.Pane eventKey="otps">
+                                <OtpLogTable data={otpLogs} />
                             </Tab.Pane>
                         </Tab.Content>
                     </Tab.Container>

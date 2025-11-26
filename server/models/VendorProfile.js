@@ -111,4 +111,44 @@ const findOneAndUpdate = async (query, update, options) => {
     }
 };
 
-module.exports = { createOne, findOne, find, findOneAndUpdate };
+const findOneAndDelete = async (query) => {
+    try {
+        return await VendorProfile.findOneAndDelete(query);
+    } catch (error) {
+        const err = new Error(`Database Error: ${error.message}`);
+        err.status = 500;
+        throw err;
+    }
+};
+
+const countDocuments = async (query) => {
+    try {
+        return await VendorProfile.countDocuments(query);
+    } catch (error) {
+        const err = new Error(`Database Error: ${error.message}`);
+        err.status = 500;
+        throw err;
+    }
+};
+
+const findWithPopulate = async (query, populatePath, selectFields) => {
+    try {
+        return await VendorProfile.find(query).populate(populatePath, selectFields);
+    } catch (error) {
+        const err = new Error(`Database Error: ${error.message}`);
+        err.status = 500;
+        throw err;
+    }
+};
+
+const findOneWithPopulate = async (query, populatePath, selectFields) => {
+    try {
+        return await VendorProfile.findOne(query).populate(populatePath, selectFields);
+    } catch (error) {
+        const err = new Error(`Database Error: ${error.message}`);
+        err.status = 500;
+        throw err;
+    }
+};
+
+module.exports = { createOne, findOne, find, findOneAndUpdate, findOneAndDelete, countDocuments, findWithPopulate, findOneWithPopulate };

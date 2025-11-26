@@ -45,6 +45,20 @@ const protect = async (req, res, next) => {
                 throw err;
             }
 
+            // Check if user is blocked
+            if (req.user.isBlocked) {
+                const err = new Error('Your account has been blocked. Please contact support.');
+                err.status = 403;
+                throw err;
+            }
+
+            // Check if user is deleted
+            if (req.user.isDeleted) {
+                const err = new Error('Not authorized, user not found');
+                err.status = 401;
+                throw err;
+            }
+
             // Proceed to the next middleware or route handler
             next();
         } catch (error) {

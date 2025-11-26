@@ -91,4 +91,12 @@ const findById = async (id) => {
     }
 };
 
-module.exports = { createOne, find, findById };
+const findWithPopulate = async (query, populatePath, populateSelect) => {
+    try {
+        return await Guest.find(query).populate(populatePath, populateSelect);
+    } catch (error) {
+        handleDbError(error);
+    }
+};
+
+module.exports = { createOne, find, findById, findWithPopulate };

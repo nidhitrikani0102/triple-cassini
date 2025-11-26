@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { Container, Row, Col, Tab, Nav, Card, Button, Form, Modal, ListGroup, Alert, ProgressBar, Table } from 'react-bootstrap';
+import { Container, Row, Col, Tab, Nav, Card, Button, Form, Modal, ListGroup, Alert, ProgressBar, Table, Badge, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import axios from 'axios';
 import { AuthContext } from '../context/AuthContext';
 import InvitationDesigner from '../components/InvitationDesigner';
@@ -18,7 +18,12 @@ const EventPage = () => {
     const [loading, setLoading] = useState(true);
     const [showGuestModal, setShowGuestModal] = useState(false);
     const [newGuest, setNewGuest] = useState({ name: '', email: '' });
+    const [invitationType, setInvitationType] = useState('Email'); // 'Email' or 'InApp'
+    const [searchQuery, setSearchQuery] = useState('');
+    const [searchResults, setSearchResults] = useState([]);
+    const [selectedUsers, setSelectedUsers] = useState([]);
     const [message, setMessage] = useState(null);
+    const [activeTab, setActiveTab] = useState('details');
 
     // Invitation Designer State
     const [showInvitationModal, setShowInvitationModal] = useState(false);
@@ -40,10 +45,19 @@ const EventPage = () => {
     const [newExpense, setNewExpense] = useState({ title: '', amount: '', category: '' });
     const [showBudgetModal, setShowBudgetModal] = useState(false);
 
+    // Vendor Assignment State
+    const [vendors, setVendors] = useState([]);
+    const [showVendorModal, setShowVendorModal] = useState(false);
+    const [newAssignment, setNewAssignment] = useState({ vendorId: '', amount: '', serviceType: '' });
+    const [vendorSearchQuery, setVendorSearchQuery] = useState('');
+    const [vendorSearchResults, setVendorSearchResults] = useState([]);
+    const [selectedVendor, setSelectedVendor] = useState(null);
+
     useEffect(() => {
         fetchEventDetails();
         fetchGuests();
         fetchBudgetDetails();
+        fetchAssignments();
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [id]);
 
@@ -53,6 +67,41 @@ const EventPage = () => {
             return () => clearTimeout(timer);
         }
     }, [message]);
+
+    // Debounced User Search
+    useEffect(() => {
+        const delayDebounceFn = setTimeout(async () => {
+            if (searchQuery.length > 2 && invitationType === 'InApp') {
+                try {
+                    const res = await axios.get(`http://localhost:5000/api/users/search?query=${searchQuery}`, config);
+                    setSearchResults(res.data);
+                } catch (err) {
+                    console.error("Search failed", err);
+                }
+            } else {
+                setSearchResults([]);
+            }
+        }, 300); // 300ms debounce
+
+        return () => clearTimeout(delayDebounceFn);
+    }, [searchQuery, invitationType]);
+
+    // Debounced Vendor Search
+    useEffect(() => {
+        const delayDebounceFn = setTimeout(async () => {
+            if (vendorSearchQuery.length > 2) {
+                try {
+                    const res = await axios.get(`http://localhost:5000/api/vendors/search?query=${vendorSearchQuery}`, config);
+                    setVendorSearchResults(res.data);
+                } catch (err) {
+                    console.error("Vendor search failed", err);
+                }
+            } else {
+                setVendorSearchResults([]);
+            }
+        }, 300);
+        return () => clearTimeout(delayDebounceFn);
+    }, [vendorSearchQuery]);
 
     // Fetch event details from the backend
     const fetchEventDetails = async () => {
@@ -100,6 +149,16 @@ const EventPage = () => {
         }
     };
 
+    // Fetch assignments for this event
+    const fetchAssignments = async () => {
+        try {
+            const res = await axios.get(`http://localhost:5000/api/assignments/event/${id}`, config);
+            setVendors(res.data);
+        } catch (err) {
+            console.error("Error fetching assignments:", err);
+        }
+    };
+
     // Handle updating event details
     const handleUpdateEvent = async () => {
         try {
@@ -116,11 +175,29 @@ const EventPage = () => {
     // Handle adding a new guest
     const handleAddGuest = async () => {
         try {
-            await axios.post(`http://localhost:5000/api/guests/${id}`, newGuest, config);
+            let guestPayload = { ...newGuest, invitationType };
+
+            if (invitationType === 'InApp') {
+                if (selectedUsers.length === 0) {
+                    setMessage({ type: 'danger', text: 'Please select at least one user' });
+                    return;
+                }
+                // Prepare array of guests for bulk insert
+                guestPayload = selectedUsers.map(u => ({
+                    name: u.name,
+                    email: u.email,
+                    userId: u._id,
+                    invitationType: 'InApp'
+                }));
+            }
+
+            await axios.post(`http://localhost:5000/api/guests/${id}`, guestPayload, config);
             fetchGuests(); // Refresh guests list to show the new guest
             setShowGuestModal(false);
             setNewGuest({ name: '', email: '' });
-            setMessage({ type: 'success', text: 'Guest invited successfully' });
+            setSelectedUsers([]);
+            setSearchQuery('');
+            setMessage({ type: 'success', text: 'Invitations sent successfully' });
         } catch (err) {
             setMessage({ type: 'danger', text: 'Error adding guest' });
         }
@@ -189,6 +266,46 @@ const EventPage = () => {
         }
     };
 
+    // Handle assigning a vendor
+    const handleAssignVendor = async () => {
+        try {
+            if (!selectedVendor || !newAssignment.amount) {
+                setMessage({ type: 'danger', text: 'Please select a vendor and enter amount' });
+                return;
+            }
+
+            await axios.post('http://localhost:5000/api/assignments', {
+                eventId: id,
+                vendorId: selectedVendor._id,
+                amount: Number(newAssignment.amount),
+                serviceType: selectedVendor.serviceType // Default to vendor's service type
+            }, config);
+
+            fetchAssignments();
+            setShowVendorModal(false);
+            setNewAssignment({ vendorId: '', amount: '', serviceType: '' });
+            setSelectedVendor(null);
+            setVendorSearchQuery('');
+            setMessage({ type: 'success', text: 'Vendor assigned successfully' });
+        } catch (err) {
+            console.error(err);
+            setMessage({ type: 'danger', text: 'Error assigning vendor' });
+        }
+    };
+
+    // Handle processing payment
+    const handleProcessPayment = async (assignmentId) => {
+        try {
+            await axios.put(`http://localhost:5000/api/assignments/${assignmentId}/status`, { status: 'Paid' }, config);
+            fetchAssignments();
+            fetchBudgetDetails(); // Refresh budget to show new expense
+            setMessage({ type: 'success', text: 'Payment processed and expense added to budget!' });
+        } catch (err) {
+            console.error(err);
+            setMessage({ type: 'danger', text: 'Error processing payment' });
+        }
+    };
+
     if (loading) return <Container className="mt-4">Loading...</Container>;
     if (!event) return <Container className="mt-4">Event not found</Container>;
 
@@ -217,7 +334,7 @@ const EventPage = () => {
                 <Button variant="outline-secondary" onClick={() => navigate('/dashboard')}>Back to Dashboard</Button>
             </div>
 
-            <Tab.Container defaultActiveKey="details">
+            <Tab.Container activeKey={activeTab} onSelect={(k) => setActiveTab(k)}>
                 <Nav variant="tabs" className="mb-3">
                     <Nav.Item>
                         <Nav.Link eventKey="details">Details</Nav.Link>
@@ -227,6 +344,9 @@ const EventPage = () => {
                     </Nav.Item>
                     <Nav.Item>
                         <Nav.Link eventKey="budget">Budget</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                        <Nav.Link eventKey="vendors">Vendors</Nav.Link>
                     </Nav.Item>
                 </Nav>
 
@@ -238,6 +358,14 @@ const EventPage = () => {
                                     <Card.Title className="fs-4">Event Details</Card.Title>
                                     <Button variant="primary" onClick={() => setShowEditModal(true)}>
                                         <i className="bi bi-pencil me-2"></i> Edit Event
+                                    </Button>
+                                </div>
+                                <div className="mb-3">
+                                    <Button variant="outline-primary" className="me-2" onClick={() => setActiveTab('vendors')}>
+                                        <i className="bi bi-people me-2"></i> Manage Vendors
+                                    </Button>
+                                    <Button variant="outline-success" onClick={() => setActiveTab('budget')}>
+                                        <i className="bi bi-cash-coin me-2"></i> View Budget
                                     </Button>
                                 </div>
                                 <Row>
@@ -375,6 +503,62 @@ const EventPage = () => {
                             </tbody>
                         </Table>
                     </Tab.Pane>
+
+                    <Tab.Pane eventKey="vendors">
+                        <div className="d-flex justify-content-between align-items-center mb-3">
+                            <h3>Vendor Management</h3>
+                            <Button variant="primary" onClick={() => setShowVendorModal(true)}>
+                                <i className="bi bi-person-plus me-2"></i> Assign Vendor
+                            </Button>
+                        </div>
+
+                        <Row>
+                            {vendors.length === 0 ? (
+                                <Col>
+                                    <Alert variant="info">No vendors assigned yet. Click "Assign Vendor" to start.</Alert>
+                                </Col>
+                            ) : (
+                                vendors.map((assignment) => (
+                                    <Col md={6} lg={4} key={assignment._id} className="mb-4">
+                                        <Card className="h-100 shadow-sm">
+                                            <Card.Body>
+                                                <div className="d-flex justify-content-between align-items-start mb-2">
+                                                    <Card.Title>{assignment.vendor.businessName}</Card.Title>
+                                                    <Badge bg={
+                                                        assignment.status === 'Paid' ? 'success' :
+                                                            assignment.status === 'Completed' ? 'info' :
+                                                                assignment.status === 'In Progress' ? 'primary' : 'warning'
+                                                    }>
+                                                        {assignment.status}
+                                                    </Badge>
+                                                </div>
+                                                <Card.Subtitle className="mb-2 text-muted">{assignment.serviceType}</Card.Subtitle>
+                                                <Card.Text>
+                                                    <strong>Amount:</strong> ₹{assignment.amount.toFixed(2)}
+                                                </Card.Text>
+
+                                                {assignment.status === 'Completed' && (
+                                                    <div className="d-grid mt-3">
+                                                        <Button variant="success" onClick={() => handleProcessPayment(assignment._id)}>
+                                                            <i className="bi bi-credit-card me-2"></i> Pay Now
+                                                        </Button>
+                                                        <Form.Text className="text-muted text-center mt-1">
+                                                            Adds expense to budget automatically
+                                                        </Form.Text>
+                                                    </div>
+                                                )}
+                                                {assignment.status === 'Paid' && (
+                                                    <div className="text-center mt-3 text-success">
+                                                        <i className="bi bi-check-circle-fill me-2"></i> Payment Complete
+                                                    </div>
+                                                )}
+                                            </Card.Body>
+                                        </Card>
+                                    </Col>
+                                ))
+                            )}
+                        </Row>
+                    </Tab.Pane>
                 </Tab.Content>
             </Tab.Container>
 
@@ -471,31 +655,124 @@ const EventPage = () => {
                     <Modal.Title>Invite Guest</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <Form>
-                        <Form.Group className="mb-3">
-                            <Form.Label>Name</Form.Label>
-                            <Form.Control
-                                type="text"
-                                value={newGuest.name}
-                                onChange={(e) => setNewGuest({ ...newGuest, name: e.target.value })}
-                            />
-                        </Form.Group>
-                        <Form.Group className="mb-3">
-                            <Form.Label>Email</Form.Label>
-                            <Form.Control
-                                type="email"
-                                value={newGuest.email}
-                                onChange={(e) => setNewGuest({ ...newGuest, email: e.target.value })}
-                            />
-                        </Form.Group>
-                    </Form>
+                    <Tab.Container activeKey={invitationType} onSelect={(k) => setInvitationType(k)}>
+                        <Nav variant="pills" className="mb-3 justify-content-center">
+                            <Nav.Item>
+                                <Nav.Link eventKey="Email">External (Email)</Nav.Link>
+                            </Nav.Item>
+                            <Nav.Item>
+                                <Nav.Link eventKey="InApp">EventEmpire User</Nav.Link>
+                            </Nav.Item>
+                        </Nav>
+                        <Tab.Content>
+                            <Tab.Pane eventKey="Email">
+                                <Form>
+                                    <Form.Group className="mb-3">
+                                        <Form.Label>Name</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            value={newGuest.name}
+                                            onChange={(e) => setNewGuest({ ...newGuest, name: e.target.value })}
+                                            placeholder="Guest Name"
+                                        />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3">
+                                        <Form.Label>Email</Form.Label>
+                                        <Form.Control
+                                            type="email"
+                                            value={newGuest.email}
+                                            onChange={(e) => setNewGuest({ ...newGuest, email: e.target.value })}
+                                            placeholder="guest@example.com"
+                                        />
+                                    </Form.Group>
+                                </Form>
+                            </Tab.Pane>
+                            <Tab.Pane eventKey="InApp">
+                                <Form.Group className="mb-3">
+                                    <Form.Label>Search EventEmpire Users</Form.Label>
+                                    <div className="position-relative">
+                                        <Form.Control
+                                            type="text"
+                                            placeholder="Search by name or email..."
+                                            value={searchQuery}
+                                            onChange={(e) => setSearchQuery(e.target.value)}
+                                        />
+                                        {searchQuery && (
+                                            <Button
+                                                variant="link"
+                                                className="position-absolute top-50 end-0 translate-middle-y text-secondary text-decoration-none"
+                                                onClick={() => setSearchQuery('')}
+                                                style={{ zIndex: 10 }}
+                                            >
+                                                <i className="bi bi-x-lg"></i>
+                                            </Button>
+                                        )}
+                                    </div>
+
+                                    {/* Selected Users Chips/Cards */}
+                                    {selectedUsers.length > 0 && (
+                                        <div className="d-flex flex-wrap gap-2 mt-3 mb-3">
+                                            {selectedUsers.map(u => (
+                                                <div key={u._id} className="d-flex align-items-center bg-white border rounded-pill ps-2 pe-3 py-1 shadow-sm">
+                                                    <div className="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-2" style={{ width: '24px', height: '24px', fontSize: '12px' }}>
+                                                        {u.name.charAt(0).toUpperCase()}
+                                                    </div>
+                                                    <span className="me-2 small fw-bold">{u.name}</span>
+                                                    <i
+                                                        className="bi bi-x-circle-fill text-danger cursor-pointer"
+                                                        style={{ cursor: 'pointer' }}
+                                                        onClick={() => setSelectedUsers(selectedUsers.filter(user => user._id !== u._id))}
+                                                    ></i>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    )}
+
+                                    {/* Search Results */}
+                                    {searchResults.length > 0 && (
+                                        <ListGroup className="mt-2 shadow-sm" style={{ maxHeight: '200px', overflowY: 'auto' }}>
+                                            {searchResults.map(user => {
+                                                const isSelected = selectedUsers.some(u => u._id === user._id);
+                                                return (
+                                                    <ListGroup.Item
+                                                        key={user._id}
+                                                        action
+                                                        onClick={() => {
+                                                            if (!isSelected) {
+                                                                setSelectedUsers([...selectedUsers, user]);
+                                                                setSearchQuery('');
+                                                                setSearchResults([]);
+                                                            }
+                                                        }}
+                                                        className={`d-flex align-items-center justify-content-between ${isSelected ? 'bg-light opacity-50' : ''}`}
+                                                        disabled={isSelected}
+                                                    >
+                                                        <div className="d-flex align-items-center">
+                                                            <div className="bg-light text-primary rounded-circle d-flex align-items-center justify-content-center me-3" style={{ width: '32px', height: '32px' }}>
+                                                                <i className="bi bi-person-fill"></i>
+                                                            </div>
+                                                            <div>
+                                                                <div className="fw-bold small">{user.name}</div>
+                                                                <small className="text-muted" style={{ fontSize: '0.75rem' }}>{user.email}</small>
+                                                            </div>
+                                                        </div>
+                                                        {isSelected ? <i className="bi bi-check-circle-fill text-success"></i> : <i className="bi bi-plus-circle text-primary"></i>}
+                                                    </ListGroup.Item>
+                                                );
+                                            })}
+                                        </ListGroup>
+                                    )}
+                                </Form.Group>
+                            </Tab.Pane>
+                        </Tab.Content>
+                    </Tab.Container>
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={() => setShowGuestModal(false)}>
                         Cancel
                     </Button>
-                    <Button variant="primary" onClick={handleAddGuest}>
-                        Send Invitation
+                    <Button variant="primary" onClick={handleAddGuest} disabled={invitationType === 'InApp' && selectedUsers.length === 0}>
+                        Send Invitations ({invitationType === 'InApp' ? selectedUsers.length : 1})
                     </Button>
                 </Modal.Footer>
             </Modal>
@@ -558,6 +835,90 @@ const EventPage = () => {
                         </div>
                     </Form>
                 </Modal.Body>
+            </Modal>
+
+            {/* Assign Vendor Modal */}
+            <Modal show={showVendorModal} onHide={() => setShowVendorModal(false)}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Assign Vendor</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    {!selectedVendor ? (
+                        <>
+                            <Form.Group className="mb-3">
+                                <Form.Label>Search Vendor</Form.Label>
+                                <Form.Control
+                                    type="text"
+                                    placeholder="Search by business name or service..."
+                                    value={vendorSearchQuery}
+                                    onChange={(e) => setVendorSearchQuery(e.target.value)}
+                                    autoFocus
+                                />
+                                <Form.Text className="text-muted">
+                                    Try searching for "Catering", "Photography", or a specific name.
+                                </Form.Text>
+                            </Form.Group>
+                            {vendorSearchResults.length > 0 ? (
+                                <ListGroup className="shadow-sm">
+                                    {vendorSearchResults.map(vendor => (
+                                        <ListGroup.Item
+                                            key={vendor._id}
+                                            action
+                                            onClick={() => {
+                                                setSelectedVendor(vendor);
+                                                setNewAssignment({ ...newAssignment, vendorId: vendor._id, serviceType: vendor.serviceType });
+                                            }}
+                                            className="d-flex justify-content-between align-items-center"
+                                        >
+                                            <div>
+                                                <div className="fw-bold">{vendor.businessName || vendor.user?.name || 'Unnamed Vendor'}</div>
+                                                <div className="text-muted small">
+                                                    <i className="bi bi-briefcase me-1"></i>{vendor.serviceType}
+                                                    <span className="mx-2">|</span>
+                                                    <i className="bi bi-geo-alt me-1"></i>{vendor.location}
+                                                </div>
+                                            </div>
+                                            <Button variant="outline-primary" size="sm">Select</Button>
+                                        </ListGroup.Item>
+                                    ))}
+                                </ListGroup>
+                            ) : (
+                                vendorSearchQuery.length > 2 && <p className="text-muted text-center mt-3">No vendors found matching "{vendorSearchQuery}".</p>
+                            )}
+                        </>
+                    ) : (
+                        <>
+                            <div className="d-flex justify-content-between align-items-center mb-4 p-3 bg-light rounded border">
+                                <div>
+                                    <h5 className="mb-1">{selectedVendor.businessName || selectedVendor.user?.name}</h5>
+                                    <Badge bg="info">{selectedVendor.serviceType}</Badge>
+                                    <div className="text-muted small mt-1">{selectedVendor.location}</div>
+                                </div>
+                                <Button variant="outline-danger" size="sm" onClick={() => setSelectedVendor(null)}>
+                                    Change Vendor
+                                </Button>
+                            </div>
+                            <Form.Group className="mb-3">
+                                <Form.Label>Agreed Amount (₹)</Form.Label>
+                                <Form.Control
+                                    type="number"
+                                    value={newAssignment.amount}
+                                    onChange={(e) => setNewAssignment({ ...newAssignment, amount: e.target.value })}
+                                    placeholder="Enter agreed amount"
+                                    min="0"
+                                />
+                            </Form.Group>
+                        </>
+                    )}
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={() => setShowVendorModal(false)}>
+                        Cancel
+                    </Button>
+                    <Button variant="primary" onClick={handleAssignVendor}>
+                        Assign Vendor
+                    </Button>
+                </Modal.Footer>
             </Modal>
         </Container >
     );
