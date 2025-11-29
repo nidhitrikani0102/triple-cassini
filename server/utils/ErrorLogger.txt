@@ -1989,3 +1989,199 @@
 [2025-11-25T19:30:44.208Z] Error: Not authorized, user not found
     at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:57:29)
     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-26T16:24:15.698Z] Error: Not authorized, user not found
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:57:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-26T16:24:15.705Z] Error: Not authorized, user not found
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:57:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-26T16:24:15.727Z] Error: Not authorized, user not found
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:57:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-26T16:24:15.733Z] Error: Not authorized, user not found
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:57:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-26T16:24:20.270Z] Error: Not authorized, user not found
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:57:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-26T16:24:20.279Z] Error: Not authorized, user not found
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:57:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-26T16:24:20.304Z] Error: Not authorized, user not found
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:57:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-26T16:24:20.313Z] Error: Not authorized, user not found
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:57:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-26T16:24:21.188Z] Error: Not authorized, user not found
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:57:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-26T16:24:21.190Z] Error: Not authorized, user not found
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:57:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-26T16:24:21.202Z] Error: Not authorized, user not found
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:57:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-26T16:24:21.207Z] Error: Not authorized, user not found
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:57:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-26T16:55:18.409Z] Error: Vendor profile not found
+    at Object.getProfile (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:63:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:48:25
+[2025-11-26T16:55:18.412Z] undefined
+[2025-11-26T16:55:18.438Z] Error: Vendor profile not found
+    at Object.getProfile (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorService.js:63:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorRoutes.js:48:25
+[2025-11-26T16:55:18.440Z] undefined
+[2025-11-26T16:57:18.786Z] TypeError: User.findById(...).select is not a function
+    at Object.getUserById (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:337:50)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:115:40
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:421:3)
+[2025-11-26T16:57:18.800Z] TypeError: User.findById(...).select is not a function
+    at Object.getUserById (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:337:50)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:115:40
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:421:3)
+[2025-11-26T16:57:18.867Z] TypeError: User.findById(...).select is not a function
+    at Object.getUserById (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:337:50)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:115:40
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:421:3)
+[2025-11-26T16:57:18.913Z] TypeError: User.findById(...).select is not a function
+    at Object.getUserById (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:337:50)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:115:40
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:421:3)
+[2025-11-28T08:08:24.750Z] TypeError: Event.findByIdAndDelete is not a function
+    at Object.deleteEvent (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\eventService.js:158:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\eventRoutes.js:84:9
+[2025-11-29T10:33:17.570Z] Error: Invalid credentials
+    at Object.loginUser (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:152:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:40:24
+[2025-11-29T10:33:25.329Z] Error: Invalid credentials
+    at Object.loginUser (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:152:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:40:24
+[2025-11-29T10:33:33.761Z] Error: Invalid credentials
+    at Object.loginUser (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:152:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:40:24
+[2025-11-29T13:09:40.835Z] TypeError: Event.findById(...).select is not a function
+    at Object.getPublicGuestInfo (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\guestService.js:317:57)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\guestRoutes.js:111:22
+[2025-11-29T13:09:40.850Z] TypeError: Event.findById(...).select is not a function
+    at Object.getPublicGuestInfo (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\guestService.js:317:57)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\guestRoutes.js:111:22
+[2025-11-29T13:10:48.890Z] TypeError: Event.findById(...).select is not a function
+    at Object.getPublicGuestInfo (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\guestService.js:317:57)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\guestRoutes.js:111:22
+[2025-11-29T13:10:48.910Z] TypeError: Event.findById(...).select is not a function
+    at Object.getPublicGuestInfo (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\guestService.js:317:57)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\guestRoutes.js:111:22
+[2025-11-29T13:10:54.449Z] TypeError: Event.findById(...).select is not a function
+    at Object.getPublicGuestInfo (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\guestService.js:317:57)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\guestRoutes.js:111:22
+[2025-11-29T13:10:54.460Z] TypeError: Event.findById(...).select is not a function
+    at Object.getPublicGuestInfo (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\guestService.js:317:57)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\guestRoutes.js:111:22
+[2025-11-29T13:11:09.822Z] TypeError: Event.findById(...).select is not a function
+    at Object.getPublicGuestInfo (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\guestService.js:317:57)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\guestRoutes.js:111:22
+[2025-11-29T13:11:09.840Z] TypeError: Event.findById(...).select is not a function
+    at Object.getPublicGuestInfo (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\guestService.js:317:57)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\guestRoutes.js:111:22
+[2025-11-29T13:13:02.125Z] TypeError: Event.findById(...).select is not a function
+    at Object.getPublicGuestInfo (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\guestService.js:317:57)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\guestRoutes.js:111:22
+[2025-11-29T13:13:02.193Z] TypeError: Event.findById(...).select is not a function
+    at Object.getPublicGuestInfo (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\guestService.js:317:57)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\guestRoutes.js:111:22
+[2025-11-29T13:15:32.855Z] TypeError: Event.findById(...).select is not a function
+    at Object.getPublicGuestInfo (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\guestService.js:317:57)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\guestRoutes.js:111:22
+[2025-11-29T13:15:32.898Z] TypeError: Event.findById(...).select is not a function
+    at Object.getPublicGuestInfo (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\guestService.js:317:57)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\guestRoutes.js:111:22
+[2025-11-29T13:51:29.177Z] Error: Database Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+    at Object.countDocuments (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\models\User.js:148:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\statsRoutes.js:23:23
+[2025-11-29T13:51:29.200Z] Error: Database Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+    at Object.findOneWithSelect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\models\User.js:138:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:40:24)
+[2025-11-29T13:55:32.696Z] Error: Database Error: Operation `users.countDocuments()` buffering timed out after 10000ms
+    at Object.countDocuments (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\models\User.js:148:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\statsRoutes.js:23:23
+[2025-11-29T13:55:32.744Z] Error: Database Error: Operation `users.findOne()` buffering timed out after 10000ms
+    at Object.findOneWithSelect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\models\User.js:138:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:40:24)
+[2025-11-29T13:55:34.957Z] Error: Database Error: Operation `users.findOne()` buffering timed out after 10000ms
+    at Object.findOneWithSelect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\models\User.js:138:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:40:24)
+[2025-11-29T13:55:35.738Z] Error: Database Error: Operation `users.findOne()` buffering timed out after 10000ms
+    at Object.findOneWithSelect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\models\User.js:138:21)
+    at processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at runNextTicks (node:internal/process/task_queues:68:3)
+    at listOnTimeout (node:internal/timers:567:9)
+    at process.processTimers (node:internal/timers:541:7)
+    at async protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:40:24)
+[2025-11-29T13:55:35.742Z] Error: Database Error: Operation `users.countDocuments()` buffering timed out after 10000ms
+    at Object.countDocuments (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\models\User.js:148:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\statsRoutes.js:23:23
+[2025-11-29T13:58:37.519Z] Error: Database Error: Operation `users.findOne()` buffering timed out after 10000ms
+    at Object.findOneWithSelect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\models\User.js:138:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:40:24)
+[2025-11-29T13:58:37.525Z] Error: Database Error: Operation `users.countDocuments()` buffering timed out after 10000ms
+    at Object.countDocuments (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\models\User.js:148:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\statsRoutes.js:23:23
+[2025-11-29T15:16:45.814Z] Error: Invalid credentials
+    at Object.loginUser (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:152:25)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:40:24

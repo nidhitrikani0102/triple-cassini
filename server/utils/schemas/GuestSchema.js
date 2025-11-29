@@ -50,6 +50,23 @@ const guestSchema = new mongoose.Schema({
     invitedAt: {
         type: Date,
     },
+    // Extended RSVP Data
+    dietaryRestrictions: {
+        type: String,
+        default: ''
+    },
+    plusOne: {
+        type: Boolean,
+        default: false
+    },
+    plusOneName: {
+        type: String,
+        default: ''
+    },
+    message: {
+        type: String,
+        default: ''
+    }
 }, {
     timestamps: true, // Automatically adds createdAt and updatedAt
 });

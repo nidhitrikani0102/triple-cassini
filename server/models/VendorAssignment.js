@@ -53,7 +53,12 @@ const createOne = async (data) => {
 
 const find = async (query) => {
     try {
-        return await VendorAssignment.find(query).populate('event vendor client');
+        return await VendorAssignment.find(query)
+            .populate({
+                path: 'vendor',
+                populate: { path: 'user', select: 'name email' }
+            })
+            .populate('event client');
     } catch (error) {
         const err = new Error(`Database Error: ${error.message}`);
         err.status = 500;
@@ -63,7 +68,12 @@ const find = async (query) => {
 
 const findById = async (id) => {
     try {
-        return await VendorAssignment.findById(id).populate('event vendor client');
+        return await VendorAssignment.findById(id)
+            .populate({
+                path: 'vendor',
+                populate: { path: 'user', select: 'name email' }
+            })
+            .populate('event client');
     } catch (error) {
         const err = new Error(`Database Error: ${error.message}`);
         err.status = 500;

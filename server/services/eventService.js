@@ -133,4 +133,32 @@ const updateEvent = async (eventId, updateData, userId) => {
     }
 };
 
-module.exports = { createEvent, getEvents, getEventById, updateEvent };
+/**
+ * Deletes an event.
+ * @param {string} eventId - ID of the event
+ * @param {string} userId - ID of the requesting user
+ * @returns {Promise<void>}
+ */
+const deleteEvent = async (eventId, userId) => {
+    try {
+        const event = await Event.findById(eventId);
+
+        if (!event) {
+            const err = new Error('Event not found');
+            err.status = 404;
+            throw err;
+        }
+
+        if (event.user.toString() !== userId) {
+            const err = new Error('Not authorized');
+            err.status = 401;
+            throw err;
+        }
+
+        await Event.findByIdAndDelete(eventId);
+    } catch (error) {
+        throw error;
+    }
+};
+
+module.exports = { createEvent, getEvents, getEventById, updateEvent, deleteEvent };

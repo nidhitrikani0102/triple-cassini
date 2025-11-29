@@ -13,6 +13,7 @@ import FindVendors from './pages/FindVendors';
 import Messages from './pages/Messages';
 import Profile from './pages/Profile';
 import RSVPPage from './pages/RSVPPage';
+import InvitationView from './pages/InvitationView';
 import InvitationsPage from './pages/InvitationsPage';
 import ForgotPassword from './pages/ForgotPassword';
 import PrivateRoute from './components/PrivateRoute';
@@ -45,6 +46,7 @@ function App() {
                         <Route path="/register" element={<Register />} />
                         <Route path="/forgot-password" element={<ForgotPassword />} />
                         <Route path="/rsvp/:guestId" element={<RSVPPage />} />
+                        <Route path="/invitation/:guestId" element={<InvitationView />} />
 
                         {/* Protected Routes */}
                         <Route path="/dashboard" element={<PrivateRoute roles={['user']}><UserDashboard /></PrivateRoute>} />

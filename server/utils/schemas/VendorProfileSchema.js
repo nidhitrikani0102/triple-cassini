@@ -37,6 +37,11 @@ const vendorProfileSchema = new mongoose.Schema({
     },
     // Array of image URLs for the portfolio
     portfolio: [String],
+    // Soft delete flag
+    isDeleted: {
+        type: Boolean,
+        default: false,
+    },
 }, {
     timestamps: true, // Automatically adds createdAt and updatedAt
 });

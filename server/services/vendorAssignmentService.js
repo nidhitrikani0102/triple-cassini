@@ -23,7 +23,7 @@ const createAssignment = async (data) => {
         if (event.user.toString() !== userId) throw { status: 401, message: 'Not authorized' };
 
         // Verify Vendor
-        const vendor = await VendorProfile.findOne({ _id: vendorId });
+        const vendor = await VendorProfile.findOne({ _id: vendorId, isDeleted: { $ne: true } });
         if (!vendor) throw { status: 404, message: 'Vendor not found' };
 
         // Create Assignment
@@ -68,7 +68,7 @@ const getAssignmentsByEvent = async (eventId, userId) => {
 const getAssignmentsByVendor = async (vendorUserId) => {
     try {
         // Find vendor profile for this user
-        const vendorProfile = await VendorProfile.findOne({ user: vendorUserId });
+        const vendorProfile = await VendorProfile.findOne({ user: vendorUserId, isDeleted: { $ne: true } });
         if (!vendorProfile) throw { status: 404, message: 'Vendor profile not found' };
 
         return await VendorAssignment.find({ vendor: vendorProfile._id });
@@ -111,7 +111,7 @@ const updateStatus = async (assignmentId, status, userId, role) => {
             const budget = await Budget.findOne({ event: assignment.event._id });
             if (budget) {
                 budget.expenses.push({
-                    title: `Payment to ${assignment.vendor.businessName}`,
+                    title: `Payment to ${assignment.vendor.user?.name || 'Unknown'} (Vendor)`,
                     amount: assignment.amount,
                     category: assignment.serviceType,
                     date: new Date()

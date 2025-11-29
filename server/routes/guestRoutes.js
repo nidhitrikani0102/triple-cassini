@@ -99,8 +99,17 @@ router.post('/resend/:guestId', authMiddleware.protect, async (req, res, next) =
  */
 router.post('/rsvp/:guestId', async (req, res, next) => {
     try {
-        const guest = await guestService.updateGuestStatus(req.params.guestId, req.body.status);
+        const guest = await guestService.updateGuestStatus(req.params.guestId, req.body);
         res.json(guest);
+    } catch (error) {
+        next(error);
+    }
+});
+
+router.get('/public/:guestId', async (req, res, next) => {
+    try {
+        const data = await guestService.getPublicGuestInfo(req.params.guestId);
+        res.json(data);
     } catch (error) {
         next(error);
     }

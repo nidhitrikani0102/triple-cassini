@@ -122,4 +122,12 @@ const countDocuments = async (query) => {
     }
 };
 
-module.exports = { createOne, find, findById, findByIdAndUpdate, countDocuments };
+const findByIdAndDelete = async (id) => {
+    try {
+        return await Event.findByIdAndDelete(id);
+    } catch (error) {
+        handleDbError(error);
+    }
+};
+
+module.exports = { createOne, find, findById, findByIdAndUpdate, countDocuments, findByIdAndDelete };

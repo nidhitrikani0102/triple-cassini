@@ -14,13 +14,14 @@ router.get('/search', protect, async (req, res) => {
             return res.json([]);
         }
 
-        // Search by name or email, case-insensitive, exclude current user
+        // Search by name or email, case-insensitive, exclude current user and deleted users
         const users = await User.findWithSelect({
             $or: [
                 { name: { $regex: query, $options: 'i' } },
                 { email: { $regex: query, $options: 'i' } }
             ],
-            _id: { $ne: req.user._id } // Exclude self
+            _id: { $ne: req.user._id }, // Exclude self
+            isDeleted: { $ne: true } // Exclude deleted users
         }, 'name email _id'); // Only return necessary fields
 
         res.json(users);

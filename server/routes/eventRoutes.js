@@ -74,4 +74,18 @@ router.put('/:id', async (req, res, next) => {
     }
 });
 
+/**
+ * @route   DELETE /api/events/:id
+ * @desc    Delete an event
+ * @access  Private
+ */
+router.delete('/:id', async (req, res, next) => {
+    try {
+        await eventService.deleteEvent(req.params.id, req.user._id);
+        res.json({ message: 'Event removed' });
+    } catch (error) {
+        next(error);
+    }
+});
+
 module.exports = router;

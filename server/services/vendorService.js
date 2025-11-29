@@ -58,7 +58,7 @@ const createOrUpdateProfile = async (userId, profileData) => {
  */
 const getProfile = async (userId) => {
     try {
-        const profile = await VendorProfile.findOneWithPopulate({ user: userId }, 'user', 'name email');
+        const profile = await VendorProfile.findOneWithPopulate({ user: userId, isDeleted: { $ne: true } }, 'user', 'name email');
         if (!profile) {
             const err = new Error('Vendor profile not found');
             err.status = 404;
@@ -76,7 +76,7 @@ const getProfile = async (userId) => {
  */
 const getAllVendors = async () => {
     try {
-        return await VendorProfile.findWithPopulate({}, 'user', 'name email');
+        return await VendorProfile.findWithPopulate({ isDeleted: { $ne: true } }, 'user', 'name email');
     } catch (error) {
         throw error;
     }
@@ -112,7 +112,7 @@ const addPortfolioImage = async (userId, imageUrl) => {
  */
 const searchVendors = async (query) => {
     try {
-        const filter = {};
+        const filter = { isDeleted: { $ne: true } };
 
         // Handle generic search query (from frontend "Search by business name...")
         if (query.query) {

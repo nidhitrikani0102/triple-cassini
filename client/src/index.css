@@ -69,6 +69,68 @@
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175) !important;
 }
 
+/* Global Font Settings */
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #fcfcfc;
+    /* Very subtle off-white */
+    color: #333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.display-1,
+.display-2,
+.display-3,
+.display-4,
+.display-5,
+.display-6 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Luxury Color Palette */
+:root {
+    --gold-primary: #D4AF37;
+    --gold-light: #F4E4BC;
+    --rose-gold: #B76E79;
+    --navy-deep: #1A237E;
+    --charcoal: #36454F;
+}
+
+/* Custom Text Colors */
+.text-gold {
+    color: var(--gold-primary) !important;
+}
+
+.text-rose {
+    color: var(--rose-gold) !important;
+}
+
+.text-navy {
+    color: var(--navy-deep) !important;
+}
+
+/* Glassmorphism Utilities */
+.glass-panel {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+}
+
+.hover-zoom {
+    transition: transform 0.5s ease;
+}
+
+.hover-zoom:hover {
+    transform: scale(1.05);
+}
+
 /* Background Shapes */
 .bg-shape {
     position: absolute;
@@ -80,15 +142,377 @@
 .shape-1 {
     width: 300px;
     height: 300px;
-    background: white;
+    background: var(--gold-primary);
     top: -100px;
     left: -100px;
+    filter: blur(80px);
 }
 
 .shape-2 {
     width: 200px;
     height: 200px;
-    background: white;
+    background: var(--rose-gold);
     bottom: 50px;
     right: 50px;
+    filter: blur(60px);
+}
+
+/* Digital Envelope Animations */
+.envelope-wrapper {
+    perspective: 1000px;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.envelope-wrapper:hover {
+    transform: scale(1.02);
+}
+
+.envelope {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #f8f9fa;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.envelope.open {
+    transform: rotateX(0deg);
+    /* Keep flat but allow card to slide */
+}
+
+.envelope-flap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: #e9ecef;
+    clip-path: polygon(0 0, 50% 100%, 100% 0);
+    transform-origin: top;
+    transition: transform 0.6s ease-in-out, z-index 0.6s;
+    z-index: 10;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+}
+
+.envelope.open .envelope-flap {
+    transform: rotateX(180deg);
+    z-index: 0;
+}
+
+.envelope-body {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 5;
+    overflow: hidden;
+    border: 1px solid #dee2e6;
+}
+
+.invitation-card-slide {
+    position: relative;
+    z-index: 2;
+    transition: transform 1s ease-in-out 0.5s, opacity 1s ease-in-out 0.5s;
+    transform: translateY(20px);
+    opacity: 0;
+}
+
+.envelope.open .invitation-card-slide {
+    transform: translateY(-50px);
+    /* Slide up effect */
+    opacity: 1;
+}
+
+/* Premium Card Reveal */
+.premium-card {
+    background: white;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.premium-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--gold-primary), var(--rose-gold), var(--gold-primary));
+}
+
+.confetti-piece {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #ffd300;
+    top: 0;
+    opacity: 0;
+}
+
+@keyframes confettiDrop {}
+
+.transform-hover:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175) !important;
+}
+
+/* Global Font Settings */
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #fcfcfc;
+    /* Very subtle off-white */
+    color: #333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.display-1,
+.display-2,
+.display-3,
+.display-4,
+.display-5,
+.display-6 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Luxury Color Palette */
+:root {
+    --gold-primary: #D4AF37;
+    --gold-light: #F4E4BC;
+    --rose-gold: #B76E79;
+    --navy-deep: #1A237E;
+    --charcoal: #36454F;
+}
+
+/* Custom Text Colors */
+.text-gold {
+    color: var(--gold-primary) !important;
+}
+
+.text-rose {
+    color: var(--rose-gold) !important;
+}
+
+.text-navy {
+    color: var(--navy-deep) !important;
+}
+
+/* Glassmorphism Utilities */
+.glass-panel {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+}
+
+.hover-zoom {
+    transition: transform 0.5s ease;
+}
+
+.hover-zoom:hover {
+    transform: scale(1.05);
+}
+
+/* Background Shapes */
+.bg-shape {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.shape-1 {
+    width: 300px;
+    height: 300px;
+    background: var(--gold-primary);
+    top: -100px;
+    left: -100px;
+    filter: blur(80px);
+}
+
+.shape-2 {
+    width: 200px;
+    height: 200px;
+    background: var(--rose-gold);
+    bottom: 50px;
+    right: 50px;
+    filter: blur(60px);
+}
+
+/* Digital Envelope Animations */
+.envelope-wrapper {
+    perspective: 1000px;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.envelope-wrapper:hover {
+    transform: scale(1.02);
+}
+
+.envelope {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #f8f9fa;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.envelope.open {
+    transform: rotateX(0deg);
+    /* Keep flat but allow card to slide */
+}
+
+.envelope-flap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: #e9ecef;
+    clip-path: polygon(0 0, 50% 100%, 100% 0);
+    transform-origin: top;
+    transition: transform 0.6s ease-in-out, z-index 0.6s;
+    z-index: 10;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+}
+
+.envelope.open .envelope-flap {
+    transform: rotateX(180deg);
+    z-index: 0;
+}
+
+.envelope-body {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 5;
+    overflow: hidden;
+    border: 1px solid #dee2e6;
+}
+
+.invitation-card-slide {
+    position: relative;
+    z-index: 2;
+    transition: transform 1s ease-in-out 0.5s, opacity 1s ease-in-out 0.5s;
+    transform: translateY(20px);
+    opacity: 0;
+}
+
+.envelope.open .invitation-card-slide {
+    transform: translateY(-50px);
+    /* Slide up effect */
+    opacity: 1;
+}
+
+/* Premium Card Reveal */
+.premium-card {
+    background: white;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.premium-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--gold-primary), var(--rose-gold), var(--gold-primary));
+}
+
+.confetti-piece {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #ffd300;
+    top: 0;
+    opacity: 0;
+}
+
+@keyframes confettiDrop {
+    0% {
+        transform: translateY(-100vh) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+.confetti-active .confetti-piece {
+    animation: confettiDrop 3s ease-out forwards;
+}
+
+/* Glassmorphism Utilities */
+.glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    border-radius: 20px;
+}
+
+.glass-panel {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 15px;
+}
+
+.bg-gradient-premium {
+    background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+}
+
+.bg-gradient-vendor {
+    background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+}
+
+.text-gradient-gold {
+    background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.video-container iframe,
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }

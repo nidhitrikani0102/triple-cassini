@@ -208,7 +208,10 @@ const sendInvitation = async (guestId, userId) => {
 
                     <div style="text-align: center; margin: 30px 0;">
                         <p style="margin-bottom: 15px; font-weight: bold;">Please let us know if you can make it:</p>
-                        <a href="${rsvpLink}" style="background-color: ${theme.button}; color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block;">RSVP Now</a>
+                        <div style="display: flex; justify-content: center; gap: 15px;">
+                            <a href="http://localhost:3000/invitation/${guest._id}?status=Accepted" style="background-color: #198754; color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block;">Joyfully Accept</a>
+                            <a href="http://localhost:3000/invitation/${guest._id}?status=Declined" style="background-color: #dc3545; color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block;">Regretfully Decline</a>
+                        </div>
                     </div>
 
                     ${config.showMap && event.mapLink ? `
@@ -247,11 +250,12 @@ const sendInvitation = async (guestId, userId) => {
 /**
  * Updates the RSVP status of a guest.
  * @param {string} guestId - ID of the guest
- * @param {string} status - New status ('Accepted', 'Declined')
+ * @param {Object} data - Update data including status and extended fields
  * @returns {Promise<Object>} Updated guest
  */
-const updateGuestStatus = async (guestId, status) => {
+const updateGuestStatus = async (guestId, data) => {
     try {
+        const { status } = data;
         const guest = await Guest.findById(guestId);
         if (!guest) {
             const err = new Error('Guest not found');
@@ -266,6 +270,13 @@ const updateGuestStatus = async (guestId, status) => {
         }
 
         guest.status = status;
+
+        // Update extended fields if provided
+        if (data.dietaryRestrictions !== undefined) guest.dietaryRestrictions = data.dietaryRestrictions;
+        if (data.plusOne !== undefined) guest.plusOne = data.plusOne;
+        if (data.plusOneName !== undefined) guest.plusOneName = data.plusOneName;
+        if (data.message !== undefined) guest.message = data.message;
+
         await guest.save();
         return guest;
     } catch (error) {
@@ -289,4 +300,34 @@ const resendInvitation = async (guestId, userId) => {
     return await sendInvitation(guestId, userId);
 };
 
-module.exports = { addGuest, addGuestsBulk, getGuests, sendInvitation, updateGuestStatus, resendInvitation, getMyInvitations };
+/**
+ * Retrieves guest and event info for the public invitation page.
+ * @param {string} guestId - ID of the guest
+ * @returns {Promise<Object>} Guest and Event details
+ */
+const getPublicGuestInfo = async (guestId) => {
+    try {
+        const guest = await Guest.findById(guestId);
+        if (!guest) {
+            const err = new Error('Guest not found');
+            err.status = 404;
+            throw err;
+        }
+
+        const event = await Event.findById(guest.event);
+        if (!event) {
+            const err = new Error('Event not found');
+            err.status = 404;
+            throw err;
+        }
+
+        // Populate host name for the "Thank You" message
+        await event.populate('user', 'name');
+
+        return { guest, event };
+    } catch (error) {
+        throw error;
+    }
+};
+
+module.exports = { addGuest, addGuestsBulk, getGuests, sendInvitation, updateGuestStatus, resendInvitation, getMyInvitations, getPublicGuestInfo };

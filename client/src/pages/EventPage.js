@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { Container, Row, Col, Tab, Nav, Card, Button, Form, Modal, ListGroup, Alert, ProgressBar, Table, Badge, OverlayTrigger, Tooltip } from 'react-bootstrap';
+import { Container, Row, Col, Tab, Nav, Card, Button, Form, Modal, ListGroup, Alert, Badge } from 'react-bootstrap';
 import axios from 'axios';
 import { AuthContext } from '../context/AuthContext';
 import InvitationDesigner from '../components/InvitationDesigner';
@@ -312,258 +312,377 @@ const EventPage = () => {
     // Budget Calculations
     const totalSpent = budget?.expenses?.reduce((acc, curr) => acc + curr.amount, 0) || 0;
     const remainingBudget = (budget?.totalBudget || 0) - totalSpent;
-    const progressVariant = remainingBudget < 0 ? 'danger' : remainingBudget < (budget?.totalBudget * 0.2) ? 'warning' : 'success';
-    const progressPercentage = budget?.totalBudget ? Math.min((totalSpent / budget.totalBudget) * 100, 100) : 0;
+
+    // Helper for Countdown
+    const calculateTimeLeft = () => {
+        if (!event?.date) return {};
+        const difference = +new Date(event.date) - +new Date();
+        let timeLeft = {};
+        if (difference > 0) {
+            timeLeft = {
+                days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+                hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+                minutes: Math.floor((difference / 1000 / 60) % 60),
+            };
+        }
+        return timeLeft;
+    };
+    const timeLeft = calculateTimeLeft();
+    const isEventPassed = new Date(event.date) < new Date();
+
+    const glassCardStyle = {
+        background: 'rgba(255, 255, 255, 0.85)',
+        backdropFilter: 'blur(12px)',
+        borderRadius: '20px',
+        border: '1px solid rgba(255, 255, 255, 0.5)',
+        boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.15)'
+    };
 
     return (
-        <Container className="mt-4">
-            {message && (
-                <Alert variant={message.type} onClose={() => setMessage(null)} dismissible>
-                    {message.text}
-                </Alert>
-            )}
-            {/* Show persistent warning if budget is exceeded */}
-            {remainingBudget < 0 && (
-                <Alert variant="danger" className="mb-4">
-                    <i className="bi bi-exclamation-triangle-fill me-2"></i>
-                    <strong>Budget Exceeded!</strong> You have spent ₹{Math.abs(remainingBudget).toFixed(2)} over your budget.
-                </Alert>
-            )}
-            <div className="d-flex justify-content-between align-items-center mb-4">
-                <h1>{event.name}</h1>
-                <Button variant="outline-secondary" onClick={() => navigate('/dashboard')}>Back to Dashboard</Button>
+        <div style={{ background: '#f8f9fa', minHeight: '100vh', paddingBottom: '50px' }}>
+            {/* Hero Section */}
+            <div className="position-relative mb-5" style={{ height: '400px', overflow: 'hidden', background: 'linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d)' }}>
+                <div className="position-absolute w-100 h-100" style={{ background: 'rgba(0,0,0,0.4)' }}></div>
+                <Container className="position-relative h-100 d-flex flex-column justify-content-center text-white">
+                    <div className="d-flex justify-content-between align-items-start">
+                        <div>
+                            <Badge bg="warning" text="dark" className="mb-3 px-3 py-2 rounded-pill text-uppercase fw-bold tracking-wider">
+                                {event.type} Event
+                            </Badge>
+                            <h1 className="display-3 fw-bold mb-2" style={{ fontFamily: 'Playfair Display, serif' }}>{event.name}</h1>
+                            <p className="fs-5 opacity-75"><i className="bi bi-geo-alt me-2"></i>{event.location} &bull; {new Date(event.date).toLocaleDateString()}</p>
+                        </div>
+                        <Button variant="light" className="rounded-pill px-4 fw-bold shadow-lg" onClick={() => setShowEditModal(true)}>
+                            <i className="bi bi-pencil me-2"></i> Edit Details
+                        </Button>
+                    </div>
+
+                    {/* Countdown Timer */}
+                    <div className="d-flex gap-4 mt-4">
+                        <div className="text-center">
+                            <h2 className="fw-bold display-5 mb-0" style={{ fontFamily: 'Playfair Display, serif' }}>{timeLeft.days || 0}</h2>
+                            <small className="text-uppercase tracking-wider opacity-75">Days</small>
+                        </div>
+                        <div className="text-center">
+                            <h2 className="fw-bold display-5 mb-0" style={{ fontFamily: 'Playfair Display, serif' }}>{timeLeft.hours || 0}</h2>
+                            <small className="text-uppercase tracking-wider opacity-75">Hours</small>
+                        </div>
+                        <div className="text-center">
+                            <h2 className="fw-bold display-5 mb-0" style={{ fontFamily: 'Playfair Display, serif' }}>{timeLeft.minutes || 0}</h2>
+                            <small className="text-uppercase tracking-wider opacity-75">Minutes</small>
+                        </div>
+                    </div>
+                </Container>
             </div>
 
-            <Tab.Container activeKey={activeTab} onSelect={(k) => setActiveTab(k)}>
-                <Nav variant="tabs" className="mb-3">
-                    <Nav.Item>
-                        <Nav.Link eventKey="details">Details</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                        <Nav.Link eventKey="guests">Guests & Invitations</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                        <Nav.Link eventKey="budget">Budget</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                        <Nav.Link eventKey="vendors">Vendors</Nav.Link>
-                    </Nav.Item>
-                </Nav>
+            <Container style={{ marginTop: '-80px' }}>
+                {message && (
+                    <Alert variant={message.type} onClose={() => setMessage(null)} dismissible className="mb-4 shadow-sm">
+                        {message.text}
+                    </Alert>
+                )}
 
-                <Tab.Content>
-                    <Tab.Pane eventKey="details">
-                        <Card className="shadow-sm">
-                            <Card.Body>
-                                <div className="d-flex justify-content-between align-items-start mb-3">
-                                    <Card.Title className="fs-4">Event Details</Card.Title>
-                                    <Button variant="primary" onClick={() => setShowEditModal(true)}>
-                                        <i className="bi bi-pencil me-2"></i> Edit Event
-                                    </Button>
-                                </div>
-                                <div className="mb-3">
-                                    <Button variant="outline-primary" className="me-2" onClick={() => setActiveTab('vendors')}>
-                                        <i className="bi bi-people me-2"></i> Manage Vendors
-                                    </Button>
-                                    <Button variant="outline-success" onClick={() => setActiveTab('budget')}>
-                                        <i className="bi bi-cash-coin me-2"></i> View Budget
-                                    </Button>
-                                </div>
-                                <Row>
-                                    <Col md={6}>
-                                        <p><strong>Date:</strong> {new Date(event.date).toLocaleDateString()}</p>
-                                        <p><strong>Time:</strong> {event.time}</p>
-                                        <p><strong>Location:</strong> {event.location}</p>
-                                        {event.mapLink && (
-                                            <p><strong>Map:</strong> <a href={event.mapLink} target="_blank" rel="noopener noreferrer">View on Google Maps</a></p>
-                                        )}
-                                        <p><strong>Type:</strong> {event.type}</p>
-                                        <p><strong>Organizer:</strong> {event.organizerName}</p>
-                                    </Col>
-                                    <Col md={6}>
-                                        <p><strong>Description:</strong></p>
-                                        <p>{event.description}</p>
-                                    </Col>
-                                </Row>
-                            </Card.Body>
-                        </Card>
-                    </Tab.Pane>
+                <Tab.Container activeKey={activeTab} onSelect={(k) => setActiveTab(k)}>
+                    {/* Navigation Pills */}
+                    <Card className="border-0 shadow-sm mb-4" style={{ borderRadius: '50px', padding: '10px', background: 'white' }}>
+                        <Nav variant="pills" className="justify-content-center gap-2">
+                            <Nav.Item>
+                                <Nav.Link eventKey="details" className="rounded-pill px-4 py-2 fw-bold">
+                                    <i className="bi bi-grid me-2"></i> Overview
+                                </Nav.Link>
+                            </Nav.Item>
+                            <Nav.Item>
+                                <Nav.Link eventKey="guests" className="rounded-pill px-4 py-2 fw-bold">
+                                    <i className="bi bi-people me-2"></i> Guests
+                                </Nav.Link>
+                            </Nav.Item>
+                            <Nav.Item>
+                                <Nav.Link eventKey="budget" className="rounded-pill px-4 py-2 fw-bold">
+                                    <i className="bi bi-wallet2 me-2"></i> Budget
+                                </Nav.Link>
+                            </Nav.Item>
+                            <Nav.Item>
+                                <Nav.Link eventKey="vendors" className="rounded-pill px-4 py-2 fw-bold">
+                                    <i className="bi bi-shop me-2"></i> Vendors
+                                </Nav.Link>
+                            </Nav.Item>
+                        </Nav>
+                    </Card>
 
-                    <Tab.Pane eventKey="guests">
-                        <div className="d-flex justify-content-between align-items-center mb-3">
-                            <h3>Guest List & Invitations</h3>
-                            <div>
-                                <Button variant="outline-primary" className="me-2" onClick={() => setShowInvitationModal(true)}>
-                                    <i className="bi bi-palette me-2"></i> Design Invitation
-                                </Button>
-                                <Button variant="primary" onClick={() => setShowGuestModal(true)}>
-                                    <i className="bi bi-envelope me-2"></i> Send Invitation
+                    <Tab.Content>
+                        {/* Overview Tab */}
+                        <Tab.Pane eventKey="details">
+                            <Row className="g-4">
+                                <Col md={4}>
+                                    <Card style={glassCardStyle} className="h-100 border-0">
+                                        <Card.Body className="text-center p-5">
+                                            <div className="mb-3 text-primary display-4"><i className="bi bi-people"></i></div>
+                                            <h3 className="fw-bold" style={{ fontFamily: 'Playfair Display, serif' }}>{guests.length}</h3>
+                                            <p className="text-muted">Total Guests</p>
+                                        </Card.Body>
+                                    </Card>
+                                </Col>
+                                <Col md={4}>
+                                    <Card style={glassCardStyle} className="h-100 border-0">
+                                        <Card.Body className="text-center p-5">
+                                            <div className="mb-3 text-success display-4"><i className="bi bi-check-circle"></i></div>
+                                            <h3 className="fw-bold" style={{ fontFamily: 'Playfair Display, serif' }}>{guests.filter(g => g.status === 'Accepted').length}</h3>
+                                            <p className="text-muted">Confirmed</p>
+                                        </Card.Body>
+                                    </Card>
+                                </Col>
+                                <Col md={4}>
+                                    <Card style={glassCardStyle} className="h-100 border-0">
+                                        <Card.Body className="text-center p-5">
+                                            <div className="mb-3 text-warning display-4"><i className="bi bi-pie-chart"></i></div>
+                                            <h3 className="fw-bold" style={{ fontFamily: 'Playfair Display, serif' }}>{Math.round((totalSpent / (totalBudget || 1)) * 100)}%</h3>
+                                            <p className="text-muted">Budget Used</p>
+                                        </Card.Body>
+                                    </Card>
+                                </Col>
+                            </Row>
+                        </Tab.Pane>
+
+                        {/* Guests Tab */}
+                        <Tab.Pane eventKey="guests">
+                            <Row>
+                                <Col md={8}>
+                                    <Card className="border-0 shadow-sm" style={{ borderRadius: '20px' }}>
+                                        <Card.Header className="bg-white border-0 pt-4 px-4 d-flex justify-content-between align-items-center">
+                                            <h4 className="fw-bold mb-0" style={{ fontFamily: 'Playfair Display, serif' }}>Guest List</h4>
+                                            <Button
+                                                variant="outline-primary"
+                                                size="sm"
+                                                className="rounded-pill"
+                                                onClick={() => setShowGuestModal(true)}
+                                                disabled={isEventPassed}
+                                            >
+                                                <i className="bi bi-plus-lg me-1"></i> Add Guest
+                                            </Button>
+                                        </Card.Header>
+                                        <Card.Body className="p-0">
+                                            <ListGroup variant="flush">
+                                                {guests.length === 0 ? (
+                                                    <div className="text-center py-5 text-muted">No guests yet.</div>
+                                                ) : (
+                                                    guests.map((guest, index) => (
+                                                        <ListGroup.Item key={index} className="px-4 py-3 border-light d-flex justify-content-between align-items-center">
+                                                            <div className="d-flex align-items-center gap-3">
+                                                                <div className="rounded-circle bg-light d-flex align-items-center justify-content-center" style={{ width: '40px', height: '40px' }}>
+                                                                    <span className="fw-bold text-muted">{guest.name.charAt(0)}</span>
+                                                                </div>
+                                                                <div>
+                                                                    <h6 className="mb-0 fw-bold">{guest.name}</h6>
+                                                                    <small className="text-muted">{guest.email}</small>
+                                                                    {/* Extended Details */}
+                                                                    {(guest.dietaryRestrictions || guest.plusOne) && (
+                                                                        <div className="mt-1 small">
+                                                                            {guest.dietaryRestrictions && (
+                                                                                <span className="me-3 text-warning">
+                                                                                    <i className="bi bi-exclamation-triangle-fill me-1"></i>
+                                                                                    {guest.dietaryRestrictions}
+                                                                                </span>
+                                                                            )}
+                                                                            {guest.plusOne && (
+                                                                                <span className="text-info">
+                                                                                    <i className="bi bi-person-plus-fill me-1"></i>
+                                                                                    +1: {guest.plusOneName}
+                                                                                </span>
+                                                                            )}
+                                                                        </div>
+                                                                    )}
+                                                                    {guest.message && (
+                                                                        <div className="mt-1 text-muted small fst-italic">
+                                                                            <i className="bi bi-chat-quote-fill me-1"></i> "{guest.message}"
+                                                                        </div>
+                                                                    )}
+                                                                </div>
+                                                            </div>
+                                                            <div className="d-flex align-items-center gap-3">
+                                                                {guest.status === 'Accepted' && <Badge bg="success" className="rounded-pill px-3">Going</Badge>}
+                                                                {guest.status === 'Declined' && <Badge bg="danger" className="rounded-pill px-3">Declined</Badge>}
+                                                                {guest.status === 'Pending' && <Badge bg="warning" text="dark" className="rounded-pill px-3">Pending</Badge>}
+
+                                                                {(guest.status === 'Pending' || guest.status === 'Declined') && (
+                                                                    <Button
+                                                                        variant="light"
+                                                                        size="sm"
+                                                                        className="rounded-circle"
+                                                                        onClick={() => handleResendInvitation(guest._id)}
+                                                                        title="Resend"
+                                                                        disabled={isEventPassed}
+                                                                    >
+                                                                        <i className="bi bi-send"></i>
+                                                                    </Button>
+                                                                )}
+                                                            </div>
+                                                        </ListGroup.Item>
+                                                    ))
+                                                )}
+                                            </ListGroup>
+                                        </Card.Body>
+                                    </Card>
+                                </Col>
+                                <Col md={4}>
+                                    <Card className="border-0 shadow-sm bg-dark text-white h-100" style={{ borderRadius: '20px', background: 'linear-gradient(135deg, #2c3e50, #4ca1af)' }}>
+                                        <Card.Body className="p-4 d-flex flex-column justify-content-center text-center">
+                                            <div className="mb-4 display-1"><i className="bi bi-envelope-paper-heart"></i></div>
+                                            <h3 className="fw-bold mb-3" style={{ fontFamily: 'Playfair Display, serif' }}>Send Invitations</h3>
+                                            <p className="opacity-75 mb-4">Design beautiful invitations and send them to your guest list instantly.</p>
+                                            <Button
+                                                variant="light"
+                                                size="lg"
+                                                className="rounded-pill fw-bold text-primary w-100"
+                                                onClick={() => setShowInvitationModal(true)}
+                                                disabled={isEventPassed}
+                                            >
+                                                Open Designer
+                                            </Button>
+                                        </Card.Body>
+                                    </Card>
+                                </Col>
+                            </Row>
+                        </Tab.Pane>
+
+                        {/* Budget Tab */}
+                        <Tab.Pane eventKey="budget">
+                            <div className="d-flex justify-content-between align-items-center mb-3">
+                                <h3>Budget Management</h3>
+                                <Button variant="success" onClick={() => setShowBudgetModal(true)}>
+                                    <i className="bi bi-plus-circle me-2"></i> Add Expense
                                 </Button>
                             </div>
-                        </div>
-                        <ListGroup>
-                            {guests.length === 0 ? (
-                                <ListGroup.Item>No guests invited yet. Click "Send Invitation" to start!</ListGroup.Item>
-                            ) : (
-                                guests.map((guest, index) => (
-                                    <ListGroup.Item key={index} className="d-flex justify-content-between align-items-center">
-                                        <div>
-                                            <strong>{guest.name}</strong> ({guest.email})
-                                            <div className="mt-1">
-                                                {guest.status === 'Accepted' && <span className="badge bg-success me-2">Accepted</span>}
-                                                {guest.status === 'Declined' && <span className="badge bg-danger me-2">Declined</span>}
-                                                {guest.status === 'Pending' && <span className="badge bg-warning text-dark me-2">Pending</span>}
-                                                {!guest.isInvited && <span className="badge bg-secondary">Not Invited</span>}
-                                            </div>
-                                        </div>
-                                        <div>
-                                            {/* Show Resend button only if status is Pending or Declined */}
-                                            {(guest.status === 'Pending' || guest.status === 'Declined') && (
-                                                <Button
-                                                    variant="outline-secondary"
-                                                    size="sm"
-                                                    className="me-2"
-                                                    onClick={() => handleResendInvitation(guest._id)}
-                                                    title="Resend Invitation"
-                                                >
-                                                    <i className="bi bi-arrow-repeat"></i> Resend Invitation
-                                                </Button>
-                                            )}
-                                        </div>
-                                    </ListGroup.Item>
-                                ))
-                            )}
-                        </ListGroup>
-                    </Tab.Pane>
 
-
-                    <Tab.Pane eventKey="budget">
-                        <div className="d-flex justify-content-between align-items-center mb-3">
-                            <h3>Budget Management</h3>
-                            <Button variant="success" onClick={() => setShowBudgetModal(true)}>
-                                <i className="bi bi-plus-circle me-2"></i> Add Expense
-                            </Button>
-                        </div>
-
-                        <Card className="mb-4 shadow-sm">
-                            <Card.Body>
-                                <Row className="align-items-end">
-                                    <Col md={4}>
-                                        <Form.Group>
-                                            <Form.Label><strong>Total Budget</strong></Form.Label>
-                                            <div className="d-flex gap-2">
-                                                <Form.Control
-                                                    type="number"
-                                                    value={totalBudget}
-                                                    onChange={(e) => setTotalBudget(e.target.value)}
-                                                />
-                                                <Button onClick={handleUpdateBudget}>Set</Button>
-                                            </div>
-                                        </Form.Group>
-                                    </Col>
-                                    <Col md={4} className="text-center">
-                                        <h5>Total Spent</h5>
-                                        <h3 className="text-danger">₹{totalSpent.toFixed(2)}</h3>
-                                    </Col>
-                                    <Col md={4} className="text-center">
-                                        <h5>Remaining</h5>
-                                        <h3 className={`text-${remainingBudget < 0 ? 'danger' : 'success'}`}>
-                                            ₹{remainingBudget.toFixed(2)}
-                                        </h3>
-                                    </Col>
-                                </Row>
-                                <div className="mt-3">
-                                    <ProgressBar now={progressPercentage} variant={progressVariant} label={`${progressPercentage.toFixed(0)}%`} />
-                                </div>
-                            </Card.Body>
-                        </Card>
-
-                        <h4>Expenses</h4>
-                        <Table striped bordered hover>
-                            <thead>
-                                <tr>
-                                    <th>Title</th>
-                                    <th>Category</th>
-                                    <th>Amount</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {budget?.expenses?.length > 0 ? (
-                                    budget.expenses.map((expense, index) => (
-                                        <tr key={index}>
-                                            <td>{expense.title}</td>
-                                            <td>{expense.category}</td>
-                                            <td>₹{expense.amount.toFixed(2)}</td>
-                                        </tr>
-                                    ))
-                                ) : (
-                                    <tr>
-                                        <td colSpan="3" className="text-center">No expenses recorded yet.</td>
-                                    </tr>
-                                )}
-                            </tbody>
-                        </Table>
-                    </Tab.Pane>
-
-                    <Tab.Pane eventKey="vendors">
-                        <div className="d-flex justify-content-between align-items-center mb-3">
-                            <h3>Vendor Management</h3>
-                            <Button variant="primary" onClick={() => setShowVendorModal(true)}>
-                                <i className="bi bi-person-plus me-2"></i> Assign Vendor
-                            </Button>
-                        </div>
-
-                        <Row>
-                            {vendors.length === 0 ? (
-                                <Col>
-                                    <Alert variant="info">No vendors assigned yet. Click "Assign Vendor" to start.</Alert>
-                                </Col>
-                            ) : (
-                                vendors.map((assignment) => (
-                                    <Col md={6} lg={4} key={assignment._id} className="mb-4">
-                                        <Card className="h-100 shadow-sm">
-                                            <Card.Body>
-                                                <div className="d-flex justify-content-between align-items-start mb-2">
-                                                    <Card.Title>{assignment.vendor.businessName}</Card.Title>
-                                                    <Badge bg={
-                                                        assignment.status === 'Paid' ? 'success' :
-                                                            assignment.status === 'Completed' ? 'info' :
-                                                                assignment.status === 'In Progress' ? 'primary' : 'warning'
-                                                    }>
-                                                        {assignment.status}
-                                                    </Badge>
+                            <Card className="mb-4 shadow-sm border-0" style={{ borderRadius: '20px' }}>
+                                <Card.Body className="p-4">
+                                    <Row className="align-items-center">
+                                        <Col md={4}>
+                                            <div className="p-3 bg-light rounded-3 text-center">
+                                                <small className="text-uppercase text-muted fw-bold">Total Budget</small>
+                                                <div className="d-flex align-items-center justify-content-center gap-2 mt-2">
+                                                    <Form.Control
+                                                        type="number"
+                                                        value={totalBudget}
+                                                        onChange={(e) => setTotalBudget(e.target.value)}
+                                                        className="border-0 bg-transparent text-center fw-bold fs-4 p-0 shadow-none"
+                                                        style={{ maxWidth: '120px' }}
+                                                    />
+                                                    <Button variant="outline-dark" size="sm" className="rounded-circle" onClick={handleUpdateBudget}><i className="bi bi-check-lg"></i></Button>
                                                 </div>
-                                                <Card.Subtitle className="mb-2 text-muted">{assignment.serviceType}</Card.Subtitle>
-                                                <Card.Text>
-                                                    <strong>Amount:</strong> ₹{assignment.amount.toFixed(2)}
-                                                </Card.Text>
+                                            </div>
+                                        </Col>
+                                        <Col md={4} className="text-center">
+                                            <div className="position-relative d-inline-block">
+                                                <div style={{ width: '120px', height: '120px', borderRadius: '50%', border: '10px solid #f8f9fa', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                                    <div style={{ width: '100px', height: '100px', borderRadius: '50%', border: `10px solid ${remainingBudget < 0 ? '#dc3545' : '#198754'}`, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                                        <span className="fw-bold fs-5">{Math.round((totalSpent / (totalBudget || 1)) * 100)}%</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </Col>
+                                        <Col md={4} className="text-center">
+                                            <h5 className="text-muted mb-1">Remaining</h5>
+                                            <h2 className={`fw-bold ${remainingBudget < 0 ? 'text-danger' : 'text-success'}`} style={{ fontFamily: 'Playfair Display, serif' }}>
+                                                ₹{remainingBudget.toFixed(2)}
+                                            </h2>
+                                        </Col>
+                                    </Row>
+                                </Card.Body>
+                            </Card>
 
-                                                {assignment.status === 'Completed' && (
-                                                    <div className="d-grid mt-3">
-                                                        <Button variant="success" onClick={() => handleProcessPayment(assignment._id)}>
+                            <h5 className="fw-bold mb-3">Expenses</h5>
+                            <Card className="border-0 shadow-sm" style={{ borderRadius: '20px' }}>
+                                <ListGroup variant="flush">
+                                    {budget?.expenses?.length > 0 ? (
+                                        budget.expenses.map((expense, index) => (
+                                            <ListGroup.Item key={index} className="px-4 py-3 d-flex justify-content-between align-items-center">
+                                                <div className="d-flex align-items-center gap-3">
+                                                    <div className="rounded-circle bg-light d-flex align-items-center justify-content-center" style={{ width: '40px', height: '40px' }}>
+                                                        <i className="bi bi-receipt text-muted"></i>
+                                                    </div>
+                                                    <div>
+                                                        <h6 className="mb-0 fw-bold">{expense.title}</h6>
+                                                        <small className="text-muted">{expense.category}</small>
+                                                    </div>
+                                                </div>
+                                                <span className="fw-bold">₹{expense.amount.toFixed(2)}</span>
+                                            </ListGroup.Item>
+                                        ))
+                                    ) : (
+                                        <div className="text-center py-5 text-muted">No expenses recorded yet.</div>
+                                    )}
+                                </ListGroup>
+                            </Card>
+                        </Tab.Pane>
+
+                        {/* Vendors Tab */}
+                        <Tab.Pane eventKey="vendors">
+                            <div className="d-flex justify-content-between align-items-center mb-3">
+                                <h3>Vendor Management</h3>
+                                <Button variant="primary" onClick={() => setShowVendorModal(true)}>
+                                    <i className="bi bi-person-plus me-2"></i> Assign Vendor
+                                </Button>
+                            </div>
+
+                            <Row className="g-4">
+                                {vendors.length === 0 ? (
+                                    <Col>
+                                        <Alert variant="info" className="border-0 shadow-sm rounded-3">No vendors assigned yet. Click "Assign Vendor" to start.</Alert>
+                                    </Col>
+                                ) : (
+                                    vendors.map((assignment) => (
+                                        <Col md={6} lg={4} key={assignment._id}>
+                                            <Card className="h-100 border-0 shadow-sm transform-hover" style={{ borderRadius: '20px' }}>
+                                                <Card.Body className="p-4">
+                                                    <div className="d-flex justify-content-between align-items-start mb-3">
+                                                        <div className="d-flex align-items-center gap-3">
+                                                            <div className="rounded-circle bg-light d-flex align-items-center justify-content-center" style={{ width: '50px', height: '50px' }}>
+                                                                <span className="fw-bold fs-5 text-primary">{assignment.vendor?.user?.name?.charAt(0) || 'V'}</span>
+                                                            </div>
+                                                            <div>
+                                                                <h5 className="fw-bold mb-0">{assignment.vendor?.user?.name || 'Unknown Vendor'}</h5>
+                                                                <small className="text-muted">{assignment.serviceType}</small>
+                                                            </div>
+                                                        </div>
+                                                        <Badge bg={
+                                                            assignment.status === 'Paid' ? 'success' :
+                                                                assignment.status === 'Completed' ? 'info' :
+                                                                    assignment.status === 'In Progress' ? 'primary' : 'warning'
+                                                        } className="rounded-pill px-3">
+                                                            {assignment.status}
+                                                        </Badge>
+                                                    </div>
+
+                                                    <div className="p-3 bg-light rounded-3 mb-3 d-flex justify-content-between align-items-center">
+                                                        <span className="text-muted small text-uppercase fw-bold">Agreed Amount</span>
+                                                        <span className="fw-bold fs-5">₹{assignment.amount.toFixed(2)}</span>
+                                                    </div>
+
+                                                    {assignment.status === 'Completed' && (
+                                                        <Button variant="success" className="w-100 rounded-pill fw-bold shadow-sm" onClick={() => handleProcessPayment(assignment._id)}>
                                                             <i className="bi bi-credit-card me-2"></i> Pay Now
                                                         </Button>
-                                                        <Form.Text className="text-muted text-center mt-1">
-                                                            Adds expense to budget automatically
-                                                        </Form.Text>
-                                                    </div>
-                                                )}
-                                                {assignment.status === 'Paid' && (
-                                                    <div className="text-center mt-3 text-success">
-                                                        <i className="bi bi-check-circle-fill me-2"></i> Payment Complete
-                                                    </div>
-                                                )}
-                                            </Card.Body>
-                                        </Card>
-                                    </Col>
-                                ))
-                            )}
-                        </Row>
-                    </Tab.Pane>
-                </Tab.Content>
-            </Tab.Container>
+                                                    )}
+                                                    {assignment.status === 'Paid' && (
+                                                        <div className="text-center text-success fw-bold">
+                                                            <i className="bi bi-check-circle-fill me-2"></i> Payment Complete
+                                                        </div>
+                                                    )}
+                                                </Card.Body>
+                                            </Card>
+                                        </Col>
+                                    ))
+                                )}
+                            </Row>
+                        </Tab.Pane>
+                    </Tab.Content>
+                </Tab.Container>
+            </Container>
+
+            {/* Modals placed outside the main layout structure for cleanliness */}
 
             {/* Edit Event Modal */}
-            <Modal show={showEditModal} onHide={() => setShowEditModal(false)} centered>
+            <Modal show={showEditModal} onHide={() => setShowEditModal(false)}>
                 <Modal.Header closeButton>
                     <Modal.Title>Edit Event</Modal.Title>
                 </Modal.Header>
@@ -920,7 +1039,7 @@ const EventPage = () => {
                     </Button>
                 </Modal.Footer>
             </Modal>
-        </Container >
+        </div>
     );
 };
 

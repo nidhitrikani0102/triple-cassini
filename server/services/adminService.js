@@ -118,8 +118,8 @@ const deleteUser = async (userId) => {
 
         // If user was a vendor, we should delete the profile to remove business details
         if (user.role === 'vendor') {
-            console.log(`Deleting vendor profile for user: ${userId}`);
-            await VendorProfile.findOneAndDelete({ user: userId });
+            console.log(`Soft deleting vendor profile for user: ${userId}`);
+            await VendorProfile.findOneAndUpdate({ user: userId }, { isDeleted: true });
         }
 
         return { message: 'User deleted successfully (Anonymized)' };
