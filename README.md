@@ -13,22 +13,6 @@ For detailed guides, please refer to:
 *   **📖 [Complete Project Walkthrough](./PROJECT_WALKTHROUGH.md)**  
     *Step-by-step guide on Setup, Installation, and how to use every feature.*
 *   **⚙️ [Technical Documentation](./project_documentation.md)**  
-    *Deep dive into System Architecture, Database Schemas (ERD), and API Reference.*
-
----
-
-## ✨ Key Features
-
-### 👤 For Event Planners (Users)
-*   **Event Dashboard**: Manage multiple events with ease.
-*   **Budget Tracker**: Set limits, track expenses, and get "Over Budget" alerts.
-*   **Guest Management**: Bulk add guests, send email invitations, and track real-time RSVPs.
-*   **Vendor Marketplace**: Search for photographers, caterers, etc., and assign them to your events.
-*   **Chat System**: Communicate directly with vendors.
-
-### 🏪 For Service Providers (Vendors)
-*   **Professional Profile**: Showcase your services, pricing, and location.
-*   **Portfolio**: Upload images of your past work to attract clients.
 *   **Job Management**: Receive job requests, Accept/Decline, and track job status (`Pending` -> `In Progress` -> `Completed`).
 *   **Payments**: Track earnings and payment status.
 
