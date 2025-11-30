@@ -2185,3 +2185,11 @@
 [2025-11-29T15:16:45.814Z] Error: Invalid credentials
     at Object.loginUser (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:152:25)
     at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:40:24
+[2025-11-30T08:18:20.372Z] Error: Invalid or expired OTP
+    at Object.verifyLoginOtp (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:190:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:57:24
+[2025-11-30T08:18:36.613Z] Error: Invalid or expired OTP
+    at Object.verifyLoginOtp (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:190:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:57:24

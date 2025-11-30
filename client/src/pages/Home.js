@@ -3,7 +3,7 @@ import { Container, Row, Col, Button, Card } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { AuthContext } from '../context/AuthContext';
-import AuthModal from '../components/AuthModal';
+import { ModalContext } from '../context/ModalContext';
 
 // Assets
 import mainVideo from '../assets/homeeventmainvideo1.mp4';
@@ -57,10 +57,9 @@ const CountUp = ({ end, duration }) => {
 
 const Home = () => {
     const { user } = useContext(AuthContext);
+    const { openModal } = useContext(ModalContext);
     const navigate = useNavigate();
     const [stats, setStats] = useState({ users: 0, vendors: 0, events: 0 });
-    const [showAuthModal, setShowAuthModal] = useState(false);
-    const [authMode, setAuthMode] = useState('login');
 
     // Redirect logged-in users
     useEffect(() => {
@@ -83,11 +82,6 @@ const Home = () => {
         };
         fetchStats();
     }, []);
-
-    const handleAuthShow = (mode) => {
-        setAuthMode(mode);
-        setShowAuthModal(true);
-    };
 
     const galleryImages = [homeEvent1, homeEvent2, homeEvent3, homeEvent4, homeEvent5, homeEvent6, homeEvent7, homeEvent8, homeEvent9];
 
@@ -164,9 +158,6 @@ const Home = () => {
     return (
         <div className="d-flex flex-column min-vh-100 overflow-hidden" style={{ background: '#f8f9fa' }}>
 
-            {/* Auth Modal */}
-            <AuthModal show={showAuthModal} onHide={() => setShowAuthModal(false)} initialMode={authMode} />
-
             {/* 1. Hero Section */}
             <div style={heroStyle}>
                 <video autoPlay loop muted style={videoBgStyle}>
@@ -181,10 +172,10 @@ const Home = () => {
                         The all-in-one platform for weddings, corporate galas, and private parties.
                     </p>
                     <div className="d-flex justify-content-center gap-3 fade-in-up fade-delay-2">
-                        <Button variant="light" size="lg" onClick={() => handleAuthShow('register')} className="px-5 py-3 rounded-pill fw-bold shadow-lg transform-hover text-dark">
+                        <Button variant="light" size="lg" onClick={() => openModal('register')} className="px-5 py-3 rounded-pill fw-bold shadow-lg transform-hover text-dark">
                             Start Planning
                         </Button>
-                        <Button variant="outline-light" size="lg" onClick={() => handleAuthShow('login')} className="px-5 py-3 rounded-pill fw-bold shadow-lg transform-hover">
+                        <Button variant="outline-light" size="lg" onClick={() => openModal('login')} className="px-5 py-3 rounded-pill fw-bold shadow-lg transform-hover">
                             Login
                         </Button>
                     </div>
@@ -258,7 +249,7 @@ const Home = () => {
             </Container>
 
             {/* 3.5. Expertise Section */}
-            <Container className="mb-5">
+            <Container className="mb-5" id="expertise">
                 <div className="text-center mb-5">
                     <h2 className="display-4 fw-bold mb-3" style={{ fontFamily: 'Playfair Display, serif' }}>Our Expertise</h2>
                     <p className="text-muted fs-5">Tailored experiences for every occasion.</p>
@@ -322,7 +313,7 @@ const Home = () => {
                         <p className="fs-4 mb-5 opacity-90" style={{ maxWidth: '700px', margin: '0 auto' }}>
                             From intimate gatherings to grand celebrations, EventEmpire helps you create moments that last a lifetime.
                         </p>
-                        <Button variant="outline-light" size="lg" onClick={() => handleAuthShow('register')} className="px-5 py-3 rounded-pill fw-bold">
+                        <Button variant="outline-light" size="lg" onClick={() => openModal('register')} className="px-5 py-3 rounded-pill fw-bold">
                             Join the Community
                         </Button>
                     </Container>
@@ -330,7 +321,7 @@ const Home = () => {
             </div>
 
             {/* 5. Gallery Teaser (Horizontal Scroll) */}
-            <Container fluid className="px-0 mb-5">
+            <Container fluid className="px-0 mb-5" id="real-magic">
                 <div className="text-center mb-5">
                     <h2 className="display-4 fw-bold mb-3" style={{ fontFamily: 'Playfair Display, serif' }}>Real Magic</h2>
                     <p className="text-muted fs-5">Get inspired by real events planned on EventEmpire.</p>
@@ -348,7 +339,7 @@ const Home = () => {
             </Container>
 
             {/* 6. Testimonials */}
-            <Container className="py-5 mb-5">
+            <Container className="py-5 mb-5" id="testimonials">
                 <div className="text-center mb-5">
                     <h2 className="display-4 fw-bold mb-3" style={{ fontFamily: 'Playfair Display, serif' }}>Loved by Thousands</h2>
                     <p className="text-muted fs-5">Don't just take our word for it. See what our community has to say.</p>
@@ -377,7 +368,7 @@ const Home = () => {
             </Container>
 
             {/* 7. Footer */}
-            <footer className="bg-dark text-white py-5 mt-auto">
+            <footer className="bg-dark text-white py-5 mt-auto" id="contact">
                 <Container>
                     <Row className="g-4">
                         <Col md={4}>
