@@ -54,9 +54,29 @@ const createEvent = async (eventData, userId) => {
  * @param {string} userId - ID of the user
  * @returns {Promise<Array>} List of events
  */
-const getEvents = async (userId) => {
+const getEvents = async (userId, page = 1, limit = 9) => {
     try {
-        return await Event.find({ user: userId });
+        if (limit === 'all') {
+            const events = await Event.find({ user: userId });
+            return {
+                events,
+                totalPages: 1,
+                currentPage: 1,
+                totalEvents: events.length
+            };
+        }
+
+        const skip = (page - 1) * limit;
+        const events = await Event.findWithPagination({ user: userId }, { date: 1 }, skip, limit);
+
+        const total = await Event.countDocuments({ user: userId });
+
+        return {
+            events,
+            totalPages: Math.ceil(total / limit),
+            currentPage: Number(page),
+            totalEvents: total
+        };
     } catch (error) {
         throw error;
     }

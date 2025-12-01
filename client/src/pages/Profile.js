@@ -62,7 +62,7 @@ const Profile = () => {
     };
 
     return (
-        <Container className="mt-4" style={{ maxWidth: '800px' }}>
+        <Container className="mt-4" style={{ maxWidth: '800px', paddingTop: '100px' }}>
             <h2 className="mb-4">Edit Profile</h2>
             {message && (
                 <Alert variant={message.type} onClose={() => setMessage(null)} dismissible>

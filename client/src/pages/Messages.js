@@ -112,7 +112,7 @@ const Messages = () => {
     };
 
     return (
-        <Container className="mt-4" style={{ height: '80vh' }}>
+        <Container className="mt-4" style={{ height: '80vh', paddingTop: '100px' }}>
             <Row className="h-100">
                 <Col md={4} className="border-end">
                     <h4 className="mb-3">Conversations</h4>

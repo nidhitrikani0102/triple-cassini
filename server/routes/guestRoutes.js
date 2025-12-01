@@ -49,7 +49,6 @@ router.post('/:eventId', authMiddleware.protect, async (req, res, next) => {
         next(error);
     }
 });
-
 /**
  * @route   GET /api/guests/:eventId
  * @desc    Get all guests for an event
@@ -57,8 +56,10 @@ router.post('/:eventId', authMiddleware.protect, async (req, res, next) => {
  */
 router.get('/:eventId', authMiddleware.protect, async (req, res, next) => {
     try {
-        const guests = await guestService.getGuests(req.params.eventId, req.user._id);
-        res.json(guests);
+        const page = parseInt(req.query.page) || 1;
+        const limit = parseInt(req.query.limit) || 10;
+        const result = await guestService.getGuests(req.params.eventId, req.user._id, page, limit);
+        res.json(result);
     } catch (error) {
         next(error);
     }

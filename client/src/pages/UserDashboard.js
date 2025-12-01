@@ -1,8 +1,10 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { Container, Row, Col, Card, Button, Modal, Form, Alert, Badge, InputGroup } from 'react-bootstrap';
+import PaginationControl from '../components/PaginationControl';
 import axios from 'axios';
 import { AuthContext } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
+import PaymentModal from '../components/PaymentModal';
 
 // Assets
 import eventVideo from '../assets/Event Video2.mp4';
@@ -30,6 +32,7 @@ import event10 from '../assets/event10.jpg';
 const UserDashboard = () => {
     const [events, setEvents] = useState([]);
     const [filteredEvents, setFilteredEvents] = useState([]);
+    const [paginatedEvents, setPaginatedEvents] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
     const [filterType, setFilterType] = useState('All');
     const [open, setOpen] = useState(false);
@@ -38,6 +41,15 @@ const UserDashboard = () => {
     });
     const [message, setMessage] = useState(null);
     const [vendorCount, setVendorCount] = useState(0);
+    const [currentPage, setCurrentPage] = useState(1);
+    const [totalPages, setTotalPages] = useState(1);
+    const itemsPerPage = 9;
+
+    // Payment & Assignment State
+    const [assignments, setAssignments] = useState([]);
+    const [showPaymentModal, setShowPaymentModal] = useState(false);
+    const [selectedBooking, setSelectedBooking] = useState(null);
+
     const { user } = useContext(AuthContext);
     const navigate = useNavigate();
     const token = localStorage.getItem('token');
@@ -66,8 +78,8 @@ const UserDashboard = () => {
 
     const fetchEvents = async () => {
         try {
-            const res = await axios.get('http://localhost:5000/api/events', config);
-            setEvents(res.data);
+            const res = await axios.get(`http://localhost:5000/api/events?limit=all`, config);
+            setEvents(res.data.events);
         } catch (err) {
             console.error('Error fetching events:', err);
             setMessage({ type: 'danger', text: 'Failed to fetch events.' });
@@ -83,30 +95,50 @@ const UserDashboard = () => {
         }
     };
 
+    const fetchAssignments = async () => {
+        try {
+            const res = await axios.get('http://localhost:5000/api/assignments/user/my-assignments', config);
+            setAssignments(res.data);
+        } catch (err) {
+            console.error('Error fetching assignments:', err);
+        }
+    };
+
     useEffect(() => {
         if (!token) { navigate('/login'); return; }
         fetchEvents();
         fetchVendorCount();
+        fetchAssignments();
         if (user) setNewEvent(prev => ({ ...prev, organizerName: user.name }));
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [user, token, navigate]);
 
     useEffect(() => {
-        setFilteredEvents(
-            events.filter(event => {
-                const matchesSearch = event.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                    event.location.toLowerCase().includes(searchTerm.toLowerCase());
-                const matchesType = filterType === 'All' || event.type === filterType;
-                return matchesSearch && matchesType;
-            })
-        );
+        const result = events.filter(event => {
+            const matchesSearch = event.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                event.location.toLowerCase().includes(searchTerm.toLowerCase());
+            const matchesType = filterType === 'All' || event.type === filterType;
+            return matchesSearch && matchesType;
+        });
+        setFilteredEvents(result);
+        setTotalPages(Math.ceil(result.length / itemsPerPage));
+        setCurrentPage(1);
     }, [searchTerm, filterType, events]);
+
+    useEffect(() => {
+        const startIndex = (currentPage - 1) * itemsPerPage;
+        const endIndex = startIndex + itemsPerPage;
+        setPaginatedEvents(filteredEvents.slice(startIndex, endIndex));
+    }, [filteredEvents, currentPage]);
 
     const handleCreateEvent = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post('http://localhost:5000/api/events', newEvent, config);
-            setEvents([...events, res.data]);
+            await axios.post('http://localhost:5000/api/events', newEvent, config);
+            // Reset filters and fetch fresh data to ensure the new event is visible and sorted correctly
+            setFilterType('All');
+            setSearchTerm('');
+            fetchEvents();
             setOpen(false);
             setNewEvent({ name: '', date: '', time: '', location: '', mapLink: '', type: '', description: '', organizerName: user.name });
             setMessage({ type: 'success', text: 'Event created successfully!' });
@@ -125,6 +157,12 @@ const UserDashboard = () => {
                 setMessage({ type: 'danger', text: 'Failed to delete event' });
             }
         }
+    };
+
+    const handlePaymentSuccess = () => {
+        fetchAssignments();
+        setShowPaymentModal(false);
+        setMessage({ type: 'success', text: 'Payment processed successfully!' });
     };
 
     const upcomingCount = events.filter(e => new Date(e.date) >= new Date()).length;
@@ -255,6 +293,44 @@ const UserDashboard = () => {
                         </Col>
                     </Row>
 
+                    {/* Pending Payments Section */}
+                    {assignments.some(a => a.status === 'Completed') && (
+                        <div className="mb-5">
+                            <h3 className="fw-bold display-6 mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>Pending Payments</h3>
+                            <Row className="g-4">
+                                {assignments.filter(a => a.status === 'Completed').map(assignment => (
+                                    <Col key={assignment._id} md={6} lg={4}>
+                                        <Card className="border-0 shadow-sm h-100" style={{ borderRadius: '20px' }}>
+                                            <Card.Body className="p-4">
+                                                <div className="d-flex justify-content-between align-items-start mb-3">
+                                                    <div>
+                                                        <h5 className="fw-bold mb-1">{assignment.vendor?.user?.name || 'Vendor'}</h5>
+                                                        <small className="text-muted">{assignment.event?.name}</small>
+                                                    </div>
+                                                    <Badge bg="info" className="rounded-pill">Completed</Badge>
+                                                </div>
+                                                <div className="p-3 bg-light rounded-3 mb-3 d-flex justify-content-between align-items-center">
+                                                    <span className="text-muted small text-uppercase fw-bold">Amount Due</span>
+                                                    <span className="fw-bold fs-5">₹{assignment.amount.toFixed(2)}</span>
+                                                </div>
+                                                <Button
+                                                    variant="success"
+                                                    className="w-100 rounded-pill fw-bold shadow-sm"
+                                                    onClick={() => {
+                                                        setSelectedBooking(assignment);
+                                                        setShowPaymentModal(true);
+                                                    }}
+                                                >
+                                                    <i className="bi bi-credit-card me-2"></i> Pay Now
+                                                </Button>
+                                            </Card.Body>
+                                        </Card>
+                                    </Col>
+                                ))}
+                            </Row>
+                        </div>
+                    )}
+
                     {/* Plan Your Event Carousel */}
                     <div className="mb-5">
                         <h3 className="mb-4 fw-bold display-6 text-center" style={{ fontFamily: 'Playfair Display, serif' }}>What are you celebrating?</h3>
@@ -358,8 +434,8 @@ const UserDashboard = () => {
                     </div>
 
                     <Row className="g-4">
-                        {filteredEvents.length > 0 ? (
-                            filteredEvents.map(event => (
+                        {paginatedEvents.length > 0 ? (
+                            paginatedEvents.map(event => (
                                 <Col key={event._id} md={4}>
                                     <Card className="h-100 border-0 shadow-sm transform-hover" style={{ borderRadius: '20px', overflow: 'hidden', background: 'white' }}>
                                         <div className="position-relative">
@@ -390,6 +466,13 @@ const UserDashboard = () => {
                             <Col><Alert variant="light" className="text-center py-5 border-0 shadow-sm" style={{ borderRadius: '20px' }}>No events found matching your criteria.</Alert></Col>
                         )}
                     </Row>
+
+                    {/* Pagination Controls */}
+                    <PaginationControl
+                        currentPage={currentPage}
+                        totalPages={totalPages}
+                        onPageChange={setCurrentPage}
+                    />
 
                     {/* Create Modal */}
                     <Modal show={open} onHide={() => setOpen(false)} centered size="lg" backdrop="static">
@@ -497,7 +580,13 @@ const UserDashboard = () => {
                     </div>
                 </Container>
             </footer>
-        </div >
+            <PaymentModal
+                show={showPaymentModal}
+                onHide={() => setShowPaymentModal(false)}
+                booking={selectedBooking}
+                onSuccess={handlePaymentSuccess}
+            />
+        </div>
     );
 };
 

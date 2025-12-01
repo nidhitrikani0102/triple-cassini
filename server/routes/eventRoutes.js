@@ -39,8 +39,13 @@ router.post('/', async (req, res, next) => {
  */
 router.get('/', async (req, res, next) => {
     try {
-        const events = await eventService.getEvents(req.user._id);
-        res.json(events);
+        const page = parseInt(req.query.page) || 1;
+        let limit = req.query.limit;
+        if (limit !== 'all') {
+            limit = parseInt(limit) || 9;
+        }
+        const result = await eventService.getEvents(req.user._id, page, limit);
+        res.json(result);
     } catch (error) {
         next(error);
     }

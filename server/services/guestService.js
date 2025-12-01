@@ -111,7 +111,7 @@ const addGuestsBulk = async (eventId, guestsData, userId) => {
  * @param {string} userId - ID of the requesting user
  * @returns {Promise<Array>} List of guests
  */
-const getGuests = async (eventId, userId) => {
+const getGuests = async (eventId, userId, page = 1, limit = 10) => {
     try {
         // Verify event ownership
         const event = await Event.findById(eventId);
@@ -127,7 +127,17 @@ const getGuests = async (eventId, userId) => {
             throw err;
         }
 
-        return await Guest.find({ event: eventId });
+        const skip = (page - 1) * limit;
+        const guests = await Guest.findWithPagination({ event: eventId }, skip, limit);
+
+        const total = await Guest.countDocuments({ event: eventId });
+
+        return {
+            guests,
+            totalPages: Math.ceil(total / limit),
+            currentPage: Number(page),
+            totalGuests: total
+        };
     } catch (error) {
         throw error;
     }

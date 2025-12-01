@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { Container, Row, Col, Card, Button, Form, Modal, Image, Badge } from 'react-bootstrap';
+import PaginationControl from '../components/PaginationControl';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
@@ -9,20 +10,24 @@ const FindVendors = () => {
     const [filters, setFilters] = useState({ location: '', serviceType: '' });
     const [selectedVendor, setSelectedVendor] = useState(null);
     const [showModal, setShowModal] = useState(false);
+    const [currentPage, setCurrentPage] = useState(1);
+    const [totalPages, setTotalPages] = useState(1);
     const { user } = useContext(AuthContext);
     const navigate = useNavigate();
     const token = localStorage.getItem('token');
 
     useEffect(() => {
-        fetchVendors();
+        fetchVendors(currentPage);
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    }, [currentPage]);
 
-    const fetchVendors = async () => {
+    const fetchVendors = async (page = 1) => {
         try {
-            const params = new URLSearchParams(filters).toString();
+            const params = new URLSearchParams({ ...filters, page, limit: 9 }).toString();
             const res = await axios.get(`http://localhost:5000/api/vendors/search?${params}`);
-            setVendors(res.data);
+            setVendors(res.data.vendors);
+            setTotalPages(res.data.totalPages);
+            setCurrentPage(res.data.currentPage);
         } catch (err) {
             console.error(err);
         }
@@ -30,7 +35,8 @@ const FindVendors = () => {
 
     const handleSearch = (e) => {
         e.preventDefault();
-        fetchVendors();
+        setCurrentPage(1);
+        fetchVendors(1);
     };
 
     const handleViewProfile = (vendor) => {
@@ -43,7 +49,7 @@ const FindVendors = () => {
     };
 
     return (
-        <Container className="mt-4">
+        <Container className="mb-5" style={{ paddingTop: '100px' }}>
             <h2 className="mb-4">Find Vendors</h2>
 
             <Form onSubmit={handleSearch} className="mb-4">
@@ -122,6 +128,13 @@ const FindVendors = () => {
                     </Col>
                 ))}
             </Row>
+
+            {/* Pagination Controls */}
+            <PaginationControl
+                currentPage={currentPage}
+                totalPages={totalPages}
+                onPageChange={setCurrentPage}
+            />
 
             {/* Vendor Details Modal */}
             <Modal show={showModal} onHide={() => setShowModal(false)} size="lg" centered>

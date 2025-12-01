@@ -41,6 +41,7 @@ app.use('/api/messages', require('./routes/messageRoutes')); // Messaging system
 app.use('/api/stats', require('./routes/statsRoutes')); // Statistics for landing page
 app.use('/api/users', require('./routes/userRoutes')); // User search and management
 app.use('/api/assignments', require('./routes/vendorAssignmentRoutes')); // Vendor assignments
+app.use('/api/payments', require('./routes/paymentRoutes')); // Payment processing
 
 // Error Logger: Middleware to log errors and send standardized error responses
 app.use(require('./utils/errorLogger'));

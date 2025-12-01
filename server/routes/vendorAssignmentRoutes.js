@@ -32,8 +32,13 @@ router.post('/', authMiddleware.protect, async (req, res, next) => {
  */
 router.get('/event/:eventId', authMiddleware.protect, async (req, res, next) => {
     try {
-        const assignments = await vendorAssignmentService.getAssignmentsByEvent(req.params.eventId, req.user._id);
-        res.json(assignments);
+        const page = parseInt(req.query.page) || 1;
+        let limit = req.query.limit;
+        if (limit !== 'all') {
+            limit = parseInt(limit) || 9;
+        }
+        const result = await vendorAssignmentService.getAssignmentsByEvent(req.params.eventId, req.user._id, page, limit);
+        res.json(result);
     } catch (error) {
         next(error);
     }
@@ -46,8 +51,13 @@ router.get('/event/:eventId', authMiddleware.protect, async (req, res, next) => 
  */
 router.get('/vendor/my-jobs', authMiddleware.protect, authMiddleware.vendor, async (req, res, next) => {
     try {
-        const assignments = await vendorAssignmentService.getAssignmentsByVendor(req.user._id);
-        res.json(assignments);
+        const page = parseInt(req.query.page) || 1;
+        let limit = req.query.limit;
+        if (limit !== 'all') {
+            limit = parseInt(limit) || 9;
+        }
+        const result = await vendorAssignmentService.getAssignmentsByVendor(req.user._id, page, limit);
+        res.json(result);
     } catch (error) {
         next(error);
     }
@@ -63,6 +73,34 @@ router.put('/:id/status', authMiddleware.protect, async (req, res, next) => {
         const { status } = req.body;
         const role = req.user.role === 'vendor' ? 'vendor' : 'user';
         const assignment = await vendorAssignmentService.updateStatus(req.params.id, status, req.user._id, role);
+        res.json(assignment);
+    } catch (error) {
+        next(error);
+    }
+});
+
+/**
+ * @route   GET /api/assignments/user/my-assignments
+ * @desc    Get assignments for the logged-in user
+ * @access  Private (User)
+ */
+router.get('/user/my-assignments', authMiddleware.protect, async (req, res, next) => {
+    try {
+        const assignments = await vendorAssignmentService.getAssignmentsByUser(req.user._id);
+        res.json(assignments);
+    } catch (error) {
+        next(error);
+    }
+});
+
+/**
+ * @route   PUT /api/assignments/:id
+ * @desc    Update assignment details (amount)
+ * @access  Private (User)
+ */
+router.put('/:id', authMiddleware.protect, async (req, res, next) => {
+    try {
+        const assignment = await vendorAssignmentService.updateAssignment(req.params.id, req.body, req.user._id);
         res.json(assignment);
     } catch (error) {
         next(error);

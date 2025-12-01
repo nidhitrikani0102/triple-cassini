@@ -99,4 +99,20 @@ const findWithPopulate = async (query, populatePath, populateSelect) => {
     }
 };
 
-module.exports = { createOne, find, findById, findWithPopulate };
+const findWithPagination = async (query, skip, limit) => {
+    try {
+        return await Guest.find(query).skip(skip).limit(limit);
+    } catch (error) {
+        handleDbError(error);
+    }
+};
+
+const countDocuments = async (query) => {
+    try {
+        return await Guest.countDocuments(query);
+    } catch (error) {
+        handleDbError(error);
+    }
+};
+
+module.exports = { createOne, find, findById, findWithPopulate, findWithPagination, countDocuments };

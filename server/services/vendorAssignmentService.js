@@ -48,13 +48,28 @@ const createAssignment = async (data) => {
  * @param {string} userId 
  * @returns {Promise<Array>} List of assignments
  */
-const getAssignmentsByEvent = async (eventId, userId) => {
+const getAssignmentsByEvent = async (eventId, userId, page = 1, limit = 9) => {
     try {
         const event = await Event.findById(eventId);
         if (!event) throw { status: 404, message: 'Event not found' };
         if (event.user.toString() !== userId) throw { status: 401, message: 'Not authorized' };
 
-        return await VendorAssignment.find({ event: eventId });
+        const skip = (page - 1) * limit;
+        const assignments = await VendorAssignment.findWithPopulateAndPagination(
+            { event: eventId },
+            [{ path: 'vendor', populate: { path: 'user', select: 'name email' } }], // Populate vendor details
+            skip,
+            limit
+        );
+
+        const total = await VendorAssignment.countDocuments({ event: eventId });
+
+        return {
+            assignments,
+            totalPages: Math.ceil(total / limit),
+            currentPage: Number(page),
+            totalAssignments: total
+        };
     } catch (error) {
         throw error;
     }
@@ -65,13 +80,41 @@ const getAssignmentsByEvent = async (eventId, userId) => {
  * @param {string} vendorUserId 
  * @returns {Promise<Array>} List of assignments
  */
-const getAssignmentsByVendor = async (vendorUserId) => {
+const getAssignmentsByVendor = async (vendorUserId, page = 1, limit = 9) => {
     try {
         // Find vendor profile for this user
         const vendorProfile = await VendorProfile.findOne({ user: vendorUserId, isDeleted: { $ne: true } });
         if (!vendorProfile) throw { status: 404, message: 'Vendor profile not found' };
 
-        return await VendorAssignment.find({ vendor: vendorProfile._id });
+        if (limit === 'all') {
+            const assignments = await VendorAssignment.findWithPopulate(
+                { vendor: vendorProfile._id },
+                ['event', 'client'] // Populate event and client details
+            );
+            return {
+                assignments,
+                totalPages: 1,
+                currentPage: 1,
+                totalAssignments: assignments.length
+            };
+        }
+
+        const skip = (page - 1) * limit;
+        const assignments = await VendorAssignment.findWithPopulateAndPagination(
+            { vendor: vendorProfile._id },
+            ['event', 'client'], // Populate event and client details
+            skip,
+            limit
+        );
+
+        const total = await VendorAssignment.countDocuments({ vendor: vendorProfile._id });
+
+        return {
+            assignments,
+            totalPages: Math.ceil(total / limit),
+            currentPage: Number(page),
+            totalAssignments: total
+        };
     } catch (error) {
         throw error;
     }
@@ -126,4 +169,53 @@ const updateStatus = async (assignmentId, status, userId, role) => {
     }
 };
 
-module.exports = { createAssignment, getAssignmentsByEvent, getAssignmentsByVendor, updateStatus };
+/**
+ * Get assignments for a user (client).
+ * @param {string} userId 
+ * @returns {Promise<Array>} List of assignments
+ */
+const getAssignmentsByUser = async (userId) => {
+    try {
+        return await VendorAssignment.findWithPopulate({ client: userId }, [
+            { path: 'event' },
+            { path: 'vendor', populate: { path: 'user' } }
+        ]);
+    } catch (error) {
+        throw error;
+    }
+};
+
+/**
+ * Update assignment details (amount) and reset status to Pending.
+ * @param {string} assignmentId 
+ * @param {Object} data - { amount }
+ * @param {string} userId 
+ * @returns {Promise<Object>} Updated assignment
+ */
+const updateAssignment = async (assignmentId, data, userId) => {
+    try {
+        const assignment = await VendorAssignment.findById(assignmentId);
+        if (!assignment) throw { status: 404, message: 'Assignment not found' };
+
+        // Only client (user) can update the assignment amount
+        if (assignment.client._id.toString() !== userId) {
+            throw { status: 401, message: 'Not authorized' };
+        }
+
+        // Can only update if status is Declined or Pending
+        if (assignment.status !== 'Declined' && assignment.status !== 'Pending') {
+            throw { status: 400, message: 'Cannot update assignment in current status' };
+        }
+
+        const updateData = {
+            amount: data.amount,
+            status: 'Pending' // Reset status to Pending so vendor can review again
+        };
+
+        return await VendorAssignment.updateAssignment(assignmentId, updateData);
+    } catch (error) {
+        throw error;
+    }
+};
+
+module.exports = { createAssignment, getAssignmentsByEvent, getAssignmentsByVendor, updateStatus, getAssignmentsByUser, updateAssignment };

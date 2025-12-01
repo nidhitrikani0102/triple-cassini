@@ -151,4 +151,17 @@ const findOneWithPopulate = async (query, populatePath, selectFields) => {
     }
 };
 
-module.exports = { createOne, findOne, find, findOneAndUpdate, findOneAndDelete, countDocuments, findWithPopulate, findOneWithPopulate };
+const findWithPagination = async (query, populatePath, selectFields, skip, limit) => {
+    try {
+        return await VendorProfile.find(query)
+            .populate(populatePath, selectFields)
+            .skip(skip)
+            .limit(limit);
+    } catch (error) {
+        const err = new Error(`Database Error: ${error.message}`);
+        err.status = 500;
+        throw err;
+    }
+};
+
+module.exports = { createOne, findOne, find, findOneAndUpdate, findOneAndDelete, countDocuments, findWithPopulate, findOneWithPopulate, findWithPagination };

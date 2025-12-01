@@ -52,6 +52,15 @@ const EventPage = () => {
     const [vendorSearchQuery, setVendorSearchQuery] = useState('');
     const [vendorSearchResults, setVendorSearchResults] = useState([]);
     const [selectedVendor, setSelectedVendor] = useState(null);
+    // State for editing assignment
+    const [isEditingAssignment, setIsEditingAssignment] = useState(false);
+    const [editingAssignmentId, setEditingAssignmentId] = useState(null);
+    const [vendorSearchPage, setVendorSearchPage] = useState(1);
+    const [vendorSearchTotalPages, setVendorSearchTotalPages] = useState(1);
+
+    // Payment Modal State
+    const [showPaymentModal, setShowPaymentModal] = useState(false);
+    const [selectedBooking, setSelectedBooking] = useState(null);
 
     useEffect(() => {
         fetchEventDetails();
@@ -92,7 +101,14 @@ const EventPage = () => {
             if (vendorSearchQuery.length > 2) {
                 try {
                     const res = await axios.get(`http://localhost:5000/api/vendors/search?query=${vendorSearchQuery}`, config);
-                    setVendorSearchResults(res.data);
+                    // Check if response is array or object with vendors property
+                    if (Array.isArray(res.data)) {
+                        setVendorSearchResults(res.data);
+                    } else if (res.data && Array.isArray(res.data.vendors)) {
+                        setVendorSearchResults(res.data.vendors);
+                    } else {
+                        setVendorSearchResults([]);
+                    }
                 } catch (err) {
                     console.error("Vendor search failed", err);
                 }
@@ -130,7 +146,14 @@ const EventPage = () => {
     const fetchGuests = async () => {
         try {
             const res = await axios.get(`http://localhost:5000/api/guests/${id}`, config);
-            setGuests(res.data);
+            // Check if response is array or object with guests property
+            if (Array.isArray(res.data)) {
+                setGuests(res.data);
+            } else if (res.data && Array.isArray(res.data.guests)) {
+                setGuests(res.data.guests);
+            } else {
+                setGuests([]);
+            }
         } catch (err) {
             console.error("Error fetching guests:", err);
         }
@@ -153,7 +176,14 @@ const EventPage = () => {
     const fetchAssignments = async () => {
         try {
             const res = await axios.get(`http://localhost:5000/api/assignments/event/${id}`, config);
-            setVendors(res.data);
+            // Check if response is array or object with assignments property
+            if (Array.isArray(res.data)) {
+                setVendors(res.data);
+            } else if (res.data && Array.isArray(res.data.assignments)) {
+                setVendors(res.data.assignments);
+            } else {
+                setVendors([]);
+            }
         } catch (err) {
             console.error("Error fetching assignments:", err);
         }
@@ -271,6 +301,11 @@ const EventPage = () => {
         try {
             if (!selectedVendor || !newAssignment.amount) {
                 setMessage({ type: 'danger', text: 'Please select a vendor and enter amount' });
+                return;
+            }
+
+            if (isEventPassed) {
+                setMessage({ type: 'danger', text: 'Cannot assign vendors to past events' });
                 return;
             }
 
@@ -1034,8 +1069,8 @@ const EventPage = () => {
                     <Button variant="secondary" onClick={() => setShowVendorModal(false)}>
                         Cancel
                     </Button>
-                    <Button variant="primary" onClick={handleAssignVendor}>
-                        Assign Vendor
+                    <Button variant="primary" onClick={handleAssignVendor} disabled={isEventPassed}>
+                        {isEditingAssignment ? 'Update Offer' : 'Assign Vendor'}
                     </Button>
                 </Modal.Footer>
             </Modal>

@@ -41,7 +41,9 @@ const createOne = async (data) => {
         const customId = await generateId();
         const assignment = new VendorAssignment({
             _id: customId,
-            ...data
+            ...data,
+            paymentStatus: 'pending', // pending, paid, completed
+            agreedPrice: data.agreedPrice || 0
         });
         return await assignment.save();
     } catch (error) {
@@ -91,4 +93,56 @@ const updateStatus = async (id, status) => {
     }
 };
 
-module.exports = { createOne, find, findById, updateStatus };
+const findWithPopulate = async (query, populateOptions) => {
+    try {
+        let q = VendorAssignment.find(query);
+        if (Array.isArray(populateOptions)) {
+            populateOptions.forEach(opt => q = q.populate(opt));
+        } else {
+            q = q.populate(populateOptions);
+        }
+        return await q;
+    } catch (error) {
+        const err = new Error(`Database Error: ${error.message}`);
+        err.status = 500;
+        throw err;
+    }
+};
+
+const findWithPopulateAndPagination = async (query, populateOptions, skip, limit) => {
+    try {
+        let q = VendorAssignment.find(query);
+        if (Array.isArray(populateOptions)) {
+            populateOptions.forEach(opt => q = q.populate(opt));
+        } else {
+            q = q.populate(populateOptions);
+        }
+        return await q.skip(skip).limit(limit);
+    } catch (error) {
+        const err = new Error(`Database Error: ${error.message}`);
+        err.status = 500;
+        throw err;
+    }
+};
+
+const countDocuments = async (query) => {
+    try {
+        return await VendorAssignment.countDocuments(query);
+    } catch (error) {
+        const err = new Error(`Database Error: ${error.message}`);
+        err.status = 500;
+        throw err;
+    }
+};
+
+const updateAssignment = async (id, data) => {
+    try {
+        return await VendorAssignment.findByIdAndUpdate(id, data, { new: true });
+    } catch (error) {
+        const err = new Error(`Database Error: ${error.message}`);
+        err.status = 500;
+        throw err;
+    }
+};
+
+module.exports = { createOne, find, findById, updateStatus, findWithPopulate, findWithPopulateAndPagination, countDocuments, updateAssignment };

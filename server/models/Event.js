@@ -130,4 +130,12 @@ const findByIdAndDelete = async (id) => {
     }
 };
 
-module.exports = { createOne, find, findById, findByIdAndUpdate, countDocuments, findByIdAndDelete };
+const findWithPagination = async (query, sort, skip, limit) => {
+    try {
+        return await Event.find(query).sort(sort).skip(skip).limit(limit);
+    } catch (error) {
+        handleDbError(error);
+    }
+};
+
+module.exports = { createOne, find, findById, findByIdAndUpdate, countDocuments, findByIdAndDelete, findWithPagination };

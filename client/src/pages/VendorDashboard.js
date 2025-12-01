@@ -3,6 +3,7 @@ import { Container, Form, Button, Card, Row, Col, Alert, Tab, Nav, Modal, Badge,
 import axios from 'axios';
 import { AuthContext } from '../context/AuthContext';
 import vendorHero from '../assets/VendorDashboard.png'; // New Hero Image
+import PaginationControl from '../components/PaginationControl';
 
 const VendorDashboard = () => {
     const [profile, setProfile] = useState(null);
@@ -22,8 +23,13 @@ const VendorDashboard = () => {
     // Job Requests State
     const [jobs, setJobs] = useState([]);
     const [filteredJobs, setFilteredJobs] = useState([]);
+    const [paginatedJobs, setPaginatedJobs] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
     const [filterStatus, setFilterStatus] = useState('All');
+    const [filterEventType, setFilterEventType] = useState('All');
+    const [currentPage, setCurrentPage] = useState(1);
+    const [totalPages, setTotalPages] = useState(1);
+    const itemsPerPage = 9;
 
     const { user } = useContext(AuthContext);
     const token = localStorage.getItem('token');
@@ -45,9 +51,18 @@ const VendorDashboard = () => {
 
     useEffect(() => {
         let result = jobs;
+
+        // Filter by Status
         if (filterStatus !== 'All') {
             result = result.filter(job => job.status === filterStatus);
         }
+
+        // Filter by Event Type
+        if (filterEventType !== 'All') {
+            result = result.filter(job => job.event.type === filterEventType);
+        }
+
+        // Filter by Search Term
         if (searchTerm) {
             const lowerTerm = searchTerm.toLowerCase();
             result = result.filter(job =>
@@ -56,8 +71,17 @@ const VendorDashboard = () => {
                 job.amount.toString().includes(lowerTerm)
             );
         }
+
         setFilteredJobs(result);
-    }, [jobs, searchTerm, filterStatus]);
+        setTotalPages(Math.ceil(result.length / itemsPerPage));
+        setCurrentPage(1); // Reset to first page on filter change
+    }, [jobs, searchTerm, filterStatus, filterEventType]);
+
+    useEffect(() => {
+        const startIndex = (currentPage - 1) * itemsPerPage;
+        const endIndex = startIndex + itemsPerPage;
+        setPaginatedJobs(filteredJobs.slice(startIndex, endIndex));
+    }, [filteredJobs, currentPage]);
 
     const fetchProfile = async () => {
         try {
@@ -80,10 +104,10 @@ const VendorDashboard = () => {
 
     const fetchJobs = async () => {
         try {
-            const res = await axios.get('http://localhost:5000/api/assignments/vendor/my-jobs', {
+            const res = await axios.get(`http://localhost:5000/api/assignments/vendor/my-jobs?limit=all`, {
                 headers: { Authorization: `Bearer ${token}` }
             });
-            setJobs(res.data);
+            setJobs(res.data.assignments);
         } catch (err) {
             console.error("Error fetching jobs:", err);
         }
@@ -489,6 +513,19 @@ const VendorDashboard = () => {
                                         className="border-0 shadow-sm bg-white"
                                     />
                                     <Form.Select
+                                        value={filterEventType}
+                                        onChange={(e) => setFilterEventType(e.target.value)}
+                                        style={{ maxWidth: '150px', borderRadius: '20px' }}
+                                        className="border-0 shadow-sm bg-white"
+                                    >
+                                        <option value="All">All Types</option>
+                                        <option value="Wedding">Wedding</option>
+                                        <option value="Birthday">Birthday</option>
+                                        <option value="Corporate">Corporate</option>
+                                        <option value="Social">Social</option>
+                                        <option value="Other">Other</option>
+                                    </Form.Select>
+                                    <Form.Select
                                         value={filterStatus}
                                         onChange={(e) => setFilterStatus(e.target.value)}
                                         style={{ maxWidth: '150px', borderRadius: '20px' }}
@@ -512,7 +549,7 @@ const VendorDashboard = () => {
                                         </div>
                                     </Col>
                                 ) : (
-                                    filteredJobs.map(job => (
+                                    paginatedJobs.map(job => (
                                         <Col key={job._id}>
                                             <Card style={glassCardStyle} className="border-0 hover-3d overflow-hidden h-100">
                                                 <div className={`p-3 text-white d-flex justify-content-between align-items-center`}
@@ -542,7 +579,7 @@ const VendorDashboard = () => {
                                                                 <Button variant="outline-success" className="rounded-pill fw-bold" onClick={() => handleUpdateStatus(job._id, 'In Progress')}>
                                                                     <i className="bi bi-check-lg me-2"></i> Accept
                                                                 </Button>
-                                                                <Button variant="outline-danger" className="rounded-pill fw-bold">
+                                                                <Button variant="outline-danger" className="rounded-pill fw-bold" onClick={() => handleUpdateStatus(job._id, 'Declined')}>
                                                                     <i className="bi bi-x-lg me-2"></i> Decline
                                                                 </Button>
                                                             </>
@@ -569,6 +606,11 @@ const VendorDashboard = () => {
                                     ))
                                 )}
                             </Row>
+                            <PaginationControl
+                                currentPage={currentPage}
+                                totalPages={totalPages}
+                                onPageChange={setCurrentPage}
+                            />
                         </Tab.Pane>
 
                         <Tab.Pane eventKey="portfolio">

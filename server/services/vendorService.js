@@ -112,6 +112,10 @@ const addPortfolioImage = async (userId, imageUrl) => {
  */
 const searchVendors = async (query) => {
     try {
+        const page = parseInt(query.page) || 1;
+        const limit = parseInt(query.limit) || 9;
+        const skip = (page - 1) * limit;
+
         const filter = { isDeleted: { $ne: true } };
 
         // Handle generic search query (from frontend "Search by business name...")
@@ -132,9 +136,17 @@ const searchVendors = async (query) => {
             filter.serviceType = { $regex: query.serviceType, $options: 'i' };
         }
 
-        const vendors = await VendorProfile.findWithPopulate(filter, 'user', 'name email');
+        const vendors = await VendorProfile.findWithPagination(filter, 'user', 'name email', skip, limit);
+        const total = await VendorProfile.countDocuments(filter);
+
         console.log(`Search vendors found: ${vendors.length}`);
-        return vendors;
+
+        return {
+            vendors,
+            totalPages: Math.ceil(total / limit),
+            currentPage: page,
+            totalVendors: total
+        };
     } catch (error) {
         throw error;
     }

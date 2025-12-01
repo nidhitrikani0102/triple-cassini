@@ -2193,3 +2193,438 @@
     at Object.verifyLoginOtp (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:190:25)
     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
     at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:57:24
+[2025-11-30T10:46:43.496Z] TypeError: VendorAssignment.find(...).populate is not a function
+    at Object.getAssignmentsByUser (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorAssignmentService.js:137:14)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorAssignmentRoutes.js:79:59
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:63:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-30T10:46:43.525Z] TypeError: VendorAssignment.find(...).populate is not a function
+    at Object.getAssignmentsByUser (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorAssignmentService.js:137:14)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorAssignmentRoutes.js:79:59
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:63:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-30T10:55:00.799Z] TypeError: VendorAssignment.find(...).populate is not a function
+    at Object.getAssignmentsByUser (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorAssignmentService.js:137:14)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorAssignmentRoutes.js:79:59
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:63:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-30T10:55:00.825Z] TypeError: VendorAssignment.find(...).populate is not a function
+    at Object.getAssignmentsByUser (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorAssignmentService.js:137:14)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorAssignmentRoutes.js:79:59
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:63:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-30T14:00:02.507Z] TypeError: VendorAssignment.find(...).populate is not a function
+    at Object.getAssignmentsByUser (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorAssignmentService.js:137:14)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorAssignmentRoutes.js:79:59
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:63:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-30T14:00:02.515Z] TypeError: VendorAssignment.find(...).populate is not a function
+    at Object.getAssignmentsByUser (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorAssignmentService.js:137:14)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorAssignmentRoutes.js:79:59
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:63:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-30T14:03:33.795Z] TypeError: VendorAssignment.find(...).populate is not a function
+    at Object.getAssignmentsByUser (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorAssignmentService.js:137:14)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorAssignmentRoutes.js:79:59
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:63:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-30T14:03:33.881Z] TypeError: VendorAssignment.find(...).populate is not a function
+    at Object.getAssignmentsByUser (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorAssignmentService.js:137:14)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorAssignmentRoutes.js:79:59
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:63:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-30T14:20:39.782Z] TypeError: VendorAssignment.find(...).populate is not a function
+    at Object.getAssignmentsByUser (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorAssignmentService.js:137:14)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorAssignmentRoutes.js:79:59
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:63:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-30T14:20:39.811Z] TypeError: VendorAssignment.find(...).populate is not a function
+    at Object.getAssignmentsByUser (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorAssignmentService.js:137:14)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorAssignmentRoutes.js:79:59
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:63:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-30T14:24:57.599Z] TypeError: VendorAssignment.find(...).populate is not a function
+    at Object.getAssignmentsByUser (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorAssignmentService.js:137:14)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorAssignmentRoutes.js:79:59
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:63:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-30T14:24:57.714Z] TypeError: VendorAssignment.find(...).populate is not a function
+    at Object.getAssignmentsByUser (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorAssignmentService.js:137:14)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorAssignmentRoutes.js:79:59
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:63:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-30T14:28:48.658Z] TypeError: VendorAssignment.find(...).populate is not a function
+    at Object.getAssignmentsByUser (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorAssignmentService.js:137:14)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorAssignmentRoutes.js:79:59
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:63:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-30T14:28:48.842Z] TypeError: VendorAssignment.find(...).populate is not a function
+    at Object.getAssignmentsByUser (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorAssignmentService.js:137:14)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorAssignmentRoutes.js:79:59
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:63:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-30T14:55:05.877Z] TypeError: Guest.find(...).skip is not a function
+    at Object.getGuests (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\guestService.js:132:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\guestRoutes.js:61:24
+[2025-11-30T14:55:05.952Z] TypeError: Guest.find(...).skip is not a function
+    at Object.getGuests (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\guestService.js:132:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\guestRoutes.js:61:24
+[2025-11-30T14:55:08.365Z] TypeError: Event.find(...).sort is not a function
+    at Object.getEvents (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\eventService.js:61:14)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\eventRoutes.js:44:43
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:63:13)
+[2025-11-30T14:55:08.374Z] TypeError: VendorAssignment.find(...).populate is not a function
+    at Object.getAssignmentsByUser (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorAssignmentService.js:137:14)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorAssignmentRoutes.js:79:59
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:63:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-30T14:55:08.391Z] TypeError: Event.find(...).sort is not a function
+    at Object.getEvents (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\eventService.js:61:14)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\eventRoutes.js:44:43
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:63:13)
+[2025-11-30T14:55:08.451Z] TypeError: VendorAssignment.find(...).populate is not a function
+    at Object.getAssignmentsByUser (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorAssignmentService.js:137:14)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorAssignmentRoutes.js:79:59
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:63:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-30T14:55:41.483Z] TypeError: Event.find(...).sort is not a function
+    at Object.getEvents (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\eventService.js:61:14)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\eventRoutes.js:44:43
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:63:13)
+[2025-11-30T14:55:41.495Z] TypeError: VendorAssignment.find(...).populate is not a function
+    at Object.getAssignmentsByUser (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorAssignmentService.js:137:14)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorAssignmentRoutes.js:79:59
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:63:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-30T14:55:41.512Z] TypeError: Event.find(...).sort is not a function
+    at Object.getEvents (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\eventService.js:61:14)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\eventRoutes.js:44:43
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:63:13)
+[2025-11-30T14:55:41.530Z] TypeError: VendorAssignment.find(...).populate is not a function
+    at Object.getAssignmentsByUser (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorAssignmentService.js:137:14)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorAssignmentRoutes.js:79:59
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:63:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-30T14:56:19.253Z] TypeError: Guest.find(...).skip is not a function
+    at Object.getGuests (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\guestService.js:132:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\guestRoutes.js:61:24
+[2025-11-30T14:56:19.297Z] TypeError: Guest.find(...).skip is not a function
+    at Object.getGuests (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\guestService.js:132:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\guestRoutes.js:61:24
+[2025-11-30T14:56:30.021Z] TypeError: Event.find(...).sort is not a function
+    at Object.getEvents (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\eventService.js:61:14)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\eventRoutes.js:44:43
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:63:13)
+[2025-11-30T14:56:30.028Z] TypeError: VendorAssignment.find(...).populate is not a function
+    at Object.getAssignmentsByUser (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorAssignmentService.js:137:14)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorAssignmentRoutes.js:79:59
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:63:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-30T14:56:30.064Z] TypeError: Event.find(...).sort is not a function
+    at Object.getEvents (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\eventService.js:61:14)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\eventRoutes.js:44:43
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:63:13)
+[2025-11-30T14:56:30.079Z] TypeError: VendorAssignment.find(...).populate is not a function
+    at Object.getAssignmentsByUser (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorAssignmentService.js:137:14)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorAssignmentRoutes.js:79:59
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:63:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-30T14:59:35.591Z] TypeError: Event.find(...).sort is not a function
+    at Object.getEvents (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\eventService.js:61:14)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\eventRoutes.js:44:43
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:63:13)
+[2025-11-30T14:59:35.595Z] TypeError: VendorAssignment.find(...).populate is not a function
+    at Object.getAssignmentsByUser (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorAssignmentService.js:137:14)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorAssignmentRoutes.js:79:59
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:63:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-30T15:00:23.533Z] TypeError: Event.find(...).sort is not a function
+    at Object.getEvents (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\eventService.js:61:14)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\eventRoutes.js:44:43
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:63:13)
+[2025-11-30T15:00:23.552Z] TypeError: VendorAssignment.find(...).populate is not a function
+    at Object.getAssignmentsByUser (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorAssignmentService.js:137:14)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorAssignmentRoutes.js:79:59
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:63:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-30T15:00:23.620Z] TypeError: Event.find(...).sort is not a function
+    at Object.getEvents (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\eventService.js:61:14)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\eventRoutes.js:44:43
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:63:13)
+[2025-11-30T15:00:23.640Z] TypeError: VendorAssignment.find(...).populate is not a function
+    at Object.getAssignmentsByUser (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorAssignmentService.js:137:14)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorAssignmentRoutes.js:79:59
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:63:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-30T15:00:38.369Z] TypeError: Event.find(...).sort is not a function
+    at Object.getEvents (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\eventService.js:61:14)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\eventRoutes.js:44:43
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:63:13)
+[2025-11-30T15:00:38.376Z] TypeError: VendorAssignment.find(...).populate is not a function
+    at Object.getAssignmentsByUser (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorAssignmentService.js:137:14)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorAssignmentRoutes.js:79:59
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:63:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-30T15:00:38.405Z] TypeError: Event.find(...).sort is not a function
+    at Object.getEvents (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\eventService.js:61:14)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\eventRoutes.js:44:43
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:63:13)
+[2025-11-30T15:00:38.420Z] TypeError: VendorAssignment.find(...).populate is not a function
+    at Object.getAssignmentsByUser (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorAssignmentService.js:137:14)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorAssignmentRoutes.js:79:59
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:63:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-30T15:04:38.059Z] TypeError: VendorAssignment.find(...).populate is not a function
+    at Object.getAssignmentsByUser (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorAssignmentService.js:137:14)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorAssignmentRoutes.js:79:59
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:63:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-30T15:04:38.185Z] TypeError: VendorAssignment.find(...).populate is not a function
+    at Object.getAssignmentsByUser (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\vendorAssignmentService.js:137:14)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\vendorAssignmentRoutes.js:79:59
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:63:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2025-11-30T15:05:00.544Z] TypeError: Guest.find(...).skip is not a function
+    at Object.getGuests (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\guestService.js:132:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\guestRoutes.js:61:24
+[2025-11-30T15:05:00.604Z] TypeError: Guest.find(...).skip is not a function
+    at Object.getGuests (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\guestService.js:132:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\guestRoutes.js:61:24
+[2025-11-30T15:08:08.559Z] TypeError: Guest.countDocuments is not a function
+    at Object.getGuests (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\guestService.js:133:35)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\guestRoutes.js:61:24
+[2025-11-30T15:08:08.677Z] TypeError: Guest.countDocuments is not a function
+    at Object.getGuests (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\guestService.js:133:35)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\guestRoutes.js:61:24
+[2025-11-30T15:08:21.156Z] Error: Not authorized, no token
+    at protect (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\middleware\authMiddleware.js:79:21)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:280:10)
+[2025-11-30T16:31:34.060Z] TypeError: User.findById(...).select is not a function
+    at Object.getUserById (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:337:50)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:115:40
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:421:3)
+[2025-11-30T16:31:34.073Z] TypeError: User.findById(...).select is not a function
+    at Object.getUserById (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:337:50)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:115:40
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:421:3)
+[2025-11-30T16:31:34.125Z] TypeError: User.findById(...).select is not a function
+    at Object.getUserById (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:337:50)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:115:40
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:421:3)
+[2025-11-30T16:31:34.192Z] TypeError: User.findById(...).select is not a function
+    at Object.getUserById (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:337:50)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:115:40
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:421:3)
+[2025-11-30T16:36:25.108Z] TypeError: User.findById(...).select is not a function
+    at Object.getUserById (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:337:50)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:115:40
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:421:3)
+[2025-11-30T16:36:25.114Z] TypeError: User.findById(...).select is not a function
+    at Object.getUserById (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:337:50)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:115:40
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\node_modules\express\lib\router\index.js:421:3)
+[2025-12-01T05:16:12.871Z] Error: Invalid credentials
+    at Object.loginUser (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:152:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:40:24
+[2025-12-01T05:16:21.241Z] Error: Invalid credentials
+    at Object.loginUser (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:152:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:40:24
+[2025-12-01T05:17:07.868Z] Error: Invalid or expired OTP
+    at Object.verifyLoginOtp (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:190:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:57:24
+[2025-12-01T05:17:09.622Z] Error: Invalid or expired OTP
+    at Object.verifyLoginOtp (C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\services\authService.js:190:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\Lenovo\.gemini\antigravity\playground\triple-cassini\server\routes\authRoutes.js:57:24
